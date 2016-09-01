@@ -62,11 +62,46 @@ TODO:
 
 TODO:
 
-- Doesn't recognize some links?
+//- Doesn't recognize some links?//
 - How to deal with PDFs: http://digicoll.library.wisc.edu/cgi-bin/FRUS/FRUS-idx?type=article&did=FRUS.FRUS1862v01.i0002&id=FRUS.FRUS1862v01&isize=M 
-- Robots.txt?
+//- Robots.txt?//
 - Work from html.
 
+
+LEARNED:
+
+- No PID... non-onyen Sakai login?
+- At Wisconsin, PDFs are scans - no text to analyze, but for the title.
+- All three websites used for testing do not have robots.txt files.
+- To do this from HTML
+	* Use php to exec(some unix command)
+	* Get result -> a file -> the html page
+
+9-6
+
+TODO:
+
+- For Dr. McKeown
+	* Demo web crawler proto - features:
+		- Visits web pages.
+		- Checks page status - 200 visited and available, 404 not found
+		- Searches for search term provided by converting page text to string, lowercase.
+		- If not found, collects searchable URLs from page and adds them to "toVisit" list - visits until term is found
+		- Stops at defined limit.
+		- Provides sample of text around search term, once found.
+	* Features to add:
+		- Visit robots.txt file and use that to search -- can't happen, none of the target links have a sitemap.
+		- Compile all search results and don't stop at first (harder)
+		- Put the search results in a more useful and comprehensible form - provide link to source.
+		- Deal with visual PDFs...
+	* Biggest challenges: 
+		- Refining search so that the crawler doesn't waste time - Office of the Historian great because all html, but bad because of lots of links!
+		- i.e., refine search locations - would be useful to have sitemap
+		- Saving a variety of searches in a server, to reduce search times
+		- Learn to use php within webpages - should be useful to have iwphys development environment
+
+	* Two options - get smarter or work harder
+				
 
 
 
