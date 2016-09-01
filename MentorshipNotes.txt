@@ -1,0 +1,75 @@
+//Mentorship Notes//
+
+National Security Archive @ George Washington U
+* nsarchive.gwu.edu *
+	- Declassified US foreign policy documents
+	- Subscription-side, UNC log-in
+	- UNREDACTED blog: discussions on politics of declassification
+
+- Electronic briefing books - organized by region and nothing else (no search function)
+- Blog attempts to provide "single reference for all FOIA inquiries" with the use of hyperlinks
+- Server error when tried to access actual NSA
+
+
+State Department's Office of the Historian  
+* history.state.gov/historicaldocuments/ *
+	- _Foreign Relations of the United States_: 
+	- only Truman through early Reagan
+	- Also, historical documents (conversations, etc.)
+
+- search function allows filters to certain parts of the website
+- simple string returns tons of results
+- also allows Booleans, wildcards (? and *), nesting
+
+
+University of Wisconsin Digital Library _Foreign Relations of the US_
+* uwdc.library.wisc.edu/collections/FRUS/ *
+	- From series inception, 1861-1960
+	- Search parameters: strings, compound strings, proximity searches (second or third term within x words of first); perhaps the only repository with these features?	
+
+- Not geared around FOIA; based on making more library material accessible on internet
+- * for truncation
+- Searches types of works (like OH filter)
+- Boolean search (AND, OR, NOT) with nesting (only once though)
+- Change number of results
+- Can do proximity with Booleans (in same sentence or paragraph)
+- Proximity is within x number of words
+- Can do "near," "followed by," or opposite of both
+
+
+8-25
+
+TODO:
+
+//- Find book IBN//
+//- Look into, take notes on web crawling - try to start something?//
+//- Visit Undergrad Library to look into textbook//
+
+LEARNED: 
+- Google works so fast because it saves search results on server (not possible for us)
+- Jumping from site to site is relatively easy, but figuring out how to extract information from FRUS files is tougher
+- How to parse results so understandable?
+
+8-30
+
+TODO:
+
+//- Adapted search terms, returns text around search and formats text better. -//
+//- Trawled through Wisconsin, identified simple terms and brought back sample text. -//
+
+
+9-1
+
+TODO:
+
+- Doesn't recognize some links?
+- How to deal with PDFs: http://digicoll.library.wisc.edu/cgi-bin/FRUS/FRUS-idx?type=article&did=FRUS.FRUS1862v01.i0002&id=FRUS.FRUS1862v01&isize=M 
+- Robots.txt?
+- Work from html.
+
+
+
+
+
+
+

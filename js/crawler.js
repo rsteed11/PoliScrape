@@ -5,7 +5,7 @@ var cheerio = require('cheerio');
 var URL = require('url-parse');
 
 var START_URL = "http://digicoll.library.wisc.edu/cgi-bin/FRUS/FRUS-idx?type=browse&scope=FRUS.FRUS1"
-var SEARCH_WORD = "commencement";
+var SEARCH_WORD = "Germany";
 var MAX_PAGES_TO_VISIT = 20;
 
 var pagesVisited = {};
