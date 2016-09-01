@@ -5,8 +5,8 @@ var cheerio = require('cheerio');
 var URL = require('url-parse');
 
 var START_URL = "https://history.state.gov/historicaldocuments/"
-var SEARCH_WORD = "kathleen b. rasmussen";
-var MAX_PAGES_TO_VISIT = 2;
+var SEARCH_WORD = "united nations";
+var MAX_PAGES_TO_VISIT = 50;
 
 var pagesVisited = {};
 var numPagesVisited = 0;
@@ -37,7 +37,6 @@ function crawl() {
   } else {
     // Unvisited page.
     visitPage(nextPage, crawl);
-    console.log(pagesToVisit);
   }
 }
 
