@@ -126,6 +126,15 @@ LEARNED:
 	- Not sure how this works when connecting to websites... seems more like you have a file and search it from terminal?
 - Scrapy
 	- In python
+	- Added new example crawler
+
+9-13 
+
+TODO:
+
+- Investigate results of Scrapy web crawler
+- Figure out what's going on in Sakai...
+- Investigate other proxy services at bookmarked page
 				
 
 
