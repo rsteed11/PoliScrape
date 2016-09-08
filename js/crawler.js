@@ -5,8 +5,8 @@ var cheerio = require('cheerio');
 var URL = require('url-parse');
 
 var START_URL = "https://history.state.gov/historicaldocuments/"
-var SEARCH_WORD = "united nations";
-var MAX_PAGES_TO_VISIT = 50;
+var SEARCH_WORD = "monroe doctrine";
+var MAX_PAGES_TO_VISIT = 100;
 
 var pagesVisited = {};
 var numPagesVisited = 0;
@@ -60,6 +60,7 @@ function visitPage(url, callback) {
      if(isWordFound) {
        console.log('Term "' + SEARCH_WORD + '" found at page ' + url +".");
        console.log("Sample: '... " + positionSample + " ...'");
+       require("openurl").open(url);
        //console.log("body text: " + bodyText);
        keepGoing = -1;
      } 

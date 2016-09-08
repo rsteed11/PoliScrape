@@ -20,7 +20,7 @@ request("https://www.reddit.com", function(error, response, body) {
     console.log("Score: " + score);
     console.log("User: " + user);
     //Will create file with information
-    //fs.appendFileSync('reddit.txt', title + '\n' + score + '\n' + user + '\n');
+    fs.appendFileSync('reddit.txt', title + '\n' + score + '\n' + user + '\n');
   });
 
 });

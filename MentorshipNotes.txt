@@ -67,7 +67,6 @@ TODO:
 //- Robots.txt?//
 - Work from html.
 
-
 LEARNED:
 
 - No PID... non-onyen Sakai login?
@@ -100,7 +99,33 @@ TODO:
 		- Saving a variety of searches in a server, to reduce search times
 		- Learn to use php within webpages - should be useful to have iwphys development environment
 
-	* Two options - get smarter or work harder
+LEARNED: 
+
+- Madison contact, when ready
+- Look through web crawler information to become more efficient
+- Deal with PDFs
+	* theory: used to be in two formats, PDF and text
+	* use test strings that get small number of hits - contained in paper
+	* Error analysis
+- Crack FRUS (economically), incrementally add target sites 
+- Solve Onyen problem, Sakai connection
+
+9-8
+
+TODO:
+
+- Investigate Lemur and similar text-parsing search tools
+- Look for proxy services that will expedite coding process
+- Record sources, current methodologies for Mentorship assignment
+
+LEARNED:
+
+- Installed lemur library, quite the process
+	- Lemur parses XML, HTML, PDF, etc. and streamlines search engines
+	- Would need to use Web Parser
+	- Not sure how this works when connecting to websites... seems more like you have a file and search it from terminal?
+- Scrapy
+	- In python
 				
 
 
