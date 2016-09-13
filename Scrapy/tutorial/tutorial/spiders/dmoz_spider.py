@@ -23,3 +23,5 @@ class DmozSpider(scrapy.Spider):
             item['link'] = sel.xpath('a/@href').extract()
             item['desc'] = sel.xpath('text()').extract()
             yield item
+
+        
