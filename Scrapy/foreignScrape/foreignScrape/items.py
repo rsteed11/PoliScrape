@@ -8,7 +8,12 @@
 import scrapy
 
 
-class ForeignscrapeItem(scrapy.Item):
+class foreignScrapeItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
-    pass
+    text = scrapy.Field()
+    author = scrapy.Field()
+    id = scrapy.Field()
+    name = scrapy.Field()
+    description = scrapy.Field()
+    
