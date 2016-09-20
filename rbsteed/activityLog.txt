@@ -1,0 +1,170 @@
+8-25
+
+TODO:
+
+//- Find book IBN//
+//- Look into, take notes on web crawling - try to start something?//
+//- Visit Undergrad Library to look into textbook//
+
+LEARNED: 
+- Google works so fast because it saves search results on server (not possible for us)
+- Jumping from site to site is relatively easy, but figuring out how to extract information from FRUS files is tougher
+- How to parse results so understandable?
+
+8-30
+
+TODO:
+
+//- Adapted search terms, returns text around search and formats text better. -//
+//- Trawled through Wisconsin, identified simple terms and brought back sample text. -//
+
+
+9-1
+
+TODO:
+
+//- Doesn't recognize some links?//
+- How to deal with PDFs: http://digicoll.library.wisc.edu/cgi-bin/FRUS/FRUS-idx?type=article&did=FRUS.FRUS1862v01.i0002&id=FRUS.FRUS1862v01&isize=M 
+//- Robots.txt?//
+- Work from html.
+
+LEARNED:
+
+- No PID... non-onyen Sakai login?
+- At Wisconsin, PDFs are scans - no text to analyze, but for the title.
+- All three websites used for testing do not have robots.txt files.
+- To do this from HTML
+	* Use php to exec(some unix command)
+	* Get result -> a file -> the html page
+
+9-6
+
+TODO:
+
+- For Dr. McKeown
+	* Demo web crawler proto - features:
+		- Visits web pages.
+		- Checks page status - 200 visited and available, 404 not found
+		- Searches for search term provided by converting page text to string, lowercase.
+		- If not found, collects searchable URLs from page and adds them to "toVisit" list - visits until term is found
+		- Stops at defined limit.
+		- Provides sample of text around search term, once found.
+	* Features to add:
+		- Visit robots.txt file and use that to search -- can't happen, none of the target links have a sitemap.
+		- Compile all search results and don't stop at first (harder)
+		- Put the search results in a more useful and comprehensible form - provide link to source.
+		- Deal with visual PDFs...
+	* Biggest challenges: 
+		- Refining search so that the crawler doesn't waste time - Office of the Historian great because all html, but bad because of lots of links!
+		- i.e., refine search locations - would be useful to have sitemap
+		- Saving a variety of searches in a server, to reduce search times
+		- Learn to use php within webpages - should be useful to have iwphys development environment
+
+LEARNED: 
+
+- Madison contact, when ready
+- Look through web crawler information to become more efficient
+- Deal with PDFs
+	* theory: used to be in two formats, PDF and text
+	* use test strings that get small number of hits - contained in paper
+	* Error analysis
+- Crack FRUS (economically), incrementally add target sites 
+- Solve Onyen problem, Sakai connection
+
+9-8
+
+TODO:
+
+- Investigate Lemur and similar text-parsing search tools
+- Look for proxy services that will expedite coding process
+- Record sources, current methodologies for Mentorship assignment
+
+LEARNED:
+
+- Installed lemur library, quite the process
+	- Lemur parses XML, HTML, PDF, etc. and streamlines search engines
+	- Would need to use Web Parser
+	- Not sure how this works when connecting to websites... seems more like you have a file and search it from terminal?
+- Scrapy
+	- In python
+	- Added new example crawler
+
+9-13 
+
+TODO:
+
+- Look into getting that textbook
+- Investigate results of Scrapy web crawler
+- Figure out what's going on in Sakai...
+- Investigate other proxy services at bookmarked page
+
+LEARNED:
+
+- Building working Scrapy proto
+
+9-15
+
+TODO:
+
+- Use Scrapyd to manage crawler
+- Investigate other proxies
+//- Textbook form//
+- Can't seem to get anything to print to page...
+				
+LEARNED:
+
+- Stuff is printing now!
+- New prototype that can scrape body paragraph - investigating ways to parse that data
+- Progress on Onyen
+
+9-20
+
+TODO:
+
+//- For Dr. McKeown:
+	- Looked at lemur project - can be used for text analysis.
+	- Open source web crawler scrapy:
+		- Framework for web searching
+		- Uses Python (a new language, but hasn't been hard to figure out)	
+		- Check out all those imports - this is why Scrapy is good
+		- Can print body text, just like in old prototype - fairly easy
+		- Set out rules to follow links on page - a bit more difficult, but much more customizable!!
+		- Can have multiple start urls and limit to a certain domain
+		- Also follows general bot rules - has manners
+		
+		- More efficient because it parses out specific data using tag collectors, items - faster, baby
+		- Scrapyd allows scheduling of crawls - will basically print to a directory which can be analyzed using Lemur, or something of the sort
+
+	- In conclusion: continue with "scraping" style, or back away and take the slower (hopeless) approach.
+
+	- Send Dr. McKeown the GitHub repo
+	- Onyen stuff?
+	- What next?
+		- Text analysis or further scraping?
+		- Some of the context we discussed - materials to look at
+		- Sakai course materials - what to focus on
+
+	- Notes:
+		- Unclassified classification manual. First 30-40 pages.
+		- NSA has best discussions of administrative politics.
+		- Sylvan and Majeski papers - more technical details than the textbook.
+		- Dr. McKeown might have some more stuff
+			- check his citations
+			- Benoit, Crimmer - technically advanced, inconsequential
+		- Political science papers are mostly proof of concept - not as oriented towards whether useful for theoretical questions//
+
+
+- How much space? Research.
+- Send GitHub repository.
+
+LEARNED:
+
+	- McKeown will give me more stuff.
+	- We might need more space.
+
+9-22
+
+TODO:
+
+	- How much space? Research.
+

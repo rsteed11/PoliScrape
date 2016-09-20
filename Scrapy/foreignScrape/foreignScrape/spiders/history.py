@@ -5,6 +5,7 @@ from scrapy.linkextractors import LinkExtractor
 from scrapy.selector import Selector
 ##from scrapy.http import HtmlResponse
 from foreignScrape.items import foreignScrapeItem
+from bs4 import BeautifulSoup
 
 class MySpider(CrawlSpider):
     name = 'history'
@@ -21,16 +22,20 @@ class MySpider(CrawlSpider):
     ##)
 
     def parse(self, response):
-        ##filename = 'body-' + response.url.split("/")[-2] + '.txt'
+        filename = 'body-' + response.url.split("/")[-2] + '.txt'
         analyzeThis = response.xpath("//body").extract_first()
         ##print(analyzeThis)
-        ##with open(filename, 'wb') as f:
-          ##  f.write(betterHere)
         item = foreignScrapeItem()
         item['text'] = analyzeThis
+        soup = BeautifulSoup(analyzeThis, 'lxml')
+        log = {
+            'url': response.url,
+            'title': soup.h1.string,
+            'body': soup.body.string
+        }
+        yield log
+        with open(filename, 'wb') as f:
+            f.write('log')
         ##yield item
-
-        for url in response.xpath('//a/@href').extract():
-            yield scrapy.Request(url, callback=self.parse)
-
-        
+        ##for url in response.xpath('//a/@href').extract():
+            ##yield scrapy.Request(url, callback=parse)
