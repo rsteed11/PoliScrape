@@ -1,5 +1,7 @@
-PoliScrape Activity Log
-Ryan Steed
+---------------- PoliScrape Activity Log ------------------
+------------------- Ryan Steed -----------
+
+Link to research journal: https://docs.google.com/document/d/13azVS2LlGunDKLAi91zUEvBUVs-EYhM4Ns51-xilf5g/edit.
 
 
 8-25
@@ -163,7 +165,7 @@ TODO:
 
 LEARNED:
 
-	- McKeown will give me more stuff.
+	- Dr. McKeown will give me more stuff.
 	- We might need more space.
 
 9-22
@@ -171,4 +173,5 @@ LEARNED:
 TODO:
 
 	- How much space? Research.
+	- Add copies of external resources to actual project for use... aagh
 
