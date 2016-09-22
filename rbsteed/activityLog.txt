@@ -174,4 +174,12 @@ TODO:
 
 	- How much space? Research.
 	- Add copies of external resources to actual project for use... aagh
+	- Follow scraped urls - callback.
+	- Get rid of extra stuff in result.
+	- Tie to html.
 
+LEARNED:
+
+	- Explanation of Modules, Classes and Objects - instantation: https://learnpythonthehardway.org/book/ex40.html
+	- Crawler now produces two files: links found and body text scraped.
+	- Some directory format changes.

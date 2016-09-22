@@ -9,6 +9,7 @@ from scrapy.selector import Selector
 ##from scrapy.http import HtmlResponse
 from foreignScrape.items import foreignScrapeItem
 from bs4 import BeautifulSoup
+import json
 
 class MySpider(CrawlSpider):
     #For scrapy command call:
@@ -51,15 +52,19 @@ class MySpider(CrawlSpider):
             'url': response.url,
             'title': soup.h1.string,
             'body': soup.body.get_text()
-            'links': links
         }
-        yield log
 
         #Print to a file.
-        filename = 'body-' + response.url.split("/")[-2] + '.txt'
+        bodyFile = '../json/text/body-' + response.url.split("/")[-2] + '.json'
+        urlFile = '../json/links/links-' + response.url.split("/")[-2] + '.json'
         #TODO: parse log to write to file.
-        with open(filename, 'wb') as f:
-            f.write('log')
+        with open(bodyFile, 'wb') as f:
+            f.write(json.dumps(log))
+        with open(urlFile, 'wb') as f:
+            f.write(json.dumps(links))
+
+        print("----------------Wrote text to " +bodyFile+ ".--------------------")
+        print("----------------Wrote links to " +urlFile+ ".--------------------")
 
         #Debugging Ryan Steed 20 Sep 2016
         ##yield item
