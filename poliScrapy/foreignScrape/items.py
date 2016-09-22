@@ -17,4 +17,5 @@ class foreignScrapeItem(scrapy.Item):
     name = scrapy.Field()
     description = scrapy.Field()
     bodyText = scrapy.Field()
+    urls = scrapy.Field()
     

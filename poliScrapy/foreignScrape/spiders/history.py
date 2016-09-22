@@ -15,7 +15,7 @@ class MySpider(CrawlSpider):
     #For scrapy command call:
     name = 'history'
     #Allowed domains for url searching?
-    allowed_domains = ['history.state.gov/historicaldocuments']
+    allowed_domains = ['history.state.gov']
     #Where to start:
     start_urls = ['https://history.state.gov/historicaldocuments']
 
@@ -33,16 +33,23 @@ class MySpider(CrawlSpider):
     
         analyzeThis = response.xpath("//body").extract_first()
         #Defined in items.py
-        item = foreignScrapeItem()
-        item['bodyText'] = analyzeThis
+        item = foreignScrapeItem()        
         #Beautiful Soup v4.1
         soup = BeautifulSoup(analyzeThis, 'lxml')
+        item['urls'] = soup.find_all('a')
         
         links = []
         #Can collect all links.
-        for link in soup.find_all('a'):
-            links.append(link.get('href'))
-        
+        for link in item['urls']:
+            url = link.get('href')
+            links.append(url)
+            #yield scrapy.Request(url, callback=self.parse)
+        for url in response.xpath('//a/@href').extract():
+            try:
+                yield scrapy.Request("https://history.state.gov/"+url, callback=self.parse)
+            except: 
+                print("Could not parse URL! Who knows why...")
+
         # Here's how to make stripped strings
         #for string in soup.stripped_strings:
         #    print(repr(string))
@@ -70,3 +77,7 @@ class MySpider(CrawlSpider):
         ##yield item
         ##for url in response.xpath('//a/@href').extract():
             ##yield scrapy.Request(url, callback=parse)
+
+        ##def parse_next(self, response):
+            # logs into next urls
+            #self.logger.info("Visited %s", response.url)
