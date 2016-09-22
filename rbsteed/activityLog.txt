@@ -183,3 +183,9 @@ LEARNED:
 	- Explanation of Modules, Classes and Objects - instantation: https://learnpythonthehardway.org/book/ex40.html
 	- Crawler now produces two files: links found and body text scraped.
 	- Some directory format changes.
+
+9-27
+
+TODO:
+	
+	- Read declassification materials first.
