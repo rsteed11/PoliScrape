@@ -57,7 +57,7 @@ class MySpider(CrawlSpider):
         #To print to screen or file
         log = {
             'url': response.url,
-            'title': soup.h1.string,
+            #'title': soup.title.string
             'body': soup.body.get_text()
         }
 

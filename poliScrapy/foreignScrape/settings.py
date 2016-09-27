@@ -22,12 +22,12 @@ NEWSPIDER_MODULE = 'foreignScrape.spiders'
 ROBOTSTXT_OBEY = True
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
-#CONCURRENT_REQUESTS = 32
+CONCURRENT_REQUESTS = 32
 
 # Configure a delay for requests for the same website (default: 0)
 # See http://scrapy.readthedocs.org/en/latest/topics/settings.html#download-delay
 # See also autothrottle settings and docs
-#DOWNLOAD_DELAY = 3
+DOWNLOAD_DELAY = 2
 # The download delay setting will honor only one of:
 #CONCURRENT_REQUESTS_PER_DOMAIN = 16
 #CONCURRENT_REQUESTS_PER_IP = 16
@@ -88,3 +88,17 @@ ROBOTSTXT_OBEY = True
 #HTTPCACHE_DIR = 'httpcache'
 #HTTPCACHE_IGNORE_HTTP_CODES = []
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
+
+
+# Ryan Steed 27 Sep 2016
+#Logging:
+LOG_FILE = 'spider.log'
+#URL Limit:
+EXTENSIONS = {
+	'scrapy.extensions.closespider.CloseSpider': 80,
+	'scrapy.extensions.logstats.LogStats': 80,
+}
+CLOSESPIDER_TIMEOUT = 5
+DEPTH_PRIORITY = 1
+
+

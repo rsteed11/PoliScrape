@@ -189,9 +189,44 @@ LEARNED:
 
 TODO:
 	
-	- Read declassification materials first - write up next research article.
+	//- Read declassification materials first - write up next research article?//
 	- Refine that url callback, baby - is it working properly? Are all searchables searched?
-	- Add copies of external resources to actual project for use... aagh
-	- Get rid of extra stuff in result.
+	- Reconcile Scrapy parsing and other parsing.
 	- Tie to html.
+	- Get rid of extra stuff in result.
+
+LEARNED: 
+
+	- On the wi-fi!
+	- Declassification notes (https://www.fas.org/sgp/othergov/intel/capco_reg_v6-0.pdf, pg. 28-38)
+		- Top Secret, Secret, Confidential, and Unclassified classification markings
+		- Originators of intelligence assign the classification marking
+		- RELIDO if without any guidance
+		- other markings for foreign release (NOFORN, Explicit Disclosure and Release)
+		- EO 13526 says info that could cause exceptionally grave damage to national security (defined by the original classification authority, OCA) is TOP Secret
+		- Secret can be mingled with other classification levels within the same document; info that could cause "serious" damage
+		- Confidential could reasonably cause damage to national security
+		- Unclassified is everything else
+		- REL TO USA, FVEY means good for Australia, Canada, New Zealand and UK too
+		- Special mark for releasable to UK even if secret
+		- Another for Japan
+		- Why only specific countries?
+		- the joint, NATO, non-US, non-intelligence, and “sensitive  compartmented information” classifications that makes up the bulk of the volume will be less than 1% of declassified material, so a quick skim of that material is enough
+	- Gov't Secrecy (https://fas.org/issues/government-secrecy/)
+		- Federation of American scientists works to promote public access
+
+	- Now print Scrapy stuff to a log
+	- Bug where only a set number of files download
+	- Attempt to use extensions to limit number of pages visited, or time spent
+
+9-29
+
+TODO:
+	
+	- Sylvan and Majeski article.
+	- Get scrapy to stop scraping.
+	- Get rid of unnecessary pages.
+	- Tie to html.
+
+LEARNED: 
 
