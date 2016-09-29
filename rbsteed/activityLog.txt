@@ -236,4 +236,31 @@ LEARNED:
 	- for timeout=30, produces 
 
 	- Sylvan and Majeski "How Foreign Policy Recommendations Are Put Together: A Computational Model with Empirical Applications"
-		- 
+		- computational model of how recommendations by U.S. policy makers are assembled in foreign policy
+		- policy is the connection of certain strings of words to other strings, explains foreign policy phenomena
+		- can model these strings with programming!
+		- the meaning of foreing policy acts (dropping bombs) can still be described by the words of high-level officials; activities are mostly verbal
+		- culture is problem-solving (sometimes a front for personal reasons), argumentative (oral and written arguments to persuade others), imperial in nature (client states, biggest problems for US are the ones client states can't solve and we have to step in on)
+		- consider modes of connecting things
+		- association of inputs yields outputs
+		- used archives heavily because they want to account for details of recommendations - want to predict kind of escalation advocated and reasons, not just that there is escalation suggested
+		- recommendations have specific goals; different "lines of policy" compete and the one that wins is the recommendation
+		- "tools" pursue goals and "missions" are the concrete things done; scale up and down these components when comparing solutions
+		- two groups of problems: those with current policy, and those that would arise if other policy were used
+		- Summary of Problems:
+			- current (an argument against using other policy)
+				- current proximate goal
+					- instrument
+					- action
+					- location
+				- mission
+				- reasons for current failure to accomplish goal
+				- assessment
+					- pure failure
+					- partial or improper implementation
+					- will eventually succeed
+		- The Model
+			- November 1961 debate over deployment to South Vietnam; Taylor and McNamara argued for major commitment south of 17th parallel
+			- generally good matches can be obtained for 51 other policy lines
+			- Works fairly well, kind of a stretch though
+
