@@ -10,6 +10,7 @@ from scrapy.selector import Selector
 from foreignScrape.items import foreignScrapeItem
 from bs4 import BeautifulSoup
 import json
+import re
 
 class MySpider(CrawlSpider):
     #For scrapy command call:
@@ -60,10 +61,9 @@ class MySpider(CrawlSpider):
             #'title': soup.title.string
             'body': soup.body.get_text()
         }
-
         #Print to a file.
-        bodyFile = '../json/text/body-' + response.url.split("/")[-2] + '.json'
-        urlFile = '../json/links/links-' + response.url.split("/")[-2] + '.json'
+        bodyFile = '../json/text/body-' + re.sub('http', '', re.sub('/', '-', re.sub('//', '', response.url))) + '.json'
+        urlFile = '../json/links/links-' + re.sub('http', '', re.sub('/', '-', re.sub('//', '', response.url))) + '.json'
         #TODO: parse log to write to file.
         with open(bodyFile, 'wb') as f:
             f.write(json.dumps(log))

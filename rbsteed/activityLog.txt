@@ -1,4 +1,4 @@
----------------- PoliScrape Activity Log ------------------
+	---------------- PoliScrape Activity Log ------------------
 ------------------- Ryan Steed -----------
 
 Link to research journal: https://docs.google.com/document/d/13azVS2LlGunDKLAi91zUEvBUVs-EYhM4Ns51-xilf5g/edit.
@@ -213,7 +213,7 @@ LEARNED:
 		- Why only specific countries?
 		- the joint, NATO, non-US, non-intelligence, and “sensitive  compartmented information” classifications that makes up the bulk of the volume will be less than 1% of declassified material, so a quick skim of that material is enough
 	- Gov't Secrecy (https://fas.org/issues/government-secrecy/)
-		- Federation of American scientists works to promote public access
+		- Federation of American Scientists works to promote public access
 
 	- Now print Scrapy stuff to a log
 	- Bug where only a set number of files download
@@ -224,9 +224,16 @@ LEARNED:
 TODO:
 	
 	- Sylvan and Majeski article.
-	- Get scrapy to stop scraping.
-	- Get rid of unnecessary pages.
+	//- Get scrapy to stop scraping.//
+	- Get rid of unnecessary pages?
 	- Tie to html.
 
 LEARNED: 
 
+	- Fixed wierd bug where only ten are printed - using pageCount instead of timeout for now.
+	- Adjusted file naming to avoid IOError
+	- Now running until timeout, replaces / with - and removes http and // to make file name
+	- for timeout=30, produces 
+
+	- Sylvan and Majeski "How Foreign Policy Recommendations Are Put Together: A Computational Model with Empirical Applications"
+		- 

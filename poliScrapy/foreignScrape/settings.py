@@ -92,13 +92,16 @@ DOWNLOAD_DELAY = 2
 
 # Ryan Steed 27 Sep 2016
 #Logging:
-LOG_FILE = 'spider.log'
+#LOG_FILE = 'spider.log'
 #URL Limit:
 EXTENSIONS = {
 	'scrapy.extensions.closespider.CloseSpider': 80,
 	'scrapy.extensions.logstats.LogStats': 80,
 }
-CLOSESPIDER_TIMEOUT = 5
+#CLOSESPIDER_PAGECOUNT = 5
+CLOSESPIDER_TIMEOUT = 30
+#CLOSESPIDER_ITEMCOUNT
+CLOSESPIDER_ERRORCOUNT = 30
 DEPTH_PRIORITY = 1
 
 
