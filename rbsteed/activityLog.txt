@@ -299,7 +299,21 @@ LEARNED
 	- "Leading the Conversation: Comparing State Department Communication Networks under Rogers and Kissinger", James Hollway and Jon Mellon
 		- Database of diplomatic communication within State Department from NARA diplomatic cables
 		- Used a 'novel citation typology' to analyze influence Secretary has over conversations emerging from networks of inter-cited messages
-		- 
+		- Does info come from the top or the bottom?
+		- who begins, manages, and ends conversations such that they are influencing the flow of information in the State Department?
+		- organizational chart of state dep.
+		- diplomatic cables still used much the same (since 1973!)
+		- Reasoning for bottom-up
+			- risk reduction
+			- cost reduction
+			- epistemic communities: expertise in their domains
+			- coalition building
+		- Top down
+			- information/processing advantages: more dedicated analysts
+			- principal-agent concerns: need to maintain control over embassies and avoid skewed reports
+			- heirarchy: clear lines of authority
+			- Nixon's distrust of state department
+		- graphed communications network; graphed typical communications structures
 
 
 
