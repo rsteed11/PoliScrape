@@ -223,7 +223,7 @@ LEARNED:
 
 TODO:
 	
-	- Sylvan and Majeski article.
+	//- Sylvan and Majeski article.//
 	//- Get scrapy to stop scraping.//
 	- Get rid of unnecessary pages?
 	- Tie to html.
@@ -263,4 +263,44 @@ LEARNED:
 			- November 1961 debate over deployment to South Vietnam; Taylor and McNamara argued for major commitment south of 17th parallel
 			- generally good matches can be obtained for 51 other policy lines
 			- Works fairly well, kind of a stretch though
+		- Takeaways:
+			- Interesting argument-based model
+			- Surprisingly good results, but very limited - not a prophet
+			- interesting that such limiting definitions can produce decent results (tools, etc.)
+			- application of this research? certainly seems modern
+
+10/4
+
+TODO: 
+	
+	- For Dr. McKeown
+		- Demonstrate Scrapy crawler results, explain further steps for parsing and specific tools added; URL callback is done and results are stored in JSON
+		- Next step is to remove all this extraneous text (one day job) and then send it on an extended crawl (set up a schedule to run over a weekend?)
+		- Go over article briefly, wi-fi problem solved, book coming in
+
+	- Read Holloway article
+	- Do the other html pages
+	- Set up test heirarchy
+	- Get rid of unnecessary pages?
+	- Tie to html with php file.
+		- before design text analysis, assess searching capabilities through PHP
+
+LEARNED
+
+	- Where do proximate goals archives come from in the first place? derivation of goal structure isn't derived, but is rather implicit
+	- Book is designed for general, non-technical audience; not as advanced as AI ambitions in article
+	- Foreign policy prophet seems to be the end goal, but is particularly ambitious
+	- Activity in the area is most likely not publicly available - conference papers appearing, batted around, vanishing (poster sessions that don't translate into papers)
+	- Sylvan and Majeski reassembly of strings reflect foreign policy decision-making, not highly constrained; who conducts activity and the subjects are very constrained
+		- high level decisions are constrained to around 5 people; things on the agenda can't be resolved at lower levels; certain communications are irrelevant to decision-making in this model
+		- decision-making system is closed in this case; informational input (text strings) but the processing is narrow and based solely on small group's reading of the situation
+	- Wisconsin people
+
+	- "Leading the Conversation: Comparing State Department Communication Networks under Rogers and Kissinger", James Hollway and Jon Mellon
+		- Database of diplomatic communication within State Department from NARA diplomatic cables
+		- Used a 'novel citation typology' to analyze influence Secretary has over conversations emerging from networks of inter-cited messages
+		- 
+
+
+
 

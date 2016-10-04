@@ -31,10 +31,15 @@ class MySpider(CrawlSpider):
     ##)
 
     def parse(self, response):
-    
-        analyzeThis = response.xpath("//body").extract_first()
+        #Debugging 04 Oct. 2016
+        #try:
+         #   analyzeThis = response.xpath("//body").extract_first().decode('utf-8', 'ignore')  
+        #except UnicodeError: 
+         #   value = unicode(value, "utf-8")
+        #else: 
+         #   analyzeThis = response.xpath("//body").extract_first()
         #Defined in items.py
-        item = foreignScrapeItem()        
+        item = foreignScrapeItem()
         #Beautiful Soup v4.1
         soup = BeautifulSoup(analyzeThis, 'lxml')
         item['urls'] = soup.find_all('a')
@@ -55,6 +60,9 @@ class MySpider(CrawlSpider):
         #for string in soup.stripped_strings:
         #    print(repr(string))
         
+        #Debugging 04 Oct 2016: convert to unicode string: 
+        #http://stackoverflow.com/questions/20205455/how-to-correctly-parse-utf-8-encoded-html-to-unicode-strings-with-beautifulsoup
+
         #To print to screen or file
         log = {
             'url': response.url,
@@ -72,6 +80,7 @@ class MySpider(CrawlSpider):
 
         print("----------------Wrote text to " +bodyFile+ ".--------------------")
         print("----------------Wrote links to " +urlFile+ ".--------------------")
+        print(log)
 
         #Debugging Ryan Steed 20 Sep 2016
         ##yield item
