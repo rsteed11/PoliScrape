@@ -1,0 +1,922 @@
+2016-10-06 15:13:30 [scrapy] INFO: Scrapy 1.1.2 started (bot: foreignScrape)
+2016-10-06 15:13:30 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'foreignScrape.spiders', 'FEED_URI': 'file:///Users/Ryan/PoliScrape/git/PoliScrape/poliScrapy/foreignScrape/spiders/items/poliScrapy/history/f705fdca8bf811e6a6f8a45e60edbd8f.jl', 'CONCURRENT_REQUESTS': 32, 'CLOSESPIDER_ERRORCOUNT': 30, 'BOT_NAME': 'foreignScrape', 'SPIDER_MODULES': ['foreignScrape.spiders'], 'ROBOTSTXT_OBEY': True, 'DEPTH_PRIORITY': 1, 'LOG_FILE': 'logs/poliScrapy/history/f705fdca8bf811e6a6f8a45e60edbd8f.log', 'DOWNLOAD_DELAY': 2}
+2016-10-06 15:13:30 [scrapy] INFO: Enabled extensions:
+['scrapy.extensions.feedexport.FeedExporter',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.closespider.CloseSpider',
+ 'scrapy.extensions.logstats.LogStats']
+2016-10-06 15:13:30 [scrapy] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.chunked.ChunkedTransferMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2016-10-06 15:13:30 [scrapy] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2016-10-06 15:13:30 [scrapy] INFO: Enabled item pipelines:
+[]
+2016-10-06 15:13:30 [scrapy] INFO: Spider opened
+2016-10-06 15:13:30 [scrapy] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2016-10-06 15:13:30 [scrapy] DEBUG: Telnet console listening on 127.0.0.1:6023
+2016-10-06 15:13:30 [scrapy] DEBUG: Crawled (200) <GET https://history.state.gov/robots.txt> (referer: None)
+2016-10-06 15:13:32 [scrapy] DEBUG: Crawled (200) <GET https://history.state.gov/historicaldocuments> (referer: None)
+2016-10-06 15:13:32 [scrapy] DEBUG: Filtered duplicate request: <GET https://history.state.gov//> - no more duplicates will be shown (see DUPEFILTER_DEBUG to show all duplicates)
+2016-10-06 15:13:32 [scrapy] ERROR: Spider error processing <GET https://history.state.gov/historicaldocuments> (referer: None)
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/referer.py", line 22, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "build/bdist.macosx-10.11-x86_64/egg/foreignScrape/spiders/history.py", line 71, in parse
+    with open(bodyFile, 'wb') as f:
+IOError: [Errno 2] No such file or directory: 'json/text/body-s:history.state.gov-historicaldocuments.json'
+2016-10-06 15:13:34 [scrapy] DEBUG: Crawled (200) <GET https://history.state.gov//about-the-beta> (referer: https://history.state.gov/historicaldocuments)
+2016-10-06 15:13:34 [scrapy] ERROR: Spider error processing <GET https://history.state.gov//about-the-beta> (referer: https://history.state.gov/historicaldocuments)
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/referer.py", line 22, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "build/bdist.macosx-10.11-x86_64/egg/foreignScrape/spiders/history.py", line 71, in parse
+    with open(bodyFile, 'wb') as f:
+IOError: [Errno 2] No such file or directory: 'json/text/body-s:history.state.govabout-the-beta.json'
+2016-10-06 15:13:37 [scrapy] DEBUG: Crawled (200) <GET https://history.state.gov//historicaldocuments/guide-to-sources-on-vietnam-1969-1975> (referer: https://history.state.gov/historicaldocuments)
+2016-10-06 15:13:37 [scrapy] ERROR: Spider error processing <GET https://history.state.gov//historicaldocuments/guide-to-sources-on-vietnam-1969-1975> (referer: https://history.state.gov/historicaldocuments)
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/referer.py", line 22, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "build/bdist.macosx-10.11-x86_64/egg/foreignScrape/spiders/history.py", line 71, in parse
+    with open(bodyFile, 'wb') as f:
+IOError: [Errno 2] No such file or directory: 'json/text/body-s:history.state.govhistoricaldocuments-guide-to-sources-on-vietnam-1969-1975.json'
+2016-10-06 15:13:39 [scrapy] DEBUG: Crawled (200) <GET https://history.state.gov//historicaldocuments/other-electronic-resources> (referer: https://history.state.gov/historicaldocuments)
+2016-10-06 15:13:39 [scrapy] ERROR: Spider error processing <GET https://history.state.gov//historicaldocuments/other-electronic-resources> (referer: https://history.state.gov/historicaldocuments)
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/referer.py", line 22, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "build/bdist.macosx-10.11-x86_64/egg/foreignScrape/spiders/history.py", line 71, in parse
+    with open(bodyFile, 'wb') as f:
+IOError: [Errno 2] No such file or directory: 'json/text/body-s:history.state.govhistoricaldocuments-other-electronic-resources.json'
+2016-10-06 15:13:42 [scrapy] DEBUG: Crawled (200) <GET https://history.state.gov//historicaldocuments/reagan> (referer: https://history.state.gov/historicaldocuments)
+2016-10-06 15:13:42 [scrapy] ERROR: Spider error processing <GET https://history.state.gov//historicaldocuments/reagan> (referer: https://history.state.gov/historicaldocuments)
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/referer.py", line 22, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "build/bdist.macosx-10.11-x86_64/egg/foreignScrape/spiders/history.py", line 71, in parse
+    with open(bodyFile, 'wb') as f:
+IOError: [Errno 2] No such file or directory: 'json/text/body-s:history.state.govhistoricaldocuments-reagan.json'
+2016-10-06 15:13:43 [scrapy] DEBUG: Crawled (200) <GET https://history.state.gov//historicaldocuments/carter> (referer: https://history.state.gov/historicaldocuments)
+2016-10-06 15:13:44 [scrapy] ERROR: Spider error processing <GET https://history.state.gov//historicaldocuments/carter> (referer: https://history.state.gov/historicaldocuments)
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/referer.py", line 22, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "build/bdist.macosx-10.11-x86_64/egg/foreignScrape/spiders/history.py", line 71, in parse
+    with open(bodyFile, 'wb') as f:
+IOError: [Errno 2] No such file or directory: 'json/text/body-s:history.state.govhistoricaldocuments-carter.json'
+2016-10-06 15:13:46 [scrapy] DEBUG: Crawled (200) <GET https://history.state.gov//historicaldocuments/nixon-ford> (referer: https://history.state.gov/historicaldocuments)
+2016-10-06 15:13:46 [scrapy] ERROR: Spider error processing <GET https://history.state.gov//historicaldocuments/nixon-ford> (referer: https://history.state.gov/historicaldocuments)
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/referer.py", line 22, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "build/bdist.macosx-10.11-x86_64/egg/foreignScrape/spiders/history.py", line 71, in parse
+    with open(bodyFile, 'wb') as f:
+IOError: [Errno 2] No such file or directory: 'json/text/body-s:history.state.govhistoricaldocuments-nixon-ford.json'
+2016-10-06 15:13:48 [scrapy] DEBUG: Crawled (200) <GET https://history.state.gov//historicaldocuments/johnson> (referer: https://history.state.gov/historicaldocuments)
+2016-10-06 15:13:48 [scrapy] ERROR: Spider error processing <GET https://history.state.gov//historicaldocuments/johnson> (referer: https://history.state.gov/historicaldocuments)
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/referer.py", line 22, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "build/bdist.macosx-10.11-x86_64/egg/foreignScrape/spiders/history.py", line 71, in parse
+    with open(bodyFile, 'wb') as f:
+IOError: [Errno 2] No such file or directory: 'json/text/body-s:history.state.govhistoricaldocuments-johnson.json'
+2016-10-06 15:13:50 [scrapy] DEBUG: Crawled (200) <GET https://history.state.gov//historicaldocuments/kennedy> (referer: https://history.state.gov/historicaldocuments)
+2016-10-06 15:13:50 [scrapy] ERROR: Spider error processing <GET https://history.state.gov//historicaldocuments/kennedy> (referer: https://history.state.gov/historicaldocuments)
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/referer.py", line 22, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "build/bdist.macosx-10.11-x86_64/egg/foreignScrape/spiders/history.py", line 71, in parse
+    with open(bodyFile, 'wb') as f:
+IOError: [Errno 2] No such file or directory: 'json/text/body-s:history.state.govhistoricaldocuments-kennedy.json'
+2016-10-06 15:13:53 [scrapy] DEBUG: Crawled (200) <GET https://history.state.gov//historicaldocuments/eisenhower> (referer: https://history.state.gov/historicaldocuments)
+2016-10-06 15:13:53 [scrapy] ERROR: Spider error processing <GET https://history.state.gov//historicaldocuments/eisenhower> (referer: https://history.state.gov/historicaldocuments)
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/referer.py", line 22, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "build/bdist.macosx-10.11-x86_64/egg/foreignScrape/spiders/history.py", line 71, in parse
+    with open(bodyFile, 'wb') as f:
+IOError: [Errno 2] No such file or directory: 'json/text/body-s:history.state.govhistoricaldocuments-eisenhower.json'
+2016-10-06 15:13:55 [scrapy] DEBUG: Crawled (200) <GET https://history.state.gov//historicaldocuments/truman> (referer: https://history.state.gov/historicaldocuments)
+2016-10-06 15:13:56 [scrapy] ERROR: Spider error processing <GET https://history.state.gov//historicaldocuments/truman> (referer: https://history.state.gov/historicaldocuments)
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/referer.py", line 22, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "build/bdist.macosx-10.11-x86_64/egg/foreignScrape/spiders/history.py", line 71, in parse
+    with open(bodyFile, 'wb') as f:
+IOError: [Errno 2] No such file or directory: 'json/text/body-s:history.state.govhistoricaldocuments-truman.json'
+2016-10-06 15:13:59 [scrapy] DEBUG: Crawled (200) <GET https://history.state.gov//historicaldocuments/pre-truman> (referer: https://history.state.gov/historicaldocuments)
+2016-10-06 15:13:59 [scrapy] ERROR: Spider error processing <GET https://history.state.gov//historicaldocuments/pre-truman> (referer: https://history.state.gov/historicaldocuments)
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/referer.py", line 22, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "build/bdist.macosx-10.11-x86_64/egg/foreignScrape/spiders/history.py", line 71, in parse
+    with open(bodyFile, 'wb') as f:
+IOError: [Errno 2] No such file or directory: 'json/text/body-s:history.state.govhistoricaldocuments-pre-truman.json'
+2016-10-06 15:14:01 [scrapy] DEBUG: Crawled (200) <GET https://history.state.gov//search?within=documents> (referer: https://history.state.gov/historicaldocuments)
+2016-10-06 15:14:01 [scrapy] ERROR: Spider error processing <GET https://history.state.gov//search?within=documents> (referer: https://history.state.gov/historicaldocuments)
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/referer.py", line 22, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "build/bdist.macosx-10.11-x86_64/egg/foreignScrape/spiders/history.py", line 71, in parse
+    with open(bodyFile, 'wb') as f:
+IOError: [Errno 2] No such file or directory: 'json/text/body-s:history.state.govsearch?within=documents.json'
+2016-10-06 15:14:04 [scrapy] DEBUG: Crawled (200) <GET https://history.state.gov//open> (referer: https://history.state.gov/historicaldocuments)
+2016-10-06 15:14:04 [scrapy] ERROR: Spider error processing <GET https://history.state.gov//open> (referer: https://history.state.gov/historicaldocuments)
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/referer.py", line 22, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "build/bdist.macosx-10.11-x86_64/egg/foreignScrape/spiders/history.py", line 71, in parse
+    with open(bodyFile, 'wb') as f:
+IOError: [Errno 2] No such file or directory: 'json/text/body-s:history.state.govopen.json'
+2016-10-06 15:14:06 [scrapy] DEBUG: Crawled (200) <GET https://history.state.gov//about/faq> (referer: https://history.state.gov/historicaldocuments)
+2016-10-06 15:14:06 [scrapy] ERROR: Spider error processing <GET https://history.state.gov//about/faq> (referer: https://history.state.gov/historicaldocuments)
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/referer.py", line 22, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "build/bdist.macosx-10.11-x86_64/egg/foreignScrape/spiders/history.py", line 71, in parse
+    with open(bodyFile, 'wb') as f:
+IOError: [Errno 2] No such file or directory: 'json/text/body-s:history.state.govabout-faq.json'
+2016-10-06 15:14:09 [scrapy] DEBUG: Crawled (200) <GET https://history.state.gov//education> (referer: https://history.state.gov/historicaldocuments)
+2016-10-06 15:14:09 [scrapy] ERROR: Spider error processing <GET https://history.state.gov//education> (referer: https://history.state.gov/historicaldocuments)
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/referer.py", line 22, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "build/bdist.macosx-10.11-x86_64/egg/foreignScrape/spiders/history.py", line 71, in parse
+    with open(bodyFile, 'wb') as f:
+IOError: [Errno 2] No such file or directory: 'json/text/body-s:history.state.goveducation.json'
+2016-10-06 15:14:11 [scrapy] DEBUG: Crawled (200) <GET https://history.state.gov//developer> (referer: https://history.state.gov/historicaldocuments)
+2016-10-06 15:14:11 [scrapy] ERROR: Spider error processing <GET https://history.state.gov//developer> (referer: https://history.state.gov/historicaldocuments)
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/referer.py", line 22, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "build/bdist.macosx-10.11-x86_64/egg/foreignScrape/spiders/history.py", line 71, in parse
+    with open(bodyFile, 'wb') as f:
+IOError: [Errno 2] No such file or directory: 'json/text/body-s:history.state.govdeveloper.json'
+2016-10-06 15:14:14 [scrapy] DEBUG: Crawled (200) <GET https://history.state.gov//about/contact-us> (referer: https://history.state.gov/historicaldocuments)
+2016-10-06 15:14:14 [scrapy] ERROR: Spider error processing <GET https://history.state.gov//about/contact-us> (referer: https://history.state.gov/historicaldocuments)
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/referer.py", line 22, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "build/bdist.macosx-10.11-x86_64/egg/foreignScrape/spiders/history.py", line 71, in parse
+    with open(bodyFile, 'wb') as f:
+IOError: [Errno 2] No such file or directory: 'json/text/body-s:history.state.govabout-contact-us.json'
+2016-10-06 15:14:17 [scrapy] DEBUG: Crawled (200) <GET https://history.state.gov//conferences> (referer: https://history.state.gov/historicaldocuments)
+2016-10-06 15:14:17 [scrapy] ERROR: Spider error processing <GET https://history.state.gov//conferences> (referer: https://history.state.gov/historicaldocuments)
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/referer.py", line 22, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "build/bdist.macosx-10.11-x86_64/egg/foreignScrape/spiders/history.py", line 71, in parse
+    with open(bodyFile, 'wb') as f:
+IOError: [Errno 2] No such file or directory: 'json/text/body-s:history.state.govconferences.json'
+2016-10-06 15:14:19 [scrapy] DEBUG: Crawled (200) <GET https://history.state.gov//tags> (referer: https://history.state.gov/historicaldocuments)
+2016-10-06 15:14:19 [scrapy] ERROR: Spider error processing <GET https://history.state.gov//tags> (referer: https://history.state.gov/historicaldocuments)
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/referer.py", line 22, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "build/bdist.macosx-10.11-x86_64/egg/foreignScrape/spiders/history.py", line 71, in parse
+    with open(bodyFile, 'wb') as f:
+IOError: [Errno 2] No such file or directory: 'json/text/body-s:history.state.govtags.json'
+2016-10-06 15:14:21 [scrapy] DEBUG: Crawled (200) <GET https://history.state.gov//about> (referer: https://history.state.gov/historicaldocuments)
+2016-10-06 15:14:21 [scrapy] ERROR: Spider error processing <GET https://history.state.gov//about> (referer: https://history.state.gov/historicaldocuments)
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/referer.py", line 22, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "build/bdist.macosx-10.11-x86_64/egg/foreignScrape/spiders/history.py", line 71, in parse
+    with open(bodyFile, 'wb') as f:
+IOError: [Errno 2] No such file or directory: 'json/text/body-s:history.state.govabout.json'
+2016-10-06 15:14:23 [scrapy] DEBUG: Crawled (200) <GET https://history.state.gov/> (referer: https://history.state.gov/historicaldocuments)
+2016-10-06 15:14:23 [scrapy] ERROR: Spider error processing <GET https://history.state.gov/> (referer: https://history.state.gov/historicaldocuments)
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/referer.py", line 22, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "build/bdist.macosx-10.11-x86_64/egg/foreignScrape/spiders/history.py", line 71, in parse
+    with open(bodyFile, 'wb') as f:
+IOError: [Errno 2] No such file or directory: 'json/text/body-s:history.state.gov-.json'
+2016-10-06 15:14:26 [scrapy] DEBUG: Crawled (200) <GET https://history.state.gov//countries/archives> (referer: https://history.state.gov/historicaldocuments)
+2016-10-06 15:14:26 [scrapy] ERROR: Spider error processing <GET https://history.state.gov//countries/archives> (referer: https://history.state.gov/historicaldocuments)
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/referer.py", line 22, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "build/bdist.macosx-10.11-x86_64/egg/foreignScrape/spiders/history.py", line 71, in parse
+    with open(bodyFile, 'wb') as f:
+IOError: [Errno 2] No such file or directory: 'json/text/body-s:history.state.govcountries-archives.json'
+2016-10-06 15:14:28 [scrapy] DEBUG: Crawled (200) <GET https://history.state.gov//countries> (referer: https://history.state.gov/historicaldocuments)
+2016-10-06 15:14:29 [scrapy] ERROR: Spider error processing <GET https://history.state.gov//countries> (referer: https://history.state.gov/historicaldocuments)
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/referer.py", line 22, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "build/bdist.macosx-10.11-x86_64/egg/foreignScrape/spiders/history.py", line 71, in parse
+    with open(bodyFile, 'wb') as f:
+IOError: [Errno 2] No such file or directory: 'json/text/body-s:history.state.govcountries.json'
+2016-10-06 15:14:30 [scrapy] INFO: Crawled 25 pages (at 25 pages/min), scraped 0 items (at 0 items/min)
+2016-10-06 15:14:31 [scrapy] DEBUG: Crawled (200) <GET https://history.state.gov//milestones/1993-2000> (referer: https://history.state.gov/historicaldocuments)
+2016-10-06 15:14:31 [scrapy] ERROR: Spider error processing <GET https://history.state.gov//milestones/1993-2000> (referer: https://history.state.gov/historicaldocuments)
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/referer.py", line 22, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "build/bdist.macosx-10.11-x86_64/egg/foreignScrape/spiders/history.py", line 71, in parse
+    with open(bodyFile, 'wb') as f:
+IOError: [Errno 2] No such file or directory: 'json/text/body-s:history.state.govmilestones-1993-2000.json'
+2016-10-06 15:14:34 [scrapy] DEBUG: Crawled (200) <GET https://history.state.gov//milestones/1989-1992> (referer: https://history.state.gov/historicaldocuments)
+2016-10-06 15:14:34 [scrapy] ERROR: Spider error processing <GET https://history.state.gov//milestones/1989-1992> (referer: https://history.state.gov/historicaldocuments)
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/referer.py", line 22, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "build/bdist.macosx-10.11-x86_64/egg/foreignScrape/spiders/history.py", line 71, in parse
+    with open(bodyFile, 'wb') as f:
+IOError: [Errno 2] No such file or directory: 'json/text/body-s:history.state.govmilestones-1989-1992.json'
+2016-10-06 15:14:35 [scrapy] DEBUG: Crawled (200) <GET https://history.state.gov//milestones/1981-1988> (referer: https://history.state.gov/historicaldocuments)
+2016-10-06 15:14:35 [scrapy] ERROR: Spider error processing <GET https://history.state.gov//milestones/1981-1988> (referer: https://history.state.gov/historicaldocuments)
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/referer.py", line 22, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "build/bdist.macosx-10.11-x86_64/egg/foreignScrape/spiders/history.py", line 71, in parse
+    with open(bodyFile, 'wb') as f:
+IOError: [Errno 2] No such file or directory: 'json/text/body-s:history.state.govmilestones-1981-1988.json'
+2016-10-06 15:14:37 [scrapy] DEBUG: Crawled (200) <GET https://history.state.gov//milestones/1977-1980> (referer: https://history.state.gov/historicaldocuments)
+2016-10-06 15:14:38 [scrapy] ERROR: Spider error processing <GET https://history.state.gov//milestones/1977-1980> (referer: https://history.state.gov/historicaldocuments)
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/referer.py", line 22, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "build/bdist.macosx-10.11-x86_64/egg/foreignScrape/spiders/history.py", line 71, in parse
+    with open(bodyFile, 'wb') as f:
+IOError: [Errno 2] No such file or directory: 'json/text/body-s:history.state.govmilestones-1977-1980.json'
+2016-10-06 15:14:39 [scrapy] DEBUG: Crawled (200) <GET https://history.state.gov//milestones/1969-1976> (referer: https://history.state.gov/historicaldocuments)
+2016-10-06 15:14:40 [scrapy] ERROR: Spider error processing <GET https://history.state.gov//milestones/1969-1976> (referer: https://history.state.gov/historicaldocuments)
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/referer.py", line 22, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "build/bdist.macosx-10.11-x86_64/egg/foreignScrape/spiders/history.py", line 71, in parse
+    with open(bodyFile, 'wb') as f:
+IOError: [Errno 2] No such file or directory: 'json/text/body-s:history.state.govmilestones-1969-1976.json'
+2016-10-06 15:14:41 [scrapy] DEBUG: Crawled (200) <GET https://history.state.gov//milestones/1961-1968> (referer: https://history.state.gov/historicaldocuments)
+2016-10-06 15:14:42 [scrapy] ERROR: Spider error processing <GET https://history.state.gov//milestones/1961-1968> (referer: https://history.state.gov/historicaldocuments)
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/referer.py", line 22, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "build/bdist.macosx-10.11-x86_64/egg/foreignScrape/spiders/history.py", line 71, in parse
+    with open(bodyFile, 'wb') as f:
+IOError: [Errno 2] No such file or directory: 'json/text/body-s:history.state.govmilestones-1961-1968.json'
+2016-10-06 15:14:42 [scrapy] INFO: Closing spider (closespider_errorcount)
+2016-10-06 15:14:43 [scrapy] DEBUG: Crawled (200) <GET https://history.state.gov//milestones/1953-1960> (referer: https://history.state.gov/historicaldocuments)
+2016-10-06 15:14:44 [scrapy] ERROR: Spider error processing <GET https://history.state.gov//milestones/1953-1960> (referer: https://history.state.gov/historicaldocuments)
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/referer.py", line 22, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "build/bdist.macosx-10.11-x86_64/egg/foreignScrape/spiders/history.py", line 71, in parse
+    with open(bodyFile, 'wb') as f:
+IOError: [Errno 2] No such file or directory: 'json/text/body-s:history.state.govmilestones-1953-1960.json'
+2016-10-06 15:14:45 [scrapy] DEBUG: Crawled (200) <GET https://history.state.gov//milestones/1945-1952> (referer: https://history.state.gov/historicaldocuments)
+2016-10-06 15:14:46 [scrapy] ERROR: Spider error processing <GET https://history.state.gov//milestones/1945-1952> (referer: https://history.state.gov/historicaldocuments)
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/referer.py", line 22, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "build/bdist.macosx-10.11-x86_64/egg/foreignScrape/spiders/history.py", line 71, in parse
+    with open(bodyFile, 'wb') as f:
+IOError: [Errno 2] No such file or directory: 'json/text/body-s:history.state.govmilestones-1945-1952.json'
+2016-10-06 15:14:48 [scrapy] DEBUG: Crawled (200) <GET https://history.state.gov//milestones/1937-1945> (referer: https://history.state.gov/historicaldocuments)
+2016-10-06 15:14:49 [scrapy] ERROR: Spider error processing <GET https://history.state.gov//milestones/1937-1945> (referer: https://history.state.gov/historicaldocuments)
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/referer.py", line 22, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "build/bdist.macosx-10.11-x86_64/egg/foreignScrape/spiders/history.py", line 71, in parse
+    with open(bodyFile, 'wb') as f:
+IOError: [Errno 2] No such file or directory: 'json/text/body-s:history.state.govmilestones-1937-1945.json'
+2016-10-06 15:14:50 [scrapy] DEBUG: Crawled (404) <GET https://history.state.gov/mailto:history@state.gov> (referer: https://history.state.gov/historicaldocuments)
+2016-10-06 15:14:50 [scrapy] DEBUG: Ignoring response <404 https://history.state.gov/mailto:history@state.gov>: HTTP status code is not handled or not allowed
+2016-10-06 15:14:53 [scrapy] DEBUG: Crawled (404) <GET https://history.state.gov/http://www.state.gov> (referer: https://history.state.gov/historicaldocuments)
+2016-10-06 15:14:53 [scrapy] DEBUG: Ignoring response <404 https://history.state.gov/http://www.state.gov>: HTTP status code is not handled or not allowed
+2016-10-06 15:14:55 [scrapy] DEBUG: Crawled (404) <GET https://history.state.gov/http://www.state.gov/misc/152386.htm> (referer: https://history.state.gov/historicaldocuments)
+2016-10-06 15:14:55 [scrapy] DEBUG: Ignoring response <404 https://history.state.gov/http://www.state.gov/misc/152386.htm>: HTTP status code is not handled or not allowed
+2016-10-06 15:14:57 [scrapy] DEBUG: Crawled (404) <GET https://history.state.gov/http://www.state.gov/misc/87529.htm#privacy> (referer: https://history.state.gov/historicaldocuments)
+2016-10-06 15:14:57 [scrapy] DEBUG: Ignoring response <404 https://history.state.gov/http://www.state.gov/misc/87529.htm>: HTTP status code is not handled or not allowed
+2016-10-06 15:14:59 [scrapy] DEBUG: Redirecting (302) to <GET https://history.state.gov/about> from <GET https://history.state.gov//about/>
+2016-10-06 15:15:02 [scrapy] DEBUG: Redirecting (302) to <GET https://history.state.gov/milestones> from <GET https://history.state.gov//milestones/>
+2016-10-06 15:15:05 [scrapy] DEBUG: Redirecting (302) to <GET https://history.state.gov/countries> from <GET https://history.state.gov//countries/>
+2016-10-06 15:15:06 [scrapy] DEBUG: Redirecting (302) to <GET https://history.state.gov/departmenthistory> from <GET https://history.state.gov//departmenthistory/>
+2016-10-06 15:15:09 [scrapy] DEBUG: Redirecting (302) to <GET https://history.state.gov/historicaldocuments> from <GET https://history.state.gov//historicaldocuments/>
+2016-10-06 15:15:12 [scrapy] DEBUG: Crawled (200) <GET https://history.state.gov//search> (referer: https://history.state.gov/historicaldocuments)
+2016-10-06 15:15:12 [scrapy] ERROR: Spider error processing <GET https://history.state.gov//search> (referer: https://history.state.gov/historicaldocuments)
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/referer.py", line 22, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "build/bdist.macosx-10.11-x86_64/egg/foreignScrape/spiders/history.py", line 71, in parse
+    with open(bodyFile, 'wb') as f:
+IOError: [Errno 2] No such file or directory: 'json/text/body-s:history.state.govsearch.json'
+2016-10-06 15:15:14 [scrapy] DEBUG: Crawled (200) <GET https://history.state.gov//historicaldocuments/citing-frus> (referer: https://history.state.gov/historicaldocuments)
+2016-10-06 15:15:14 [scrapy] ERROR: Spider error processing <GET https://history.state.gov//historicaldocuments/citing-frus> (referer: https://history.state.gov/historicaldocuments)
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/referer.py", line 22, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "build/bdist.macosx-10.11-x86_64/egg/foreignScrape/spiders/history.py", line 71, in parse
+    with open(bodyFile, 'wb') as f:
+IOError: [Errno 2] No such file or directory: 'json/text/body-s:history.state.govhistoricaldocuments-citing-frus.json'
+2016-10-06 15:15:17 [scrapy] DEBUG: Crawled (200) <GET https://history.state.gov//search/tips> (referer: https://history.state.gov/historicaldocuments)
+2016-10-06 15:15:17 [scrapy] ERROR: Spider error processing <GET https://history.state.gov//search/tips> (referer: https://history.state.gov/historicaldocuments)
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/referer.py", line 22, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "build/bdist.macosx-10.11-x86_64/egg/foreignScrape/spiders/history.py", line 71, in parse
+    with open(bodyFile, 'wb') as f:
+IOError: [Errno 2] No such file or directory: 'json/text/body-s:history.state.govsearch-tips.json'
+2016-10-06 15:15:20 [scrapy] DEBUG: Crawled (200) <GET https://history.state.gov//milestones/1921-1936> (referer: https://history.state.gov/historicaldocuments)
+2016-10-06 15:15:20 [scrapy] ERROR: Spider error processing <GET https://history.state.gov//milestones/1921-1936> (referer: https://history.state.gov/historicaldocuments)
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/referer.py", line 22, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "build/bdist.macosx-10.11-x86_64/egg/foreignScrape/spiders/history.py", line 71, in parse
+    with open(bodyFile, 'wb') as f:
+IOError: [Errno 2] No such file or directory: 'json/text/body-s:history.state.govmilestones-1921-1936.json'
+2016-10-06 15:15:23 [scrapy] DEBUG: Crawled (200) <GET https://history.state.gov//milestones/1914-1920> (referer: https://history.state.gov/historicaldocuments)
+2016-10-06 15:15:23 [scrapy] ERROR: Spider error processing <GET https://history.state.gov//milestones/1914-1920> (referer: https://history.state.gov/historicaldocuments)
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/referer.py", line 22, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "build/bdist.macosx-10.11-x86_64/egg/foreignScrape/spiders/history.py", line 71, in parse
+    with open(bodyFile, 'wb') as f:
+IOError: [Errno 2] No such file or directory: 'json/text/body-s:history.state.govmilestones-1914-1920.json'
+2016-10-06 15:15:25 [scrapy] DEBUG: Crawled (200) <GET https://history.state.gov//milestones/1899-1913> (referer: https://history.state.gov/historicaldocuments)
+2016-10-06 15:15:25 [scrapy] ERROR: Spider error processing <GET https://history.state.gov//milestones/1899-1913> (referer: https://history.state.gov/historicaldocuments)
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/referer.py", line 22, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "build/bdist.macosx-10.11-x86_64/egg/foreignScrape/spiders/history.py", line 71, in parse
+    with open(bodyFile, 'wb') as f:
+IOError: [Errno 2] No such file or directory: 'json/text/body-s:history.state.govmilestones-1899-1913.json'
+2016-10-06 15:15:27 [scrapy] DEBUG: Crawled (200) <GET https://history.state.gov//milestones/1866-1898> (referer: https://history.state.gov/historicaldocuments)
+2016-10-06 15:15:27 [scrapy] ERROR: Spider error processing <GET https://history.state.gov//milestones/1866-1898> (referer: https://history.state.gov/historicaldocuments)
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/referer.py", line 22, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "build/bdist.macosx-10.11-x86_64/egg/foreignScrape/spiders/history.py", line 71, in parse
+    with open(bodyFile, 'wb') as f:
+IOError: [Errno 2] No such file or directory: 'json/text/body-s:history.state.govmilestones-1866-1898.json'
+2016-10-06 15:15:30 [scrapy] INFO: Crawled 45 pages (at 20 pages/min), scraped 0 items (at 0 items/min)
+2016-10-06 15:15:30 [scrapy] DEBUG: Crawled (200) <GET https://history.state.gov//milestones/1861-1865> (referer: https://history.state.gov/historicaldocuments)
+2016-10-06 15:15:30 [scrapy] ERROR: Spider error processing <GET https://history.state.gov//milestones/1861-1865> (referer: https://history.state.gov/historicaldocuments)
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/referer.py", line 22, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "build/bdist.macosx-10.11-x86_64/egg/foreignScrape/spiders/history.py", line 71, in parse
+    with open(bodyFile, 'wb') as f:
+IOError: [Errno 2] No such file or directory: 'json/text/body-s:history.state.govmilestones-1861-1865.json'
+2016-10-06 15:15:32 [scrapy] DEBUG: Crawled (200) <GET https://history.state.gov//milestones/1830-1860> (referer: https://history.state.gov/historicaldocuments)
+2016-10-06 15:15:32 [scrapy] ERROR: Spider error processing <GET https://history.state.gov//milestones/1830-1860> (referer: https://history.state.gov/historicaldocuments)
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/referer.py", line 22, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "build/bdist.macosx-10.11-x86_64/egg/foreignScrape/spiders/history.py", line 71, in parse
+    with open(bodyFile, 'wb') as f:
+IOError: [Errno 2] No such file or directory: 'json/text/body-s:history.state.govmilestones-1830-1860.json'
+2016-10-06 15:15:35 [scrapy] DEBUG: Crawled (200) <GET https://history.state.gov//milestones/1801-1829> (referer: https://history.state.gov/historicaldocuments)
+2016-10-06 15:15:35 [scrapy] ERROR: Spider error processing <GET https://history.state.gov//milestones/1801-1829> (referer: https://history.state.gov/historicaldocuments)
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/referer.py", line 22, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "build/bdist.macosx-10.11-x86_64/egg/foreignScrape/spiders/history.py", line 71, in parse
+    with open(bodyFile, 'wb') as f:
+IOError: [Errno 2] No such file or directory: 'json/text/body-s:history.state.govmilestones-1801-1829.json'
+2016-10-06 15:15:37 [scrapy] DEBUG: Crawled (200) <GET https://history.state.gov//milestones/1784-1800> (referer: https://history.state.gov/historicaldocuments)
+2016-10-06 15:15:37 [scrapy] ERROR: Spider error processing <GET https://history.state.gov//milestones/1784-1800> (referer: https://history.state.gov/historicaldocuments)
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/referer.py", line 22, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "build/bdist.macosx-10.11-x86_64/egg/foreignScrape/spiders/history.py", line 71, in parse
+    with open(bodyFile, 'wb') as f:
+IOError: [Errno 2] No such file or directory: 'json/text/body-s:history.state.govmilestones-1784-1800.json'
+2016-10-06 15:15:40 [scrapy] DEBUG: Crawled (200) <GET https://history.state.gov//milestones/1776-1783> (referer: https://history.state.gov/historicaldocuments)
+2016-10-06 15:15:40 [scrapy] ERROR: Spider error processing <GET https://history.state.gov//milestones/1776-1783> (referer: https://history.state.gov/historicaldocuments)
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/referer.py", line 22, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "build/bdist.macosx-10.11-x86_64/egg/foreignScrape/spiders/history.py", line 71, in parse
+    with open(bodyFile, 'wb') as f:
+IOError: [Errno 2] No such file or directory: 'json/text/body-s:history.state.govmilestones-1776-1783.json'
+2016-10-06 15:15:43 [scrapy] DEBUG: Crawled (200) <GET https://history.state.gov//milestones/1750-1775> (referer: https://history.state.gov/historicaldocuments)
+2016-10-06 15:15:43 [scrapy] ERROR: Spider error processing <GET https://history.state.gov//milestones/1750-1775> (referer: https://history.state.gov/historicaldocuments)
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/referer.py", line 22, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "build/bdist.macosx-10.11-x86_64/egg/foreignScrape/spiders/history.py", line 71, in parse
+    with open(bodyFile, 'wb') as f:
+IOError: [Errno 2] No such file or directory: 'json/text/body-s:history.state.govmilestones-1750-1775.json'
+2016-10-06 15:15:45 [scrapy] DEBUG: Crawled (200) <GET https://history.state.gov//milestones> (referer: https://history.state.gov/historicaldocuments)
+2016-10-06 15:15:45 [scrapy] ERROR: Spider error processing <GET https://history.state.gov//milestones> (referer: https://history.state.gov/historicaldocuments)
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/referer.py", line 22, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "build/bdist.macosx-10.11-x86_64/egg/foreignScrape/spiders/history.py", line 71, in parse
+    with open(bodyFile, 'wb') as f:
+IOError: [Errno 2] No such file or directory: 'json/text/body-s:history.state.govmilestones.json'
+2016-10-06 15:15:47 [scrapy] DEBUG: Crawled (200) <GET https://history.state.gov//departmenthistory/diplomatic-couriers> (referer: https://history.state.gov/historicaldocuments)
+2016-10-06 15:15:47 [scrapy] ERROR: Spider error processing <GET https://history.state.gov//departmenthistory/diplomatic-couriers> (referer: https://history.state.gov/historicaldocuments)
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/referer.py", line 22, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "build/bdist.macosx-10.11-x86_64/egg/foreignScrape/spiders/history.py", line 71, in parse
+    with open(bodyFile, 'wb') as f:
+IOError: [Errno 2] No such file or directory: 'json/text/body-s:history.state.govdepartmenthistory-diplomatic-couriers.json'
+2016-10-06 15:15:49 [scrapy] DEBUG: Crawled (200) <GET https://history.state.gov//departmenthistory/buildings> (referer: https://history.state.gov/historicaldocuments)
+2016-10-06 15:15:49 [scrapy] ERROR: Spider error processing <GET https://history.state.gov//departmenthistory/buildings> (referer: https://history.state.gov/historicaldocuments)
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/referer.py", line 22, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "build/bdist.macosx-10.11-x86_64/egg/foreignScrape/spiders/history.py", line 71, in parse
+    with open(bodyFile, 'wb') as f:
+IOError: [Errno 2] No such file or directory: 'json/text/body-s:history.state.govdepartmenthistory-buildings.json'
+2016-10-06 15:15:51 [scrapy] DEBUG: Crawled (200) <GET https://history.state.gov//departmenthistory/wwi> (referer: https://history.state.gov/historicaldocuments)
+2016-10-06 15:15:51 [scrapy] ERROR: Spider error processing <GET https://history.state.gov//departmenthistory/wwi> (referer: https://history.state.gov/historicaldocuments)
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/referer.py", line 22, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "build/bdist.macosx-10.11-x86_64/egg/foreignScrape/spiders/history.py", line 71, in parse
+    with open(bodyFile, 'wb') as f:
+IOError: [Errno 2] No such file or directory: 'json/text/body-s:history.state.govdepartmenthistory-wwi.json'
+2016-10-06 15:15:54 [scrapy] DEBUG: Crawled (200) <GET https://history.state.gov//departmenthistory/visits> (referer: https://history.state.gov/historicaldocuments)
+2016-10-06 15:15:54 [scrapy] ERROR: Spider error processing <GET https://history.state.gov//departmenthistory/visits> (referer: https://history.state.gov/historicaldocuments)
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/referer.py", line 22, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "build/bdist.macosx-10.11-x86_64/egg/foreignScrape/spiders/history.py", line 71, in parse
+    with open(bodyFile, 'wb') as f:
+IOError: [Errno 2] No such file or directory: 'json/text/body-s:history.state.govdepartmenthistory-visits.json'
+2016-10-06 15:15:55 [scrapy] DEBUG: Crawled (200) <GET https://history.state.gov//departmenthistory/travels/president> (referer: https://history.state.gov/historicaldocuments)
+2016-10-06 15:15:55 [scrapy] ERROR: Spider error processing <GET https://history.state.gov//departmenthistory/travels/president> (referer: https://history.state.gov/historicaldocuments)
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/referer.py", line 22, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "build/bdist.macosx-10.11-x86_64/egg/foreignScrape/spiders/history.py", line 71, in parse
+    with open(bodyFile, 'wb') as f:
+IOError: [Errno 2] No such file or directory: 'json/text/body-s:history.state.govdepartmenthistory-travels-president.json'
+2016-10-06 15:15:58 [scrapy] DEBUG: Crawled (200) <GET https://history.state.gov//departmenthistory/travels/secretary> (referer: https://history.state.gov/historicaldocuments)
+2016-10-06 15:15:58 [scrapy] ERROR: Spider error processing <GET https://history.state.gov//departmenthistory/travels/secretary> (referer: https://history.state.gov/historicaldocuments)
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/referer.py", line 22, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/usr/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "build/bdist.macosx-10.11-x86_64/egg/foreignScrape/spiders/history.py", line 71, in parse
+    with open(bodyFile, 'wb') as f:
+IOError: [Errno 2] No such file or directory: 'json/text/body-s:history.state.govdepartmenthistory-travels-secretary.json'
+2016-10-06 15:15:58 [scrapy] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 27909,
+ 'downloader/request_count': 63,
+ 'downloader/request_method_count/GET': 63,
+ 'downloader/response_bytes': 324952,
+ 'downloader/response_count': 63,
+ 'downloader/response_status_count/200': 54,
+ 'downloader/response_status_count/302': 5,
+ 'downloader/response_status_count/404': 4,
+ 'dupefilter/filtered': 4479,
+ 'finish_reason': 'closespider_errorcount',
+ 'finish_time': datetime.datetime(2016, 10, 6, 19, 15, 58, 757740),
+ 'log_count/DEBUG': 69,
+ 'log_count/ERROR': 53,
+ 'log_count/INFO': 9,
+ 'request_depth_max': 2,
+ 'response_received_count': 58,
+ 'scheduler/dequeued': 62,
+ 'scheduler/dequeued/memory': 62,
+ 'scheduler/enqueued': 1690,
+ 'scheduler/enqueued/memory': 1690,
+ 'spider_exceptions/IOError': 53,
+ 'start_time': datetime.datetime(2016, 10, 6, 19, 13, 30, 240803)}
+2016-10-06 15:15:58 [scrapy] INFO: Spider closed (closespider_errorcount)

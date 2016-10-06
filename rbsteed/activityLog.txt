@@ -285,11 +285,11 @@ TODO:
 	- Tie to html with php file.
 		- before design text analysis, assess searching capabilities through PHP
 
-LEARNED
+LEARNED:
 
 	- Where do proximate goals archives come from in the first place? derivation of goal structure isn't derived, but is rather implicit
 	- Book is designed for general, non-technical audience; not as advanced as AI ambitions in article
-	- Foreign policy prophet seems to be the end goal, but is particularly ambitious
+	- Foreign policy prophet seems to be the end goqal, but is particularly ambitious
 	- Activity in the area is most likely not publicly available - conference papers appearing, batted around, vanishing (poster sessions that don't translate into papers)
 	- Sylvan and Majeski reassembly of strings reflect foreign policy decision-making, not highly constrained; who conducts activity and the subjects are very constrained
 		- high level decisions are constrained to around 5 people; things on the agenda can't be resolved at lower levels; certain communications are irrelevant to decision-making in this model
@@ -315,6 +315,32 @@ LEARNED
 			- Nixon's distrust of state department
 		- graphed communications network; graphed typical communications structures
 
+10/6
 
+TODO:
 
+	//- Try and except unicode codec error//
+	- Do the other html pages
+	- Set up test heirarchy
+	- Get rid of unnecessary pages?
+	- Tie to html with php file.
+		- before design text analysis, assess searching capabilities through PHP
+
+LEARNED:
+	
+	- Decided to leave in unicode, difficult to parse and should be fine when rendering
+	- Scrapyd: used scrapyd client to eggify project and add to server
+	- configured scrapy.cfg 
+	- Use scrapyd-deploy to prepare project in egg
+	- Use curl http://localhost:6800/schedule.json -d project=poliScrapy -d spider=history to schedule
+	- Can run crawlers without limitations, working on getting items to return
+	- Successfully saved to server!!! Now, how to access those files later/maintain that server
+
+10/10
+
+TODO:
+	
+	- Figure out how to make best use of Scrapyd and how to access the data there from html
+	- Add in other html pages and domains
+	- Setup a test heirarchy and search itself?
 
