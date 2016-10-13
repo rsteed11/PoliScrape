@@ -33,7 +33,7 @@ include_once('PoliScrape-config.php');
             <div class="col-lg-12">
         <header class="jumbotron hero-spacer">
 
-		<p>Committed to scraping the text that matters most.</p>
+		<p>Committed to scraping the text that matters most. <b>PoliScrape</b> is an archival web scraper that collects, searches and analyzes unredacted foreign policy documents.</p>
 		<p>When you find something that can be improved, please <a href="https://github.com/ntbrock/iwphys/issues">open a new github issue.</a></p>
 </header>
             </div>
@@ -56,7 +56,7 @@ include_once('PoliScrape-config.php');
             		    <a href="https://startbootstrap.com/template-overviews/heroic-features/">HTML 5 Template is StartBootstrap.com, Heroic Features</a>
             		</p>
         		    <p>Acknowledgement to Dr. Timothy McKeown at the University of North Carolina at Chapel Hill for the inspiration and sponsorship of PoliScrape.</p>
-                    <p>Author: Ryan Steed</p>
+                    <p>Author: Ryan Steed, 2016</p>
                 </div>
             </div>
         </footer>

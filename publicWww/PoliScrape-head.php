@@ -16,8 +16,9 @@
 
 <!-- Custom CSS -->
 <link href="css/heroic-features.css" rel="stylesheet">
+<link href="css/business-frontpage.css" rel="stylesheet">
 
-<!-- IWP Common Application CSS -->
+<!-- Common Application CSS -->
 <link href="css/PoliScrape-common.css" rel="stylesheet">
 
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
