@@ -1,4 +1,4 @@
-	---------------- PoliScrape Activity Log ------------------
+---------------- PoliScrape Activity Log ------------------
 ------------------- Ryan Steed -----------
 
 Link to research journal: https://docs.google.com/document/d/13azVS2LlGunDKLAi91zUEvBUVs-EYhM4Ns51-xilf5g/edit.
@@ -336,11 +336,34 @@ LEARNED:
 	- Can run crawlers without limitations, working on getting items to return
 	- Successfully saved to server!!! Now, how to access those files later/maintain that server
 
-10/10
+10/11
 
 TODO:
 	
 	- Figure out how to make best use of Scrapyd and how to access the data there from html
-	- Add in other html pages and domains
+	//- Add in other html pages and domains//
 	- Setup a test heirarchy and search itself?
+
+LEARNED: 
+
+	- Using bootstrap template "Heroic Features" as homepage, will feature various databases available across web with descriptions in separate pages
+	- Configured php files with path URL for prod
+	- Kept reading paper
+
+10/13
+
+TODO 
+	
+	- Finish formatting bootstrap HTML web layout, update GitHub project for any visitors
+	- Updated README file
+
+10/18
+
+TODO
+	
+	- Talk to Dr. McKeown about obtaining prod server
+
+LEARNED
+
+	- Project limitations: can we do both collection and analysis, or should we leave analysis for another time? or concentrate on analysis with straight FRUS now and worry about other stuff later?
 
