@@ -38,7 +38,7 @@ include_once('PoliScrape-config.php');
 </header>
             </div>
         </div>
-
+        
         <!-- Page Features -->
         <div class="row text-center">
 

@@ -17,12 +17,16 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
+               <li>
+                    <a href="http://localhost/PoliScrape/git/PoliScrape/publicWww/data.php"> Full Database </a>
+                </li>
                 <li>
                     <a href="https://github.com/rsteed11/PoliScrape"><i class="fa fa-git"></i> Open Source on Github</a>
                 </li>
 	            <li>
 	                <a href="https://github.com/rsteed11/PoliScrape/issues"><i class="fa fa-bug"></i> Github Issues</a>
                 </li>
+
             </ul>
         </div>
         <!-- /.navbar-collapse -->

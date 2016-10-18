@@ -11,6 +11,8 @@ from foreignScrape.items import foreignScrapeItem
 from bs4 import BeautifulSoup
 import json
 import re
+import json
+import pymongo
 
 class MySpider(CrawlSpider):
     #For scrapy command call:
@@ -43,7 +45,7 @@ class MySpider(CrawlSpider):
             url = link.get('href')
             links.append(url)
             #yield scrapy.Request(url, callback=self.parse)
-        item['urls'] = json.dumps(links)
+        #item['urls'] = json.dumps(links)
         for url in response.xpath('//a/@href').extract():
             try:
                 yield scrapy.Request("https://history.state.gov/"+url, callback=self.parse)
@@ -72,9 +74,6 @@ class MySpider(CrawlSpider):
             #f.write(json.dumps(log))
         #with open(urlFile, 'wb') as f:
             #f.write(json.dumps(links))
-
-        print("----------------Wrote text to " +bodyFile+ ".--------------------")
-        print("----------------Wrote links to " +urlFile+ ".--------------------")
         print(log)
         yield item
         #Debugging Ryan Steed 20 Sep 2016
@@ -85,3 +84,12 @@ class MySpider(CrawlSpider):
         ##def parse_next(self, response):
             # logs into next urls
             #self.logger.info("Visited %s", response.url)
+class JsonWriterPipeline(object):
+
+    def __init__(self):
+        self.file = open('items.jl', 'wb')
+
+    def process_item(self, item, spider):
+        line = json.dumps(dict(item)) + "\n"
+        self.file.write(line)
+        return item

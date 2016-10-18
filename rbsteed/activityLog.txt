@@ -333,6 +333,7 @@ LEARNED:
 	- configured scrapy.cfg 
 	- Use scrapyd-deploy to prepare project in egg
 	- Use curl http://localhost:6800/schedule.json -d project=poliScrapy -d spider=history to schedule
+	- don't forget to start scrapyd with scrapyd command
 	- Can run crawlers without limitations, working on getting items to return
 	- Successfully saved to server!!! Now, how to access those files later/maintain that server
 
@@ -356,6 +357,7 @@ TODO
 	
 	- Finish formatting bootstrap HTML web layout, update GitHub project for any visitors
 	- Updated README file
+	- Project limitations: can we do both collection and analysis, or should we leave analysis for another time? or concentrate on analysis with straight FRUS now and worry about other stuff later?
 
 10/18
 
@@ -365,5 +367,16 @@ TODO
 
 LEARNED
 
-	- Project limitations: can we do both collection and analysis, or should we leave analysis for another time? or concentrate on analysis with straight FRUS now and worry about other stuff later?
+	- Started longer term run of Scrapyd
+	- https://meta-toolkit.org/
+	- Added tab to page with scraped data
+	- https://doc.scrapy.org/en/latest/topics/item-pipeline.html
+	- https://doc.scrapy.org/en/latest/topics/exporters.html
 
+10-20
+
+TODO
+
+	- Figure out how to run Scrapyd on same server as PoliScrape directory - will matter later in prod
+	- Look into security issues of Scrapyd
+	- Use lemur for 
