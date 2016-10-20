@@ -17,11 +17,13 @@ include_once('PoliScrape-config.php');
 
 <body>
     <?php include_once("PoliScrape-nav.php") ?>
-
+    <div class="container">
+        <header class="jumbotron hero-spacer"> 
+            <h3>Latest data scraped, organized in JSON:</h3>
+        </header>
         <!-- Page Features -->
-        <div class="row text-center">
-        	<?php include_once("../poliScrapy/items/poliScrapy/history/1d6d63f0955d11e69001a45e60edbd8f.jl") ?>
-        </div>
+
+        <div style="width:100%"><?php include_once("../poliScrapy/items/poliScrapy/history/69179b4796f611e69513a45e60edbd8f.jl") ?></div>
         <!-- /.row -->
 
     </div>

@@ -319,6 +319,7 @@ LEARNED:
 
 TODO:
 
+
 	//- Try and except unicode codec error//
 	- Do the other html pages
 	- Set up test heirarchy
@@ -377,6 +378,22 @@ LEARNED
 
 TODO
 
-	- Figure out how to run Scrapyd on same server as PoliScrape directory - will matter later in prod
+	//- Figure out how to run Scrapyd on same server as PoliScrape directory - will matter later in prod//
+	- Export items to a better format
 	- Look into security issues of Scrapyd
-	- Use lemur for 
+	- Use lemur for data analysis...
+
+LEARNED 
+
+	- Lots of time fixing network permissions bug, kept on 6800 server because no point in moving it
+	- Configuring item pipelines; still cannot achieve, will use MongoDB
+	- Sylvan and Majeski (!)
+		-
+
+10-24
+
+TODO
+	
+	- Configure MongoDB pipeline and set up Mongo DB to recieve data!
+	- Look into security issues of Scrapyd
+	- Use lemur for data analysis...

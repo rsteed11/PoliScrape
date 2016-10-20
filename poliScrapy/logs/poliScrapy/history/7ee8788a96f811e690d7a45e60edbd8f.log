@@ -1,0 +1,203 @@
+2016-10-20 15:07:51 [scrapy] INFO: Scrapy 1.1.2 started (bot: foreignScrape)
+2016-10-20 15:07:51 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'foreignScrape.spiders', 'FEED_URI': 'file:///private/var/www/PoliScrape/git/PoliScrape/poliScrapy/items/poliScrapy/history/7ee8788a96f811e690d7a45e60edbd8f.jl', 'CONCURRENT_REQUESTS': 32, 'CLOSESPIDER_ERRORCOUNT': 30, 'BOT_NAME': 'foreignScrape', 'CLOSESPIDER_TIMEOUT': 50, 'SPIDER_MODULES': ['foreignScrape.spiders'], 'ROBOTSTXT_OBEY': True, 'DEPTH_PRIORITY': 1, 'LOG_FILE': 'logs/poliScrapy/history/7ee8788a96f811e690d7a45e60edbd8f.log', 'DOWNLOAD_DELAY': 2}
+2016-10-20 15:07:51 [scrapy] INFO: Enabled extensions:
+['scrapy.extensions.feedexport.FeedExporter',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.closespider.CloseSpider',
+ 'scrapy.extensions.logstats.LogStats']
+2016-10-20 15:07:51 [scrapy] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.chunked.ChunkedTransferMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2016-10-20 15:07:51 [scrapy] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2016-10-20 15:07:51 [scrapy] INFO: Enabled item pipelines:
+['foreignScrape.pipelines.JsonWriterPipeline']
+2016-10-20 15:07:51 [scrapy] INFO: Spider opened
+2016-10-20 15:07:51 [scrapy] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2016-10-20 15:07:51 [scrapy] DEBUG: Telnet console listening on 127.0.0.1:6025
+2016-10-20 15:07:51 [scrapy] DEBUG: Crawled (200) <GET https://history.state.gov/robots.txt> (referer: None)
+2016-10-20 15:07:53 [scrapy] DEBUG: Crawled (200) <GET https://history.state.gov/historicaldocuments> (referer: None)
+2016-10-20 15:07:53 [scrapy] DEBUG: Filtered duplicate request: <GET https://history.state.gov//> - no more duplicates will be shown (see DUPEFILTER_DEBUG to show all duplicates)
+2016-10-20 15:07:53 [scrapy] DEBUG: Scraped from <200 https://history.state.gov/historicaldocuments>
+{}
+2016-10-20 15:07:56 [scrapy] DEBUG: Crawled (200) <GET https://history.state.gov//about-the-beta> (referer: https://history.state.gov/historicaldocuments)
+2016-10-20 15:07:56 [scrapy] DEBUG: Scraped from <200 https://history.state.gov//about-the-beta>
+{}
+2016-10-20 15:07:58 [scrapy] DEBUG: Crawled (200) <GET https://history.state.gov//historicaldocuments/nixon-ford> (referer: https://history.state.gov/historicaldocuments)
+2016-10-20 15:07:59 [scrapy] DEBUG: Scraped from <200 https://history.state.gov//historicaldocuments/nixon-ford>
+{}
+2016-10-20 15:07:59 [scrapy] DEBUG: Crawled (200) <GET https://history.state.gov//historicaldocuments/johnson> (referer: https://history.state.gov/historicaldocuments)
+2016-10-20 15:08:00 [scrapy] DEBUG: Scraped from <200 https://history.state.gov//historicaldocuments/johnson>
+{}
+2016-10-20 15:08:02 [scrapy] DEBUG: Crawled (200) <GET https://history.state.gov//historicaldocuments/kennedy> (referer: https://history.state.gov/historicaldocuments)
+2016-10-20 15:08:02 [scrapy] DEBUG: Scraped from <200 https://history.state.gov//historicaldocuments/kennedy>
+{}
+2016-10-20 15:08:05 [scrapy] DEBUG: Crawled (200) <GET https://history.state.gov//historicaldocuments/eisenhower> (referer: https://history.state.gov/historicaldocuments)
+2016-10-20 15:08:05 [scrapy] DEBUG: Scraped from <200 https://history.state.gov//historicaldocuments/eisenhower>
+{}
+2016-10-20 15:08:07 [scrapy] DEBUG: Crawled (200) <GET https://history.state.gov//historicaldocuments/truman> (referer: https://history.state.gov/historicaldocuments)
+2016-10-20 15:08:07 [scrapy] DEBUG: Scraped from <200 https://history.state.gov//historicaldocuments/truman>
+{}
+2016-10-20 15:08:10 [scrapy] DEBUG: Crawled (200) <GET https://history.state.gov//historicaldocuments/pre-truman> (referer: https://history.state.gov/historicaldocuments)
+2016-10-20 15:08:10 [scrapy] DEBUG: Scraped from <200 https://history.state.gov//historicaldocuments/pre-truman>
+{}
+2016-10-20 15:08:12 [scrapy] DEBUG: Crawled (200) <GET https://history.state.gov//search?within=documents> (referer: https://history.state.gov/historicaldocuments)
+2016-10-20 15:08:12 [scrapy] DEBUG: Scraped from <200 https://history.state.gov//search?within=documents>
+{}
+2016-10-20 15:08:15 [scrapy] DEBUG: Crawled (200) <GET https://history.state.gov//open> (referer: https://history.state.gov/historicaldocuments)
+2016-10-20 15:08:15 [scrapy] DEBUG: Scraped from <200 https://history.state.gov//open>
+{}
+2016-10-20 15:08:18 [scrapy] DEBUG: Crawled (200) <GET https://history.state.gov//about/faq> (referer: https://history.state.gov/historicaldocuments)
+2016-10-20 15:08:18 [scrapy] DEBUG: Scraped from <200 https://history.state.gov//about/faq>
+{}
+2016-10-20 15:08:20 [scrapy] DEBUG: Crawled (200) <GET https://history.state.gov//education> (referer: https://history.state.gov/historicaldocuments)
+2016-10-20 15:08:20 [scrapy] DEBUG: Scraped from <200 https://history.state.gov//education>
+{}
+2016-10-20 15:08:22 [scrapy] DEBUG: Crawled (200) <GET https://history.state.gov//developer> (referer: https://history.state.gov/historicaldocuments)
+2016-10-20 15:08:23 [scrapy] DEBUG: Scraped from <200 https://history.state.gov//developer>
+{}
+2016-10-20 15:08:25 [scrapy] DEBUG: Crawled (200) <GET https://history.state.gov//about/contact-us> (referer: https://history.state.gov/historicaldocuments)
+2016-10-20 15:08:25 [scrapy] DEBUG: Scraped from <200 https://history.state.gov//about/contact-us>
+{}
+2016-10-20 15:08:27 [scrapy] DEBUG: Crawled (200) <GET https://history.state.gov//conferences> (referer: https://history.state.gov/historicaldocuments)
+2016-10-20 15:08:28 [scrapy] DEBUG: Scraped from <200 https://history.state.gov//conferences>
+{}
+2016-10-20 15:08:30 [scrapy] DEBUG: Crawled (200) <GET https://history.state.gov//tags> (referer: https://history.state.gov/historicaldocuments)
+2016-10-20 15:08:30 [scrapy] DEBUG: Scraped from <200 https://history.state.gov//tags>
+{}
+2016-10-20 15:08:32 [scrapy] DEBUG: Crawled (200) <GET https://history.state.gov//about> (referer: https://history.state.gov/historicaldocuments)
+2016-10-20 15:08:32 [scrapy] DEBUG: Scraped from <200 https://history.state.gov//about>
+{}
+2016-10-20 15:08:35 [scrapy] DEBUG: Crawled (200) <GET https://history.state.gov/> (referer: https://history.state.gov/historicaldocuments)
+2016-10-20 15:08:35 [scrapy] DEBUG: Scraped from <200 https://history.state.gov/>
+{}
+2016-10-20 15:08:38 [scrapy] DEBUG: Crawled (200) <GET https://history.state.gov//countries/archives> (referer: https://history.state.gov/historicaldocuments)
+2016-10-20 15:08:38 [scrapy] DEBUG: Scraped from <200 https://history.state.gov//countries/archives>
+{}
+2016-10-20 15:08:41 [scrapy] DEBUG: Crawled (200) <GET https://history.state.gov//countries> (referer: https://history.state.gov/historicaldocuments)
+2016-10-20 15:08:41 [scrapy] DEBUG: Scraped from <200 https://history.state.gov//countries>
+{}
+2016-10-20 15:08:41 [scrapy] INFO: Closing spider (closespider_timeout)
+2016-10-20 15:08:43 [scrapy] DEBUG: Crawled (200) <GET https://history.state.gov//milestones/1993-2000> (referer: https://history.state.gov/historicaldocuments)
+2016-10-20 15:08:43 [scrapy] DEBUG: Scraped from <200 https://history.state.gov//milestones/1993-2000>
+{}
+2016-10-20 15:08:45 [scrapy] DEBUG: Crawled (200) <GET https://history.state.gov//milestones/1989-1992> (referer: https://history.state.gov/historicaldocuments)
+2016-10-20 15:08:45 [scrapy] DEBUG: Scraped from <200 https://history.state.gov//milestones/1989-1992>
+{}
+2016-10-20 15:08:48 [scrapy] DEBUG: Crawled (200) <GET https://history.state.gov//milestones/1981-1988> (referer: https://history.state.gov/historicaldocuments)
+2016-10-20 15:08:48 [scrapy] DEBUG: Scraped from <200 https://history.state.gov//milestones/1981-1988>
+{}
+2016-10-20 15:08:51 [scrapy] INFO: Crawled 24 pages (at 24 pages/min), scraped 23 items (at 23 items/min)
+2016-10-20 15:08:51 [scrapy] DEBUG: Crawled (200) <GET https://history.state.gov//milestones/1977-1980> (referer: https://history.state.gov/historicaldocuments)
+2016-10-20 15:08:51 [scrapy] DEBUG: Scraped from <200 https://history.state.gov//milestones/1977-1980>
+{}
+2016-10-20 15:08:52 [scrapy] DEBUG: Crawled (200) <GET https://history.state.gov//milestones/1969-1976> (referer: https://history.state.gov/historicaldocuments)
+2016-10-20 15:08:53 [scrapy] DEBUG: Scraped from <200 https://history.state.gov//milestones/1969-1976>
+{}
+2016-10-20 15:08:55 [scrapy] DEBUG: Crawled (200) <GET https://history.state.gov//milestones/1961-1968> (referer: https://history.state.gov/historicaldocuments)
+2016-10-20 15:08:56 [scrapy] DEBUG: Scraped from <200 https://history.state.gov//milestones/1961-1968>
+{}
+2016-10-20 15:08:58 [scrapy] DEBUG: Crawled (200) <GET https://history.state.gov//milestones/1953-1960> (referer: https://history.state.gov/historicaldocuments)
+2016-10-20 15:08:58 [scrapy] DEBUG: Scraped from <200 https://history.state.gov//milestones/1953-1960>
+{}
+2016-10-20 15:09:00 [scrapy] DEBUG: Crawled (200) <GET https://history.state.gov//milestones/1945-1952> (referer: https://history.state.gov/historicaldocuments)
+2016-10-20 15:09:00 [scrapy] DEBUG: Scraped from <200 https://history.state.gov//milestones/1945-1952>
+{}
+2016-10-20 15:09:02 [scrapy] DEBUG: Crawled (200) <GET https://history.state.gov//milestones/1937-1945> (referer: https://history.state.gov/historicaldocuments)
+2016-10-20 15:09:03 [scrapy] DEBUG: Scraped from <200 https://history.state.gov//milestones/1937-1945>
+{}
+2016-10-20 15:09:04 [scrapy] DEBUG: Crawled (200) <GET https://history.state.gov//milestones/1921-1936> (referer: https://history.state.gov/historicaldocuments)
+2016-10-20 15:09:04 [scrapy] DEBUG: Scraped from <200 https://history.state.gov//milestones/1921-1936>
+{}
+2016-10-20 15:09:06 [scrapy] DEBUG: Crawled (200) <GET https://history.state.gov//milestones/1914-1920> (referer: https://history.state.gov/historicaldocuments)
+2016-10-20 15:09:07 [scrapy] DEBUG: Scraped from <200 https://history.state.gov//milestones/1914-1920>
+{}
+2016-10-20 15:09:09 [scrapy] DEBUG: Crawled (200) <GET https://history.state.gov//milestones/1899-1913> (referer: https://history.state.gov/historicaldocuments)
+2016-10-20 15:09:09 [scrapy] DEBUG: Scraped from <200 https://history.state.gov//milestones/1899-1913>
+{}
+2016-10-20 15:09:11 [scrapy] DEBUG: Crawled (200) <GET https://history.state.gov//milestones/1866-1898> (referer: https://history.state.gov/historicaldocuments)
+2016-10-20 15:09:11 [scrapy] DEBUG: Scraped from <200 https://history.state.gov//milestones/1866-1898>
+{}
+2016-10-20 15:09:13 [scrapy] DEBUG: Crawled (404) <GET https://history.state.gov/mailto:history@state.gov> (referer: https://history.state.gov/historicaldocuments)
+2016-10-20 15:09:13 [scrapy] DEBUG: Ignoring response <404 https://history.state.gov/mailto:history@state.gov>: HTTP status code is not handled or not allowed
+2016-10-20 15:09:16 [scrapy] DEBUG: Crawled (404) <GET https://history.state.gov/http://www.state.gov> (referer: https://history.state.gov/historicaldocuments)
+2016-10-20 15:09:16 [scrapy] DEBUG: Ignoring response <404 https://history.state.gov/http://www.state.gov>: HTTP status code is not handled or not allowed
+2016-10-20 15:09:18 [scrapy] DEBUG: Crawled (404) <GET https://history.state.gov/http://www.state.gov/misc/152386.htm> (referer: https://history.state.gov/historicaldocuments)
+2016-10-20 15:09:18 [scrapy] DEBUG: Ignoring response <404 https://history.state.gov/http://www.state.gov/misc/152386.htm>: HTTP status code is not handled or not allowed
+2016-10-20 15:09:20 [scrapy] DEBUG: Crawled (404) <GET https://history.state.gov/http://www.state.gov/misc/87529.htm#privacy> (referer: https://history.state.gov/historicaldocuments)
+2016-10-20 15:09:20 [scrapy] DEBUG: Ignoring response <404 https://history.state.gov/http://www.state.gov/misc/87529.htm>: HTTP status code is not handled or not allowed
+2016-10-20 15:09:22 [scrapy] DEBUG: Redirecting (302) to <GET https://history.state.gov/about> from <GET https://history.state.gov//about/>
+2016-10-20 15:09:25 [scrapy] DEBUG: Redirecting (302) to <GET https://history.state.gov/milestones> from <GET https://history.state.gov//milestones/>
+2016-10-20 15:09:28 [scrapy] DEBUG: Redirecting (302) to <GET https://history.state.gov/countries> from <GET https://history.state.gov//countries/>
+2016-10-20 15:09:30 [scrapy] DEBUG: Redirecting (302) to <GET https://history.state.gov/departmenthistory> from <GET https://history.state.gov//departmenthistory/>
+2016-10-20 15:09:32 [scrapy] DEBUG: Redirecting (302) to <GET https://history.state.gov/historicaldocuments> from <GET https://history.state.gov//historicaldocuments/>
+2016-10-20 15:09:34 [scrapy] DEBUG: Crawled (200) <GET https://history.state.gov//search> (referer: https://history.state.gov/historicaldocuments)
+2016-10-20 15:09:34 [scrapy] DEBUG: Scraped from <200 https://history.state.gov//search>
+{}
+2016-10-20 15:09:36 [scrapy] DEBUG: Crawled (200) <GET https://history.state.gov//historicaldocuments/citing-frus> (referer: https://history.state.gov/historicaldocuments)
+2016-10-20 15:09:37 [scrapy] DEBUG: Scraped from <200 https://history.state.gov//historicaldocuments/citing-frus>
+{}
+2016-10-20 15:09:39 [scrapy] DEBUG: Crawled (200) <GET https://history.state.gov//search/tips> (referer: https://history.state.gov/historicaldocuments)
+2016-10-20 15:09:39 [scrapy] DEBUG: Scraped from <200 https://history.state.gov//search/tips>
+{}
+2016-10-20 15:09:42 [scrapy] DEBUG: Crawled (200) <GET https://history.state.gov//historicaldocuments/guide-to-sources-on-vietnam-1969-1975> (referer: https://history.state.gov/historicaldocuments)
+2016-10-20 15:09:42 [scrapy] DEBUG: Scraped from <200 https://history.state.gov//historicaldocuments/guide-to-sources-on-vietnam-1969-1975>
+{}
+2016-10-20 15:09:45 [scrapy] DEBUG: Crawled (200) <GET https://history.state.gov//historicaldocuments/other-electronic-resources> (referer: https://history.state.gov/historicaldocuments)
+2016-10-20 15:09:45 [scrapy] DEBUG: Scraped from <200 https://history.state.gov//historicaldocuments/other-electronic-resources>
+{}
+2016-10-20 15:09:47 [scrapy] DEBUG: Crawled (200) <GET https://history.state.gov//historicaldocuments/reagan> (referer: https://history.state.gov/historicaldocuments)
+2016-10-20 15:09:47 [scrapy] DEBUG: Scraped from <200 https://history.state.gov//historicaldocuments/reagan>
+{}
+2016-10-20 15:09:50 [scrapy] DEBUG: Crawled (200) <GET https://history.state.gov//historicaldocuments/carter> (referer: https://history.state.gov/historicaldocuments)
+2016-10-20 15:09:50 [scrapy] DEBUG: Scraped from <200 https://history.state.gov//historicaldocuments/carter>
+{}
+2016-10-20 15:09:51 [scrapy] INFO: Crawled 45 pages (at 21 pages/min), scraped 40 items (at 17 items/min)
+2016-10-20 15:09:52 [scrapy] DEBUG: Crawled (200) <GET https://history.state.gov//milestones/1861-1865> (referer: https://history.state.gov/historicaldocuments)
+2016-10-20 15:09:53 [scrapy] DEBUG: Scraped from <200 https://history.state.gov//milestones/1861-1865>
+{}
+2016-10-20 15:09:54 [scrapy] DEBUG: Crawled (200) <GET https://history.state.gov//milestones/1830-1860> (referer: https://history.state.gov/historicaldocuments)
+2016-10-20 15:09:55 [scrapy] DEBUG: Scraped from <200 https://history.state.gov//milestones/1830-1860>
+{}
+2016-10-20 15:09:56 [scrapy] DEBUG: Crawled (200) <GET https://history.state.gov//milestones/1801-1829> (referer: https://history.state.gov/historicaldocuments)
+2016-10-20 15:09:57 [scrapy] DEBUG: Scraped from <200 https://history.state.gov//milestones/1801-1829>
+{}
+2016-10-20 15:09:57 [scrapy] INFO: Stored jsonlines feed (43 items) in: file:///private/var/www/PoliScrape/git/PoliScrape/poliScrapy/items/poliScrapy/history/7ee8788a96f811e690d7a45e60edbd8f.jl
+2016-10-20 15:09:57 [scrapy] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 23390,
+ 'downloader/request_count': 53,
+ 'downloader/request_method_count/GET': 53,
+ 'downloader/response_bytes': 260598,
+ 'downloader/response_count': 53,
+ 'downloader/response_status_count/200': 44,
+ 'downloader/response_status_count/302': 5,
+ 'downloader/response_status_count/404': 4,
+ 'dupefilter/filtered': 3574,
+ 'finish_reason': 'closespider_timeout',
+ 'finish_time': datetime.datetime(2016, 10, 20, 19, 9, 57, 130412),
+ 'item_scraped_count': 43,
+ 'log_count/DEBUG': 102,
+ 'log_count/INFO': 10,
+ 'request_depth_max': 2,
+ 'response_received_count': 48,
+ 'scheduler/dequeued': 52,
+ 'scheduler/dequeued/memory': 52,
+ 'scheduler/enqueued': 1003,
+ 'scheduler/enqueued/memory': 1003,
+ 'start_time': datetime.datetime(2016, 10, 20, 19, 7, 51, 213063)}
+2016-10-20 15:09:57 [scrapy] INFO: Spider closed (closespider_timeout)

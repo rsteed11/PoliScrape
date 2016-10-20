@@ -65,7 +65,8 @@ DOWNLOAD_DELAY = 2
 # Configure item pipelines
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
 #ITEM_PIPELINES = {
-#    'foreignScrape.pipelines.SomePipeline': 300,
+    #'foreignScrape.pipelines.SomePipeline': 300,
+ #   'foreignScrape.pipelines.MongoPipeline': 300,
 #}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
@@ -99,7 +100,7 @@ EXTENSIONS = {
 	'scrapy.extensions.logstats.LogStats': 80,
 }
 #CLOSESPIDER_PAGECOUNT = 5
-#CLOSESPIDER_TIMEOUT = 50
+CLOSESPIDER_TIMEOUT = 50
 #CLOSESPIDER_ITEMCOUNT
 CLOSESPIDER_ERRORCOUNT = 30
 DEPTH_PRIORITY = 1

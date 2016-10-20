@@ -11,8 +11,8 @@ from foreignScrape.items import foreignScrapeItem
 from bs4 import BeautifulSoup
 import json
 import re
-import json
-import pymongo
+from scrapy import signals
+from scrapy.exporters import XmlItemExporter
 
 class MySpider(CrawlSpider):
     #For scrapy command call:
@@ -60,36 +60,29 @@ class MySpider(CrawlSpider):
         #http://stackoverflow.com/questions/20205455/how-to-correctly-parse-utf-8-encoded-html-to-unicode-strings-with-beautifulsoup
 
         #To print to screen or file
-        log = {
-            'url': response.url,
+        #log = {
+         #   'url': response.url,
             #'title': soup.title.string
-            'body': soup.body.get_text()
-        }
-        item['bodyText'] = soup.body.get_text()
+          #  'body': soup.body.get_text()
+        #}
+        #item['bodyText'] = soup.body.get_text()
         #Print to a file.
-        bodyFile = 'json/text/body-' + re.sub('http', '', re.sub('/', '-', re.sub('//', '', response.url))) + '.json'
-        urlFile = 'json/links/links-' + re.sub('http', '', re.sub('/', '-', re.sub('//', '', response.url))) + '.json'
+        #bodyFile = 'json/text/body-' + re.sub('http', '', re.sub('/', '-', re.sub('//', '', response.url))) + '.json'
+        #urlFile = 'json/links/links-' + re.sub('http', '', re.sub('/', '-', re.sub('//', '', response.url))) + '.json'
         #TODO: parse log to write to file.
         #with open(bodyFile, 'wb') as f:
             #f.write(json.dumps(log))
         #with open(urlFile, 'wb') as f:
             #f.write(json.dumps(links))
-        print(log)
-        yield item
+        #print(log)
         #Debugging Ryan Steed 20 Sep 2016
-        ##yield item
+        yield item
         ##for url in response.xpath('//a/@href').extract():
             ##yield scrapy.Request(url, callback=parse)
 
         ##def parse_next(self, response):
             # logs into next urls
             #self.logger.info("Visited %s", response.url)
-class JsonWriterPipeline(object):
 
-    def __init__(self):
-        self.file = open('items.jl', 'wb')
 
-    def process_item(self, item, spider):
-        line = json.dumps(dict(item)) + "\n"
-        self.file.write(line)
-        return item
+    
