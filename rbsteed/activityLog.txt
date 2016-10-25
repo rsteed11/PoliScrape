@@ -388,12 +388,41 @@ LEARNED
 	- Lots of time fixing network permissions bug, kept on 6800 server because no point in moving it
 	- Configuring item pipelines; still cannot achieve, will use MongoDB
 	- Sylvan and Majeski (!)
-		-
 
-10-24
+
+10-25
 
 TODO
 	
 	- Configure MongoDB pipeline and set up Mongo DB to recieve data!
 	- Look into security issues of Scrapyd
-	- Use lemur for data analysis...
+	- Use Lemur for data analysis...
+
+LEARNED
+
+	- For Dr. McKeown
+		- PoliScrape
+			- Using bootstrap template "Heroic Features" as homepage, will feature various databases available across web with descriptions in separate pages
+				- Has first tab, which can feature different databases and various features of the site (search techniques)
+				- Has database tab, which currently has a series of concatenated docs - will transition to MongoDB shortly
+				- Has GitHub feature, which gives statistics, issues, etc.
+				- Other features you would like to see?
+				- Marketing? Name for project?
+			- Configured php files with path URL for prod
+			- Started longer term run of Scrapyd - once on prod, can let run overnight/weeks
+			- Let's look into getting production... (licensing? space?)
+			- Second half of trimester will be data analysis, it would seem
+			- Some issues to resolve:
+				- how do I test full saturation - time to scrape is a limiting factor
+				- use Lemur or similar in basic tests - configure, essentially
+				- Presenting files usefully - edit PHP
+		- I have a book! What to read...
+		- Discuss Hollway
+		- My Mentorship Schedule??
+
+		- Talk to IT support services, write up request; talk to someone in person
+		- File names with page names in tree hierarchy
+		- Paper
+			- theory of decision-making close to the data and to actual decision-making (not microeconomic logic)
+			- historically grounded approach
+			- "combines man and machine" - series of interrogatives
