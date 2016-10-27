@@ -7,7 +7,7 @@
 // Relative URL Routes
 
 $baseUri     = $prefixUri;
-$browseUri   = $prefixUri . "browse.php";
+$browseUri   = "poliScrapy/items/poliScrapy/history";
 
 
 //----------------------------------------------------------------------------------------
@@ -28,31 +28,22 @@ $browseUrl = ( $httpSecure ? 'https://' : 'http://' ) . $_SERVER['HTTP_HOST'] . 
 //----------------------------------------------------------------------------------------
 // Filesystem Scanning
 
-/*
+
 // Look for the fiel on disk
-$iwpFile =  $animationPath . $pathInfo;
-if ( ! file_exists ( $iwpFile ) ) { die("No Such File: " . $iwpFile); }
+$jlFile =  $itemPath . $pathInfo;
+if ( ! file_exists ( $jlFile ) ) { die("No Such File: " . $jlFile); }
 
 
-function readIwpFileJson($fullPath) { 
+function readjlFileJson($fullPath) { 
 	 $xml_string = file_get_contents($fullPath);
 	 $xml = simplexml_load_string($xml_string);
 	 return json_encode($xml);
 }
 
-function readIwpFileDescription($fullPath) { 
-	 $json = readIwpFileJson($fullPath);
-	 $jobject = json_decode($json,true);
-
-	 $text = $jobject['objects']['description']['text'];
-
-	 return limit_text ( $text, 35 ); // 35 words
-}
-
 //----------------------------------------------------------------------------------------
 // Functions
 
-// http://stackoverflow.com/questions/965235/how-can-i-truncate-a-string-to-the-first-20-words-in-php
+//http://stackoverflow.com/questions/965235/how-can-i-truncate-a-string-to-the-first-20-words-in-php
 function limit_text($text, $limit) {
       if (str_word_count($text, 0) > $limit) {
           $words = str_word_count($text, 2);
@@ -150,7 +141,7 @@ function recurseDirs($dir, $depthRemaining )
 
 	return $subDirs;
 }
-*/
+
 
 return '';
 ?>

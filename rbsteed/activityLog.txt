@@ -426,3 +426,22 @@ LEARNED
 			- theory of decision-making close to the data and to actual decision-making (not microeconomic logic)
 			- historically grounded approach
 			- "combines man and machine" - series of interrogatives
+
+10/27
+
+TODO
+	- Talk to IT support services, write up request; talk to someone in person
+	- File names with page names in tree hierarchy
+
+LEARNED
+	- IT says go through the PoliSci dept.
+	- Tried to get data.php to render database as series of links
+	- Problems with .jl files not wanting to display, need to use php include but gets commented out in transfer process - create template?
+
+11/8
+
+TODO
+	- For Dr. McKeown:
+	- Problems with .jl files not wanting to display, need to use php include but gets commented out in transfer process - create template?
+	- File names with page names in tree hierarchy
+	- IT?

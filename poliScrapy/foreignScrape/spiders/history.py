@@ -45,7 +45,8 @@ class MySpider(CrawlSpider):
             url = link.get('href')
             links.append(url)
             #yield scrapy.Request(url, callback=self.parse)
-        #item['urls'] = json.dumps(links)
+        item['name'] = response.xpath("//title").extract_first()
+        item['urls'] = json.dumps(links)
         for url in response.xpath('//a/@href').extract():
             try:
                 yield scrapy.Request("https://history.state.gov/"+url, callback=self.parse)
@@ -65,7 +66,7 @@ class MySpider(CrawlSpider):
             #'title': soup.title.string
           #  'body': soup.body.get_text()
         #}
-        #item['bodyText'] = soup.body.get_text()
+        item['bodyText'] = soup.body.get_text()
         #Print to a file.
         #bodyFile = 'json/text/body-' + re.sub('http', '', re.sub('/', '-', re.sub('//', '', response.url))) + '.json'
         #urlFile = 'json/links/links-' + re.sub('http', '', re.sub('/', '-', re.sub('//', '', response.url))) + '.json'

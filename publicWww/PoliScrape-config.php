@@ -7,7 +7,7 @@
 //----------------------------------------------------------------------------------------
 
 // File Path Setup
-//$animationPath = "animations";
+$itemPath = "../poliScrapy/items/poliScrapy/history";
 
 // Prod Webserver Prefix 
 //$prefixUri   = 'somethingDifferent';
