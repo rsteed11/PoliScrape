@@ -441,7 +441,48 @@ LEARNED
 11/8
 
 TODO
-	- For Dr. McKeown:
 	- Problems with .jl files not wanting to display, need to use php include but gets commented out in transfer process - create template?
 	- File names with page names in tree hierarchy
 	- IT?
+
+LEARNED
+	- Moved tasks to https://trello.com/b/deLTrYZ7/poliscrape-2016; further logs will include only "LEARNED" section
+	- "Decision Making by Objection and the Cuban Missile Crisis," by Paul A. Anderson
+		- Analysis of missile crisis documents questions standard definition of a "decision"
+			- Involved sequential choice over array of noncompeting courses of action
+			- Decision-making led to discovery of goals, not the other way around
+			- More concerned with avoiding failure than achieving success
+			- Calls it "objection"
+		- conventional:
+			- identify goals
+			- search for alternate courses
+			- predict consequences of each
+			- evaluate in terms of goal
+			- select best alternative for achieving the goal
+			- requires cycles
+		- categorized interactions in discussion in the ExCom by assigning codes to particular statements
+		- sets up a series of questions for user to answer about the text
+		- don't advocate alternatives, just object to them
+		- yes-no choices for a bunch of different alternatives
+		- satisfactory alternative often has low probability of success
+
+11-15 
+
+LEARNED
+	- things that matter
+		- type of document
+		- date created
+		- organization or agency producing
+		- author or authors, if known
+	- how to search by date - reference existing pages
+	- Iraq War
+		- papers on public opinion, how agency performance is evaluated
+		- Effect of Cold War end on intelligence
+		- Iraq 2001-2003: Read Sakai chapters of Polar (2), Polluck (1)
+		- Talk about it, then get a sense for what to read next
+
+
+
+
+
+

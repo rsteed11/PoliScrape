@@ -51,7 +51,7 @@ class MySpider(CrawlSpider):
             try:
                 yield scrapy.Request("https://history.state.gov/"+url, callback=self.parse)
             except: 
-                print("Could not parse URL! Who knows why...")
+                print("Could not parse URL! Who knows why..."+url)
 
         # Here's how to make stripped strings
         #for string in soup.stripped_strings:
@@ -84,6 +84,5 @@ class MySpider(CrawlSpider):
         ##def parse_next(self, response):
             # logs into next urls
             #self.logger.info("Visited %s", response.url)
-
 
     
