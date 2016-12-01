@@ -33,16 +33,17 @@ include_once('PoliScrape-config.php');
             <div class="col-lg-12">
         <header class="jumbotron hero-spacer">
 
-		<p>Committed to scraping the text that matters most. <b>PoliScrape</b> is an archival web scraper that collects, searches and analyzes unredacted foreign policy documents.</p>
+		<p> Facilitating research and discovery with a comprehensive resource for foreign policy archival analysis. </br> <b>PoliScrape</b> is an web archive scraper that collects, searches and analyzes unredacted foreign policy documents.</p>
 		<p>When you find something that can be improved, please <a href="https://github.com/ntbrock/iwphys/issues">open a new github issue.</a></p>
+        </br>
+        <p align="center"><input type="text" name="search" placeholder="Search PoliScrape..."></p>
 </header>
             </div>
         </div>
+
+        
         
         <!-- Page Features -->
-        <div class="row text-center">
-
-        </div>
         <!-- /.row -->
 
         <!-- Footer -->
