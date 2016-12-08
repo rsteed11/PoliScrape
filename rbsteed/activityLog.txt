@@ -539,3 +539,7 @@ LEARNED:
   				Git remote: ssh://58471a9a42d9f5d4fd00006d@poliscrape-rsteed11.apps.unc.edu/~/git/poliscrape.git/
   				Cloned to:  /Users/Ryan/poliProd/poliscrape
   			- no success adding files to Carolina github that aren't in the root directory of hte project, oddly
+
+ 8 Dec 2016
+
+ 
