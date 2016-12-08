@@ -1,5 +1,6 @@
 #PoliScrape
-PoliScrape
+PoliScrape: a foreign policy archival document collection tool.
+Author: Ryan Steed
 
 ## Version 1
 _2016-Oct-13, Chapel Hill, NC_
