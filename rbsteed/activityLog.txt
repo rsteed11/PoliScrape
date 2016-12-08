@@ -511,7 +511,31 @@ LEARNED
 		- SEEEMS TO CONTRAST WITH CONTINUOUS, FLOW OF INFORMATION VIEW OF DECISION-MAKING; MORE DETERMINISTIC, ADMINSTRATION-BASED
 		- Thinks Bush, admin decided to wage war in first weeks after 9/11, spent 1.5 years priming public opinion
 		- Intelligence did not drive decision, but was used in arguments
+		- In fact, briefings before inauguration barely mentioned Iraq
+		- Intelligence community judged for getting things wrong, and for resisting politicians
+		- Somehow ignored issue that Saddam wouldn't use potential WMD without a provocation, like a freaking war!
 
+1 Dec 2016
 
+LEARNED: 
 
+	Subsequently, I researched the VCL, a virtual programming system that can install Scrapy and the necessary Python packages. This should be sufficient for our project as neither program requires a DBMS (database management service), only pure Python code and a few Python packages. Lemur is in Java and requires a few Linux libraries. We are working with research computing to set up the proper UNC environment to handle the program and begin prototype testing. 
 
+6 Dec 2016
+
+LEARNED:
+	
+	- met with Sandeep!
+		- Decided to go with VCL - has 10 GB of storage soft cap, use vcl.unc.edu to make a reservation
+		- Sandeep will get image editing permissions so I can create my own disk image to use (software)
+		- Create reservation, ssh into VCL and work until time limit expires; work will disappear!
+		- will push any results to GitHub when finished
+		- also creating a Mass Storage account to store info; haven't decided yet the way that the storage will be handled
+		- how to get Lemur to work? might work on KillDevil/Longleaf, definitely would work on the VCL (Virtual Computing Log)
+		- recommended Carolina Cloud for web hosting
+			- application: 
+				URL:        http://poliscrape-rsteed11.apps.unc.edu/
+  				SSH to:     58471a9a42d9f5d4fd00006d@poliscrape-rsteed11.apps.unc.edu
+  				Git remote: ssh://58471a9a42d9f5d4fd00006d@poliscrape-rsteed11.apps.unc.edu/~/git/poliscrape.git/
+  				Cloned to:  /Users/Ryan/poliProd/poliscrape
+  			- no success adding files to Carolina github that aren't in the root directory of hte project, oddly
