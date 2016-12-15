@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+import time
 
 # Scrapy settings for foreignScrape project
 #
@@ -66,6 +67,11 @@ DOWNLOAD_DELAY = 2
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
     'foreignScrape.pipelines.XmlExportPipeline': 300,
+}
+FEED_URI = '../xmlItems/history/'+str(time.strftime("%m-%d-%Y/%H-%M-%S"))+".xml"
+FEED_FORMAT = 'xml'
+FEED_EXPORTERS = {
+    'xml': 'scrapy.exporters.XmlItemExporter',
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)

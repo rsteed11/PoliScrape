@@ -555,4 +555,4 @@ LEARNED:
  - Disk Imaging process
  	- working inside virtualenv, in folder in machine which I activated with "bin/activate"
  	- downloaded pip package, virtualenv and Scrapy, and BeautifulSoup
- 	- Called Scrapy,Ubuntu 14.04 LTS Svr (Full Blade)
+ 	- Called Scrapy, Ubuntu 14.04 LTS Svr (Full Blade)

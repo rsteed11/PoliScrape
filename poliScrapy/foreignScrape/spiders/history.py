@@ -32,27 +32,23 @@ class MySpider(CrawlSpider):
     ##)
 
     def parse(self, response):
-        #Debugging 06 Oct. 2016
         analyzeThis = response.xpath("//body").extract_first()
         #Defined in items.py
         item = foreignScrapeItem()
-        #Beautiful Soup v4.1
         soup = BeautifulSoup(analyzeThis, 'lxml')
-        rawLinks = soup.find_all('a')
-        links = []
-        #Can collect all links.
-        for link in rawLinks:
-            url = link.get('href')
-            links.append(url)
-            #yield scrapy.Request(url, callback=self.parse)
-        item['name'] = response.xpath("//title").extract_first()
-        item['urls'] = json.dumps(links)
+        item['name'] = response.xpath("//title").extract()[6:][:-8]
+        item['id'] = response.url
         for url in response.xpath('//a/@href').extract():
             try:
                 yield scrapy.Request("https://history.state.gov/"+url, callback=self.parse)
             except: 
                 print("Could not parse URL! Who knows why..."+url)
+        item['bodyText'] = soup.body.get_text()[:-568]
+        item['urls'] = ["https://history.state.gov/"+k for k in response.xpath('//a/@href').extract()]
+        yield item
+        
 
+        #Comments and Debugging:
         # Here's how to make stripped strings
         #for string in soup.stripped_strings:
         #    print(repr(string))
@@ -66,7 +62,6 @@ class MySpider(CrawlSpider):
             #'title': soup.title.string
           #  'body': soup.body.get_text()
         #}
-        item['bodyText'] = soup.body.get_text()
         #Print to a file.
         #bodyFile = 'json/text/body-' + re.sub('http', '', re.sub('/', '-', re.sub('//', '', response.url))) + '.json'
         #urlFile = 'json/links/links-' + re.sub('http', '', re.sub('/', '-', re.sub('//', '', response.url))) + '.json'
@@ -77,12 +72,10 @@ class MySpider(CrawlSpider):
             #f.write(json.dumps(links))
         #print(log)
         #Debugging Ryan Steed 20 Sep 2016
-        yield item
-        ##for url in response.xpath('//a/@href').extract():
+
+         ##for url in response.xpath('//a/@href').extract():
             ##yield scrapy.Request(url, callback=parse)
 
         ##def parse_next(self, response):
             # logs into next urls
             #self.logger.info("Visited %s", response.url)
-
-    
