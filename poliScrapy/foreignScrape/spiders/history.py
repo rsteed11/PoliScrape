@@ -18,9 +18,9 @@ class MySpider(CrawlSpider):
     #For scrapy command call:
     name = 'history'
     #Allowed domains for url searching?
-    allowed_domains = ['history.state.gov']
+    allowed_domains = ['history.state.gov/historicaldocuments']
     #Where to start:
-    start_urls = ['https://history.state.gov/historicaldocuments']
+    start_urls = ['https://history.state.gov/historicaldocuments/frus1945v01']
     #Idea for collecting links using Scrapy, can be done with Beautiful Soup. Ryan Steed 20 Sep 2016.
     ##rules = (
         # Extract links matching 'category.php' (but not matching 'subsection.php')
