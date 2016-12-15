@@ -104,7 +104,7 @@ EXTENSIONS = {
 	'scrapy.extensions.closespider.CloseSpider': 80,
 	'scrapy.extensions.logstats.LogStats': 80,
 }
-CLOSESPIDER_PAGECOUNT = 3
+#CLOSESPIDER_PAGECOUNT = 3
 #CLOSESPIDER_TIMEOUT = 50
 #CLOSESPIDER_ITEMCOUNT
 CLOSESPIDER_ERRORCOUNT = 30
