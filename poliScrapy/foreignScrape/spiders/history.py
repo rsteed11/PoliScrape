@@ -18,7 +18,7 @@ class MySpider(CrawlSpider):
     #For scrapy command call:
     name = 'history'
     #Allowed domains for url searching?
-    allowed_domains = ['history.state.gov/historicaldocuments']
+    allowed_domains = ['history.state.gov']
     #Where to start:
     start_urls = ['https://history.state.gov/historicaldocuments/frus1945v01']
     #Idea for collecting links using Scrapy, can be done with Beautiful Soup. Ryan Steed 20 Sep 2016.
@@ -44,7 +44,7 @@ class MySpider(CrawlSpider):
             except: 
                 print("Could not parse URL! Who knows why..."+url)
         item['bodyText'] = soup.body.get_text()[:-568]
-        item['urls'] = ["https://history.state.gov/"+k for k in response.xpath('//a/@href').extract()]
+        item['urls'] = ["https://history.state.gov"+k for k in response.xpath('//a/@href').extract()]
         yield item
         
 
