@@ -5,7 +5,7 @@ Author: Ryan Steed
 ## Version 1
 _2016-Oct-13, Chapel Hill, NC_
 
-PoliScrape is an archival web scraper that collects, searches and analyzes unredacted foreign policy documents.
+PoliScrape is an archival web scraper that collects, searches and analyzes foreign policy documents.
 
 ## Features
 - Summary of available foreign policy databases
