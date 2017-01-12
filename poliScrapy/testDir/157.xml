@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<item><bodyText>
+
+Learn about the beta
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+MenuMenu
+
+
+
+Home
+
+Historical Documents
+
+Foreign Relations of the United States
+
+About the Foreign Relations Series
+
+Current Status of the Foreign Relations Series
+
+History of the Foreign Relations Series
+
+Ebooks Initiative
+
+
+
+Department History
+
+Overview
+
+A Short History of the Department
+
+Biographies of the Secretaries of
+                                        State
+
+Principal Officers and Chiefs of
+                                        Mission
+
+Travels of the Secretary of State
+
+Travels of the President
+
+Visits by Foreign Heads of State
+
+World War I and the Department
+
+Buildings of the Department of State
+
+U.S. Diplomatic Couriers
+
+
+
+Key Milestones
+
+Overview
+
+1750&#8211;1775
+
+1776&#8211;1783
+
+1784&#8211;1800
+
+1801&#8211;1829
+
+1830&#8211;1860
+
+1861&#8211;1865
+
+1866&#8211;1898
+
+1899&#8211;1913
+
+1914&#8211;1920
+
+1921&#8211;1936
+
+1937&#8211;1945
+
+1945&#8211;1952
+
+1953&#8211;1960
+
+1961&#8211;1968
+
+1969&#8211;1976
+
+1977&#8211;1980
+
+1981&#8211;1988
+
+1989&#8211;1992
+
+1993&#8211;2000
+
+
+
+Guide to Countries
+
+Guide to Country Recognition and Relations
+
+World Wide Diplomatic Archives Index
+
+
+
+More Resources
+
+About Us
+
+Browse Resources by Subject Tag
+
+Conferences
+
+Contact Us
+
+Developer Resources &amp; APIs
+
+Educational Resources
+
+Frequently Asked Questions
+
+Open Government Initiative
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Home
+
+Developer
+
+Catalog
+
+
+
+
+
+
+
+Office of the Historian Ebook Catalog API
+
+Overview
+To improve access to data and encourage innovation, the Office of the Historian Ebook
+                            Catalog is open to third party developers via an Application Programming Interface
+                            (API). This browsable catalog contains all ebooks from the Foreign Relations of the United States
+                            (FRUS) series, the official documentary historical record of major U.S.
+                            foreign policy decisions and significant diplomatic activity. Use this API to embed
+                            our live, up-to-date, searchable, and browsable ebook catalog in your application
+                            and to locate download links to the ebooks and their cover images.
+Do you have feedback or requests about this API? Use our feedback tracker on GitHub
+                            to start the discussion.
+
+
+Accessing the API
+The entry point to API is the following URI (no registration, authentication, or API
+                            key is required):
+GET https://history.state.gov/api/v1/catalog
+This request returns an XML response, using the Atom-based OPDS format (see below for more information about the RESTful OPDS standard),
+                            which contains a single Atom &lt;feed&gt; element, metadata about the feed
+                            (including a link to an OpenSearch description document that allows keyword querying
+                            of the ebook catalog), and three Atom &lt;entry&gt; elements with OPDS
+                            navigation-type links to interior resources:
+&lt;feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"&gt;
+    &lt;id&gt;https://history.state.gov/api/v1/catalog&lt;/id&gt;
+    &lt;title&gt;Office of the Historian Ebook Catalog&lt;/title&gt;
+    &lt;updated&gt;2013-05-22T03:10:12.659Z&lt;/updated&gt;
+    &lt;author&gt;
+        &lt;name&gt;Office of the Historian&lt;/name&gt;
+        &lt;uri&gt;https://history.state.gov/&lt;/uri&gt;
+    &lt;/author&gt;
+    &lt;link
+        type="application/atom+xml;profile=opds-catalog;kind=acquisition"
+        rel="self"
+        href="https://history.state.gov/api/v1/catalog"
+        title="Office of the Historian Ebook Catalog"/&gt;
+    &lt;link type="application/atom+xml;profile=opds-catalog;kind=navigation"
+        rel="start"
+        href="https://history.state.gov/api/v1/catalog"
+        title="Foreign Relations of the United States"/&gt;
+    &lt;link type="application/opensearchdescription+xml"
+        rel="search"
+        href="https://history.state.gov/opensearch.xml"
+        title="Search Office of the Historian ebooks"/&gt;
+    &lt;entry&gt;
+        &lt;title&gt;All Volumes&lt;/title&gt;
+        &lt;id&gt;all&lt;/id&gt;
+        &lt;updated&gt;2013-05-22T03:10:12.659Z&lt;/updated&gt;
+        &lt;summary type="text"&gt;
+            All Foreign Relations of the United States series ebooks
+        &lt;/summary&gt;
+        &lt;link type="application/atom+xml;profile=opds-catalog;kind=acquisition"
+            rel="subsection"
+            href="https://history.state.gov/api/v1/catalog/all"
+            title="Foreign Relations of the United States Ebook Catalog"/&gt;
+    &lt;/entry&gt;
+    &lt;entry&gt;
+        &lt;title&gt;Recently Published&lt;/title&gt;
+        &lt;id&gt;recent&lt;/id&gt;
+        &lt;updated&gt;2013-05-22T03:10:12.659Z&lt;/updated&gt;
+        &lt;summary type="text"&gt;10 Most Recently Published Volumes&lt;/summary&gt;
+        &lt;link type="application/atom+xml;profile=opds-catalog;kind=acquisition"
+            rel="http://opds-spec.org/sort/new"
+            href="https://history.state.gov/api/v1/catalog/recent"
+            title="10 Most Recently Published"/&gt;
+    &lt;/entry&gt;
+    &lt;entry&gt;
+        &lt;title&gt;Browse By Keywords&lt;/title&gt;
+        &lt;id&gt;browse&lt;/id&gt;
+        &lt;updated&gt;2013-05-22T03:10:12.659Z&lt;/updated&gt;
+        &lt;summary type="text"&gt;Browse By Keywords&lt;/summary&gt;
+        &lt;link type="application/atom+xml;profile=opds-catalog;kind=navigation"
+            rel="subsection"
+            href="https://history.state.gov/api/v1/catalog/browse"
+            title="Browse By Keywords"/&gt;
+    &lt;/entry&gt;
+&lt;/feed&gt;
+While additional entries may be added in the future using the same self-describing
+                            format, the current entries are worth discussing. The three key URIs in the entries
+                            here are:
+
+All Volumes
+                                GET https://history.state.gov/api/v1/catalog/all
+
+Recently Published
+                                GET https://history.state.gov/api/v1/catalog/recent
+
+Browse by Keywords
+                                GET https://history.state.gov/api/v1/catalog/browse
+
+
+The /catalog/all &#8220;All Volumes&#8221; URI leads to a listing of all ebooks in the catalog,
+                            sorted in &#8220;series&#8221; order (chronologically by period covered and then by volume
+                            number). The /catalog/recent &#8220;Recently Published&#8221; URI leads to a listing of the ten
+                            most recently published ebooks, sorted in reverse chronological order. Both these
+                            URIs return an OPDS feed with links to the ebooks. An example ebook entry:
+&lt;entry&gt;
+    &lt;title&gt;China, 1973&#8211;1976&lt;/title&gt;
+    &lt;id&gt;frus1969-76v18&lt;/id&gt;
+    &lt;updated&gt;2013-01-06T06:00:27Z&lt;/updated&gt;
+    &lt;summary type="text"&gt;
+        Foreign Relations of the United States, 1969&#8211;1976, Volume XVIII, China, 1973&#8211;1976
+    &lt;/summary&gt;
+    &lt;link type="application/epub+zip"
+        rel="http://opds-spec.org/acquisition"
+        href="//s3.amazonaws.com/static.history.state.gov/frus/frus1969-76v18/ebook/frus1969-76v18.epub"
+        title="China, 1973&#8211;1976 (EPUB)"/&gt;
+    &lt;link type="application/x-mobipocket-ebook"
+        rel="http://opds-spec.org/acquisition"
+        href="//s3.amazonaws.com/static.history.state.gov/frus/frus1969-76v18/ebook/frus1969-76v18.mobi"
+        title="China, 1973&#8211;1976 (Mobi)"/&gt;
+    &lt;link type="application/pdf"
+        rel="http://opds-spec.org/acquisition"
+        href="//s3.amazonaws.com/static.history.state.gov/frus/frus1969-76v18/ebook/frus1969-76v18.epub"
+        title="China, 1973&#8211;1976 (PDF)"/&gt;
+    &lt;link type="image/jpeg"
+        rel="http://opds-spec.org/image"
+        href="//s3.amazonaws.com/static.history.state.gov/frus/frus1969-76v18/covers/frus1969-76v18.jpg"
+        title="Cover of China, 1973&#8211;1976"/&gt;
+    &lt;link type="image/jpeg"
+        rel="http://opds-spec.org/image/thumbnail"
+        href="//s3.amazonaws.com/static.history.state.gov/frus/frus1969-76v18/covers/frus1969-76v18-thumb.jpg"
+        title="Thumbnail-sized cover of China, 1973&#8211;1976"/&gt;
+&lt;/entry&gt;
+This OPDS entry element contains an ebook&#8217;s title, links to the EPUB, Mobi, and PDF
+                            editions of the volume, and links to the thumbnail- and full-sized cover images of
+                            the volume.
+The &#8220;Browse by Keywords&#8221; URI leads to the main feed for subject keyword-based
+                            browsing of the ebooks. The keywords belong to a rich subject taxonomy focusing on
+                            the history of U.S. foreign relations, and is organized into three main categories:
+                            People, Places, and Topics, with 500 subjects nested hierarchically inside. Browse
+                            the taxonomy by accessing the /catalog/browse URI with the &#8220;tag&#8221; parameter:
+GET https://history.state.gov/api/v1/catalog/browse?tag={value}
+If an invalid tag is passed to the browse URI, a 404 error will be returned. The
+                            results of a browse are returned as links to sub-topics in the keyword taxonomy and
+                            links to any books matching the current tag (in the same form as the China volume
+                            example above). An example keyword entry returned inside a query for the Human
+                            Rights tag is Refugees (here, we excerpt an entry element from the feed):
+&lt;entry&gt;
+    &lt;title&gt;Refugees&lt;/title&gt;
+    &lt;id&gt;refugees&lt;/id&gt;
+    &lt;updated&gt;2013-05-22T04:03:53.436Z&lt;/updated&gt;
+    &lt;summary type="text"&gt;13 volumes&lt;/summary&gt;
+    &lt;link type="application/atom+xml;profile=opds-catalog;kind=navigation"
+        rel="subsection"
+        href="https://history.state.gov/api/v1/catalog/browse?tag=refugees"
+        title="Refugees"/&gt;
+&lt;/entry&gt;
+Notice that the &lt;summary&gt; element provides a count of the number of ebook
+                            volumes that can be found by following the link to /catalog/browse?tag=refugees.
+Tags can also be searched using the search URI with a &#8220;q&#8221; parameter (note: this URI
+                            is exposed in the OpenSearch description document above):
+GET https://history.state.gov/api/v1/catalog/search?q={value}
+A &#8220;q&#8221; query parameter can be submitted as (Google-style) free text using Lucene Query
+                            Syntax, e.g.:
+q=China+Nixon
+q=for*
+The first query searches the subject keywords for (&#8220;China&#8221; OR &#8220;Nixon&#8221;) and returns an
+                            OPDS feed with entries linking to the /catalog/browse entries for Richard M. Nixon
+                            and China. The second query uses the asterisk wildcard to return entries including
+                            President Gerald Ford, the topic of Foreign Aid, and Secretary John Forsyth.
+Again, all of these resources can be reached by navigating from this main catalog
+                            address, and since the entries may grow, we encourage developers to retain the main
+                            catalog address.
+Please link back to the ebooks files on this server, so that readers can always
+                            receive the most up-to-date version of an ebook.
+
+
+An OPDS-based, RESTful API
+This API delivers resources using the Open
+                            Publication Distribution System (OPDS) Catalog 1.1, an open standard for
+                            encoding catalogs. This format is widely
+                                used by organizations that distribute ebooks, and enjoys a growing ecosystem
+                            of client applications.
+                            As an Atom-based format,
+                            OPDS uses the Representational State Transfer (REST) architectural style, and designs
+                            resources around media types, links, and link relationships. This means that the API
+                            is largely self-describing. Furthermore, the API does not define any new link
+                            relationship (&#8220;rel&#8221;) values, limiting itself to those defined in the OPDS spec.
+To learn more about OPDS and the key concepts associated with this standard, visit
+                            the Discover OPDS site. The OPDS mailing list is a helpful
+                            forum for asking questions and following the evolution of the standard.
+
+
+
+
+
+
+
+
+
+
+
+
+
+Learn more
+Home
+
+Search
+
+FAQ
+
+
+
+Topics
+Historical Documents
+
+Department History
+
+Countries
+
+Milestones of U.S. Foreign Relations
+
+
+
+Contact
+About Us
+
+Contact Us
+
+
+
+Imprint
+Privacy Notice
+
+External Link Policy
+
+Copyright Info
+
+
+
+
+
+
+
+
+
+Office of the Historian, Bureau of Public AffairsUnited States Department of State
+
+history@state.gov
+
+Phone: 202-955-0200
+Fax: 202-955-0268
+
+
+
+
+
+
+
+       </bodyText><name /><urls><value>https://history.state.gov//about-the-beta</value><value>https://history.state.gov//</value><value>https://history.state.gov//</value><value>https://history.state.gov//historicaldocuments</value><value>https://history.state.gov//historicaldocuments</value><value>https://history.state.gov//historicaldocuments/about-frus</value><value>https://history.state.gov//historicaldocuments/status-of-the-series</value><value>https://history.state.gov//historicaldocuments/frus-history</value><value>https://history.state.gov//historicaldocuments/ebooks</value><value>https://history.state.gov//departmenthistory</value><value>https://history.state.gov//departmenthistory</value><value>https://history.state.gov//departmenthistory/short-history</value><value>https://history.state.gov//departmenthistory/people/secretaries</value><value>https://history.state.gov//departmenthistory/people/principals-chiefs</value><value>https://history.state.gov//departmenthistory/travels/secretary</value><value>https://history.state.gov//departmenthistory/travels/president</value><value>https://history.state.gov//departmenthistory/visits</value><value>https://history.state.gov//departmenthistory/wwi</value><value>https://history.state.gov//departmenthistory/buildings</value><value>https://history.state.gov//departmenthistory/diplomatic-couriers</value><value>https://history.state.gov//milestones</value><value>https://history.state.gov//milestones</value><value>https://history.state.gov//milestones/1750-1775</value><value>https://history.state.gov//milestones/1776-1783</value><value>https://history.state.gov//milestones/1784-1800</value><value>https://history.state.gov//milestones/1801-1829</value><value>https://history.state.gov//milestones/1830-1860</value><value>https://history.state.gov//milestones/1861-1865</value><value>https://history.state.gov//milestones/1866-1898</value><value>https://history.state.gov//milestones/1899-1913</value><value>https://history.state.gov//milestones/1914-1920</value><value>https://history.state.gov//milestones/1921-1936</value><value>https://history.state.gov//milestones/1937-1945</value><value>https://history.state.gov//milestones/1945-1952</value><value>https://history.state.gov//milestones/1953-1960</value><value>https://history.state.gov//milestones/1961-1968</value><value>https://history.state.gov//milestones/1969-1976</value><value>https://history.state.gov//milestones/1977-1980</value><value>https://history.state.gov//milestones/1981-1988</value><value>https://history.state.gov//milestones/1989-1992</value><value>https://history.state.gov//milestones/1993-2000</value><value>https://history.state.gov//countries</value><value>https://history.state.gov//countries</value><value>https://history.state.gov//countries/archives</value><value>https://history.state.gov/</value><value>https://history.state.gov//about</value><value>https://history.state.gov//tags</value><value>https://history.state.gov//conferences</value><value>https://history.state.gov//about/contact-us</value><value>https://history.state.gov//developer</value><value>https://history.state.gov//education</value><value>https://history.state.gov//about/faq</value><value>https://history.state.gov//open</value><value>https://history.state.gov/</value><value>https://history.state.gov//developer</value><value>https://history.state.gov//developer/catalog</value><value>https://history.state.gov/http://en.wikipedia.org/wiki/API</value><value>https://history.state.gov//historicaldocuments</value><value>https://history.state.gov/http://github.com/HistoryAtState/Feedback</value><value>https://history.state.gov/#opds</value><value>https://history.state.gov/http://lucene.apache.org/core/3_6_2/queryparsersyntax.html</value><value>https://history.state.gov/http://opds-spec.org/</value><value>https://history.state.gov/http://opds-spec.org/catalogs/</value><value>https://history.state.gov/http://en.wikipedia.org/wiki/OPDS#OPDS_Clients</value><value>https://history.state.gov/http://en.wikipedia.org/wiki/Atom_(standard)</value><value>https://history.state.gov/http://en.wikipedia.org/wiki/Representational_State_Transfer</value><value>https://history.state.gov/http://opds-spec.org/</value><value>https://history.state.gov/http://discover-opds.org/</value><value>https://history.state.gov/http://groups.google.com/group/openpub</value><value>https://history.state.gov//</value><value>https://history.state.gov//search</value><value>https://history.state.gov//about/faq</value><value>https://history.state.gov//historicaldocuments/</value><value>https://history.state.gov//departmenthistory/</value><value>https://history.state.gov//countries/</value><value>https://history.state.gov//milestones/</value><value>https://history.state.gov//about/</value><value>https://history.state.gov//about/contact-us</value><value>https://history.state.gov/http://www.state.gov/misc/87529.htm#privacy</value><value>https://history.state.gov/http://www.state.gov/misc/152386.htm</value><value>https://history.state.gov/http://www.state.gov/misc/87529.htm#copyright</value><value>https://history.state.gov/http://www.state.gov</value><value>https://history.state.gov/mailto:history@state.gov</value></urls><id>https://history.state.gov//developer/catalog</id></item>

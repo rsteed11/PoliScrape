@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<item><bodyText>
+
+Learn about the beta
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+MenuMenu
+
+
+
+Home
+
+Historical Documents
+
+Foreign Relations of the United States
+
+About the Foreign Relations Series
+
+Current Status of the Foreign Relations Series
+
+History of the Foreign Relations Series
+
+Ebooks Initiative
+
+
+
+Department History
+
+Overview
+
+A Short History of the Department
+
+Biographies of the Secretaries of
+                                        State
+
+Principal Officers and Chiefs of
+                                        Mission
+
+Travels of the Secretary of State
+
+Travels of the President
+
+Visits by Foreign Heads of State
+
+World War I and the Department
+
+Buildings of the Department of State
+
+U.S. Diplomatic Couriers
+
+
+
+Key Milestones
+
+Overview
+
+1750&#8211;1775
+
+1776&#8211;1783
+
+1784&#8211;1800
+
+1801&#8211;1829
+
+1830&#8211;1860
+
+1861&#8211;1865
+
+1866&#8211;1898
+
+1899&#8211;1913
+
+1914&#8211;1920
+
+1921&#8211;1936
+
+1937&#8211;1945
+
+1945&#8211;1952
+
+1953&#8211;1960
+
+1961&#8211;1968
+
+1969&#8211;1976
+
+1977&#8211;1980
+
+1981&#8211;1988
+
+1989&#8211;1992
+
+1993&#8211;2000
+
+
+
+Guide to Countries
+
+Guide to Country Recognition and Relations
+
+World Wide Diplomatic Archives Index
+
+
+
+More Resources
+
+About Us
+
+Browse Resources by Subject Tag
+
+Conferences
+
+Contact Us
+
+Developer Resources &amp; APIs
+
+Educational Resources
+
+Frequently Asked Questions
+
+Open Government Initiative
+
+
+
+
+
+
+
+
+
+
+
+Tips - Search
+
+
+
+Home
+
+Search
+
+Search Tips
+
+
+
+
+
+
+
+Search Tips
+By default, the search engine returns documents from the entire site* containing any of the
+                    search terms you enter. All searches are case-insensitive, so searching for &#8220;SALT&#8221; will
+                    return the same results as searching for &#8220;salt.&#8221; You can refine a query by (1) narrowing its
+                    scope to specific sections of the website or to specific Foreign Relations volumes
+                    and (2) using phrase, boolean, wildcard, and proximity operators in your search. Use the
+                    following techniques and syntax to improve your search results. Click on each example to
+                    pre-fill the search form with the parameters of your search, and then submit the search to
+                    see the results.
+* Note that the search engine&#8217;s results are limited to the materials that the Office of the
+                    Historian has digitized. Please consult the full list of Foreign Relations volumes
+                        by administration to see which volumes have been
+                    digitized (indicated by the phrase, &#8220;full text,&#8221; next to each volume&#8217;s title), and consult
+                    the University of Wisconsin Madison
+                            FRUS collection or a library near you for access to volumes not yet
+                    available here.
+
+Scope
+Beneath the keyword search field is a set of checkboxes. Selecting any of the checkboxes
+                        can narrow the scope of your search, resulting in a faster, more specific query. The
+                        default set of checkboxes contains the major content sections of the website: Historical
+                        Documents, Department History, Milestones, Countries, Conferences, Educational
+                        Resources, FRUS Sesquicentennial, and About (FAQ, Advisory Committee Minutes). You can
+                        also select specific Foreign Relations volumes. To search for articles about
+                        U.S. diplomatic history that relate to peace:
+peace (with the &#8220;Department History&#8221; and &#8220;Milestones&#8221; checkboxes selected) 
+If no checkboxes are selected, the entire site will be searched. To achieve the best
+                        results, combine scope with the following search operators:
+
+
+Phrases
+When you type your search terms into the box, the search engine will search for those
+                        terms, individually, anywhere in a document. To force the search engine to find fixed
+                        phrases (i.e., specific, ordered combinations of words), place the phrase in quotation
+                        marks. To locate documents which include both &#8220;peaceful&#8221; and &#8220;nuclear&#8221; anywhere in the
+                        text, use the following search:
+peaceful nuclear
+
+To locate documents which use the phrase &#8220;peaceful nuclear,&#8221; use this search:
+"peaceful nuclear"
+
+
+
+Booleans
+The search engine will allow you to perform Boolean searches (AND, OR, and NOT). Boolean
+                        operators must be in all caps.
+You can use Boolean operators with individual terms or with phrases enclosed in quotation
+                        marks. For example, to locate documents which include both the word &#8220;Kissinger&#8221; and the
+                        phrase &#8220;peaceful nuclear,&#8221; use this search:
+Kissinger AND
+                            "peaceful nuclear"
+
+To locate documents which include either &#8220;Rhodesia&#8221; or &#8220;Zimbabwe,&#8221; use this search:
+Rhodesia OR Zimbabwe
+
+To locate documents which include the phrase &#8220;arms control&#8221; but exclude documents which
+                        also include the term &#8220;SALT,&#8221; use this search:
+"arms control" NOT SALT
+
+You can also use the plus (+) and minus (-) signs to include or exclude certain terms. To
+                        search for documents which must include the phrase &#8220;law of the sea&#8221; and may include the
+                        term &#8220;seabed,&#8221; use this search:
++"law of the sea" seabed
+
+To search for documents which include &#8220;Korea&#8221; but not &#8220;DMZ,&#8221; use this search:
+Korea -DMZ
+
+Finally, you can use parentheses to nest your searches. To find documents which include
+                        &#8220;Guatemala&#8221; or &#8220;El Salvador&#8221; and &#8220;Belize,&#8221; use this search:
+(Guatemala OR
+                            "El Salvador") AND Belize
+
+
+
+Wildcards
+If you are unsure about the spelling of a term or want to find variants of a term, you
+                        can use wildcards. The search engine supports two wildcard characters: ? and *.
+If you want to replace a single letter in your search term, use ? in your query. To find
+                        documents which include &#8220;text&#8221; or &#8220;test,&#8221; use this search:
+te?t
+
+Note that the above search will not return hits for &#8220;Tet&#8221; or &#8220;teapot.&#8221; If you want to
+                        replace zero or more letters in your search term use * in your query. For example, to
+                        find documents which include &#8220;Vietnam&#8221; and &#8220;Vietnamese,&#8221; use this search:
+Vietna*
+
+Note that the above search will not return hits for &#8220;Viet Nam,&#8221; another spelling of the
+                        same country. You may have to try multiple variants of the same search to get all the
+                        results you need.
+
+
+Proximity
+If you are searching for common words, you can tell the search engine to only return
+                        documents in which the words are within a distance you define. To find documents which
+                        include &#8220;Cuba&#8221; and &#8220;submarine&#8221; within 10 words of each other, use this search:
+"Cuba submarine"~10
+
+We are aware that &#8220;keyword in context&#8221; summary of the results of proximity searches are
+                        not displaying correctly. The search results themselves, however, are reliable.
+
+
+
+
+
+
+
+
+
+
+
+
+
+Learn more
+Home
+
+Search
+
+FAQ
+
+
+
+Topics
+Historical Documents
+
+Department History
+
+Countries
+
+Milestones of U.S. Foreign Relations
+
+
+
+Contact
+About Us
+
+Contact Us
+
+
+
+Imprint
+Privacy Notice
+
+External Link Policy
+
+Copyright Info
+
+
+
+
+
+
+
+
+
+Office of the Historian, Bureau of Public AffairsUnited States Department of State
+
+history@state.gov
+
+Phone: 202-955-0200
+Fax: 202-955-0268
+
+
+
+
+
+
+
+       </bodyText><name /><urls><value>https://history.state.gov//about-the-beta</value><value>https://history.state.gov//</value><value>https://history.state.gov//</value><value>https://history.state.gov//historicaldocuments</value><value>https://history.state.gov//historicaldocuments</value><value>https://history.state.gov//historicaldocuments/about-frus</value><value>https://history.state.gov//historicaldocuments/status-of-the-series</value><value>https://history.state.gov//historicaldocuments/frus-history</value><value>https://history.state.gov//historicaldocuments/ebooks</value><value>https://history.state.gov//departmenthistory</value><value>https://history.state.gov//departmenthistory</value><value>https://history.state.gov//departmenthistory/short-history</value><value>https://history.state.gov//departmenthistory/people/secretaries</value><value>https://history.state.gov//departmenthistory/people/principals-chiefs</value><value>https://history.state.gov//departmenthistory/travels/secretary</value><value>https://history.state.gov//departmenthistory/travels/president</value><value>https://history.state.gov//departmenthistory/visits</value><value>https://history.state.gov//departmenthistory/wwi</value><value>https://history.state.gov//departmenthistory/buildings</value><value>https://history.state.gov//departmenthistory/diplomatic-couriers</value><value>https://history.state.gov//milestones</value><value>https://history.state.gov//milestones</value><value>https://history.state.gov//milestones/1750-1775</value><value>https://history.state.gov//milestones/1776-1783</value><value>https://history.state.gov//milestones/1784-1800</value><value>https://history.state.gov//milestones/1801-1829</value><value>https://history.state.gov//milestones/1830-1860</value><value>https://history.state.gov//milestones/1861-1865</value><value>https://history.state.gov//milestones/1866-1898</value><value>https://history.state.gov//milestones/1899-1913</value><value>https://history.state.gov//milestones/1914-1920</value><value>https://history.state.gov//milestones/1921-1936</value><value>https://history.state.gov//milestones/1937-1945</value><value>https://history.state.gov//milestones/1945-1952</value><value>https://history.state.gov//milestones/1953-1960</value><value>https://history.state.gov//milestones/1961-1968</value><value>https://history.state.gov//milestones/1969-1976</value><value>https://history.state.gov//milestones/1977-1980</value><value>https://history.state.gov//milestones/1981-1988</value><value>https://history.state.gov//milestones/1989-1992</value><value>https://history.state.gov//milestones/1993-2000</value><value>https://history.state.gov//countries</value><value>https://history.state.gov//countries</value><value>https://history.state.gov//countries/archives</value><value>https://history.state.gov/</value><value>https://history.state.gov//about</value><value>https://history.state.gov//tags</value><value>https://history.state.gov//conferences</value><value>https://history.state.gov//about/contact-us</value><value>https://history.state.gov//developer</value><value>https://history.state.gov//education</value><value>https://history.state.gov//about/faq</value><value>https://history.state.gov//open</value><value>https://history.state.gov/</value><value>https://history.state.gov//search</value><value>https://history.state.gov//search/tips</value><value>https://history.state.gov//historicaldocuments</value><value>https://history.state.gov/http://uwdc.library.wisc.edu/collections/FRUS</value><value>https://history.state.gov//search?q-fill=peace&amp;within=milestones&amp;within=department</value><value>https://history.state.gov//search?q-fill=peaceful+nuclear</value><value>https://history.state.gov//search?q-fill="peaceful+nuclear"</value><value>https://history.state.gov//search?q-fill=Kissinger+AND+"peaceful+nuclear"</value><value>https://history.state.gov//search?q-fill=Rhodesia+OR+Zimbabwe</value><value>https://history.state.gov//search?q-fill="arms+control"+NOT+SALT</value><value>https://history.state.gov//search?q-fill=%2B"law+of+the+sea"+seabed</value><value>https://history.state.gov//search?q-fill=Korea+-DMZ</value><value>https://history.state.gov//search?q-fill=(Guatemala+OR+"El+Salvador")+AND+Belize</value><value>https://history.state.gov//search?q-fill=te?t</value><value>https://history.state.gov//search?q-fill=Vietna*</value><value>https://history.state.gov//search?q-fill="Cuba+submarine"~10</value><value>https://history.state.gov//</value><value>https://history.state.gov//search</value><value>https://history.state.gov//about/faq</value><value>https://history.state.gov//historicaldocuments/</value><value>https://history.state.gov//departmenthistory/</value><value>https://history.state.gov//countries/</value><value>https://history.state.gov//milestones/</value><value>https://history.state.gov//about/</value><value>https://history.state.gov//about/contact-us</value><value>https://history.state.gov/http://www.state.gov/misc/87529.htm#privacy</value><value>https://history.state.gov/http://www.state.gov/misc/152386.htm</value><value>https://history.state.gov/http://www.state.gov/misc/87529.htm#copyright</value><value>https://history.state.gov/http://www.state.gov</value><value>https://history.state.gov/mailto:history@state.gov</value></urls><id>https://history.state.gov//search/tips</id></item>

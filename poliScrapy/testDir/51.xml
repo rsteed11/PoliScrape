@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<item><bodyText>
+
+Learn about the beta
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+MenuMenu
+
+
+
+Home
+
+Historical Documents
+
+Foreign Relations of the United States
+
+About the Foreign Relations Series
+
+Current Status of the Foreign Relations Series
+
+History of the Foreign Relations Series
+
+Ebooks Initiative
+
+
+
+Department History
+
+Overview
+
+A Short History of the Department
+
+Biographies of the Secretaries of
+                                        State
+
+Principal Officers and Chiefs of
+                                        Mission
+
+Travels of the Secretary of State
+
+Travels of the President
+
+Visits by Foreign Heads of State
+
+World War I and the Department
+
+Buildings of the Department of State
+
+U.S. Diplomatic Couriers
+
+
+
+Key Milestones
+
+Overview
+
+1750&#8211;1775
+
+1776&#8211;1783
+
+1784&#8211;1800
+
+1801&#8211;1829
+
+1830&#8211;1860
+
+1861&#8211;1865
+
+1866&#8211;1898
+
+1899&#8211;1913
+
+1914&#8211;1920
+
+1921&#8211;1936
+
+1937&#8211;1945
+
+1945&#8211;1952
+
+1953&#8211;1960
+
+1961&#8211;1968
+
+1969&#8211;1976
+
+1977&#8211;1980
+
+1981&#8211;1988
+
+1989&#8211;1992
+
+1993&#8211;2000
+
+
+
+Guide to Countries
+
+Guide to Country Recognition and Relations
+
+World Wide Diplomatic Archives Index
+
+
+
+More Resources
+
+About Us
+
+Browse Resources by Subject Tag
+
+Conferences
+
+Contact Us
+
+Developer Resources &amp; APIs
+
+Educational Resources
+
+Frequently Asked Questions
+
+Open Government Initiative
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Home
+
+Developer
+
+
+
+
+
+
+
+Developer Resources
+
+Overview
+In keeping with the goal of the President&#8217;s Digital Government Strategy to deliver better digital services to the
+                            American people, the Office of the Historian has created its first public Application Programming Interface
+                            (API) and has established this page to house information for developers. We invite
+                            developers to use our API and provide feedback.
+
+
+Ebook Catalog API
+The Office of the Historian Ebook Catalog API is a
+                            RESTful, OPDS-formatted catalog of the growing number of free ebooks from the
+                                Foreign Relations of the United States series. Use this API to embed
+                            our live, up-to-date, searchable, and browsable ebook catalog in your application
+                            and to locate download links to the ebooks and their cover images.
+
+
+Support
+Developers are welcome to visit our organizational account on GitHub. Requests or inquiries may
+                            be submitted as issues.
+
+
+Technologies &amp; Standards
+This website is powered by eXist-db, a free, open
+                            source XML server and the open standard W3C technologies it supports, including
+                            XQuery 3.0, EXPath, and EXQuery.
+Our digitization initiatives center around the Text
+                                Encoding Initiative (TEI), an open, mature, XML-based standard used widely
+                            in libraries and the humanities. All our article- and book-length content is encoded
+                            as TEI. A single digital master TEI file can store an entire FRUS volume.
+                            We store this TEI in eXist-db and convert it to TEI into HTML or ebook forms using
+                            XQuery.
+Our ebook catalog API uses the Open Publication Distribution System (OPDS), an Atom
+                            XML-based standard for encoding ebook catalogs.
+
+
+
+
+
+
+
+Developer Resources
+
+
+Ebook Catalog API
+
+eXist-db
+
+Text Encoding Initiative (TEI)
+
+Project on GitHub
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Learn more
+Home
+
+Search
+
+FAQ
+
+
+
+Topics
+Historical Documents
+
+Department History
+
+Countries
+
+Milestones of U.S. Foreign Relations
+
+
+
+Contact
+About Us
+
+Contact Us
+
+
+
+Imprint
+Privacy Notice
+
+External Link Policy
+
+Copyright Info
+
+
+
+
+
+
+
+
+
+Office of the Historian, Bureau of Public AffairsUnited States Department of State
+
+history@state.gov
+
+Phone: 202-955-0200
+Fax: 202-955-0268
+
+
+
+
+
+
+
+       </bodyText><name /><urls><value>https://history.state.gov//about-the-beta</value><value>https://history.state.gov//</value><value>https://history.state.gov//</value><value>https://history.state.gov//historicaldocuments</value><value>https://history.state.gov//historicaldocuments</value><value>https://history.state.gov//historicaldocuments/about-frus</value><value>https://history.state.gov//historicaldocuments/status-of-the-series</value><value>https://history.state.gov//historicaldocuments/frus-history</value><value>https://history.state.gov//historicaldocuments/ebooks</value><value>https://history.state.gov//departmenthistory</value><value>https://history.state.gov//departmenthistory</value><value>https://history.state.gov//departmenthistory/short-history</value><value>https://history.state.gov//departmenthistory/people/secretaries</value><value>https://history.state.gov//departmenthistory/people/principals-chiefs</value><value>https://history.state.gov//departmenthistory/travels/secretary</value><value>https://history.state.gov//departmenthistory/travels/president</value><value>https://history.state.gov//departmenthistory/visits</value><value>https://history.state.gov//departmenthistory/wwi</value><value>https://history.state.gov//departmenthistory/buildings</value><value>https://history.state.gov//departmenthistory/diplomatic-couriers</value><value>https://history.state.gov//milestones</value><value>https://history.state.gov//milestones</value><value>https://history.state.gov//milestones/1750-1775</value><value>https://history.state.gov//milestones/1776-1783</value><value>https://history.state.gov//milestones/1784-1800</value><value>https://history.state.gov//milestones/1801-1829</value><value>https://history.state.gov//milestones/1830-1860</value><value>https://history.state.gov//milestones/1861-1865</value><value>https://history.state.gov//milestones/1866-1898</value><value>https://history.state.gov//milestones/1899-1913</value><value>https://history.state.gov//milestones/1914-1920</value><value>https://history.state.gov//milestones/1921-1936</value><value>https://history.state.gov//milestones/1937-1945</value><value>https://history.state.gov//milestones/1945-1952</value><value>https://history.state.gov//milestones/1953-1960</value><value>https://history.state.gov//milestones/1961-1968</value><value>https://history.state.gov//milestones/1969-1976</value><value>https://history.state.gov//milestones/1977-1980</value><value>https://history.state.gov//milestones/1981-1988</value><value>https://history.state.gov//milestones/1989-1992</value><value>https://history.state.gov//milestones/1993-2000</value><value>https://history.state.gov//countries</value><value>https://history.state.gov//countries</value><value>https://history.state.gov//countries/archives</value><value>https://history.state.gov/</value><value>https://history.state.gov//about</value><value>https://history.state.gov//tags</value><value>https://history.state.gov//conferences</value><value>https://history.state.gov//about/contact-us</value><value>https://history.state.gov//developer</value><value>https://history.state.gov//education</value><value>https://history.state.gov//about/faq</value><value>https://history.state.gov//open</value><value>https://history.state.gov/</value><value>https://history.state.gov//developer</value><value>https://history.state.gov/http://www.whitehouse.gov/sites/default/files/omb/egov/digital-government/digital-government.html</value><value>https://history.state.gov/http://en.wikipedia.org/wiki/API</value><value>https://history.state.gov//developer/catalog</value><value>https://history.state.gov/http://github.com/HistoryAtState</value><value>https://history.state.gov/http://exist-db.org/</value><value>https://history.state.gov/http://www.tei-c.org</value><value>https://history.state.gov//developer/catalog</value><value>https://history.state.gov/http://exist-db.org/</value><value>https://history.state.gov/http://www.tei-c.org</value><value>https://history.state.gov/http://github.com/HistoryAtState</value><value>https://history.state.gov//</value><value>https://history.state.gov//search</value><value>https://history.state.gov//about/faq</value><value>https://history.state.gov//historicaldocuments/</value><value>https://history.state.gov//departmenthistory/</value><value>https://history.state.gov//countries/</value><value>https://history.state.gov//milestones/</value><value>https://history.state.gov//about/</value><value>https://history.state.gov//about/contact-us</value><value>https://history.state.gov/http://www.state.gov/misc/87529.htm#privacy</value><value>https://history.state.gov/http://www.state.gov/misc/152386.htm</value><value>https://history.state.gov/http://www.state.gov/misc/87529.htm#copyright</value><value>https://history.state.gov/http://www.state.gov</value><value>https://history.state.gov/mailto:history@state.gov</value></urls><id>https://history.state.gov//developer</id></item>
