@@ -22,5 +22,5 @@ def split(toSplit, dir_name):
 					f.write(str(ET.tostring(elem)))
 
 context = ET.iterparse(sys.argv[1], events=('end', ))
-directoryName = input("Directory name? ")
+directoryName = sys.argv[2]
 split(context, directoryName)

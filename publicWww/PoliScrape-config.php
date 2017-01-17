@@ -7,7 +7,7 @@
 //----------------------------------------------------------------------------------------
 
 // File Path Setup
-$itemPath = "../poliScrapy/items/poliScrapy/history";
+$itemPath = "testData";
 
 // Prod Webserver Prefix 
 //$prefixUri   = 'somethingDifferent';

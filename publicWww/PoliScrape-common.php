@@ -7,7 +7,7 @@
 // Relative URL Routes
 
 $baseUri     = $prefixUri;
-$browseUri   = "poliScrapy/items/poliScrapy/history";
+$browseUri   = $prefixUri+"/testData/";
 
 
 //----------------------------------------------------------------------------------------
