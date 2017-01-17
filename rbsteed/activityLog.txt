@@ -560,5 +560,6 @@ LEARNED:
  12 Jan 2017
 
  - Some Notes from "Introduction to Information Retrieval," by Manning, Raghavan and Schutze
+ 	- 
 
  
