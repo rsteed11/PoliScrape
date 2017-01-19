@@ -16,7 +16,12 @@ def split(toSplit, dir_name):
 			else:
 				print(index, title)
 				filename = dir_name+"/"+title+ ".xml"
-				os.makedirs(os.path.dirname(filename),exist_ok=True)
+				if not os.path.exists(os.path.dirname(filename)):
+    				try:
+        				os.makedirs(os.path.dirname(filename))
+   					except OSError as exc: # Guard against race condition
+       					if exc.errno != errno.EEXIST:
+            				raise
 				with io.open(filename, 'w') as f:
 					f.write("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n")
 					f.write(str(ET.tostring(elem)))
