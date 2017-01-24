@@ -21,11 +21,16 @@ class MySpider(CrawlSpider):
         soup = BeautifulSoup(analyzeThis, 'lxml')
         item['name'] = response.xpath("//title").extract()[6:][:-8] #strips excess title text
         item['id'] = response.url
-        for url in response.xpath('//a/@href').extract():
+        item['bodyText'] = soup.body.get_text()[:-568] #strip off excess text from historian site
+        roughLinks = response.xpath('//a/@href').extract()
+        fineLinks = []
+        for url in roughLinks:
+            if "frus1945" in url:
+                fineLinks.append(url)
+        item['urls'] = ["https://history.state.gov/"+link for link in fineLinks]
+        for url in fineLinks:
             try:
                 yield scrapy.Request("https://history.state.gov/"+url, callback=self.parse)
             except: 
                 print("Could not parse URL! "+url)
-        item['bodyText'] = soup.body.get_text()[:-568] #strip off excess text from historian site
-        item['urls'] = ["https://history.state.gov"+k for k in response.xpath('//a/@href').extract()]
         yield item #sends items to item pipeline (settings.py, pipelines.py)

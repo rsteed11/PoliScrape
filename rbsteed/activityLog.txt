@@ -559,7 +559,10 @@ LEARNED:
 
  12 Jan 2017
 
- - Some Notes from "Introduction to Information Retrieval," by Manning, Raghavan and Schutze
- 	- 
+ - Some Notes from "Introduction to Information Retrieval," by Manning, Raghavan and Schutze: see Dropbox
 
+ 19 Jan 2017
  
+ created submodule in poliprod dir, links to PoliScrape main website
+ now published at http://poliscrape-rsteed11.apps.unc.edu/PoliScrape/publicWww/
+ git fetch and git merge to update changes, from PoliScrape dir
