@@ -2,12 +2,11 @@
 <!-- Author: Ryan Steed -->
 
 <?php
-// 2016-Aug-28 Brockman - IWP5 
 //
 //----------------------------------------------------------------------------------------
 
 // File Path Setup
-$itemPath = "testData";
+$animationPath = "testData";
 
 // Prod Webserver Prefix 
 //$prefixUri   = 'somethingDifferent';

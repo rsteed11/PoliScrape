@@ -3,18 +3,18 @@
 // 2008-Jan-25 Brockman NCSSM IWP
 // Simple PHP replacement for legacy .cgi script., Lists all the problems for easy copy + paste.
 
-include_once('iwp-config.php');
+include_once('PoliScrape-config.php');
 
 ?><!DOCTYPE html>
 <meta charset="utf-8">
 <html lang="en">
 
 <head>
-  <?php include_once("iwp-head.php") ?>
+  <?php include_once("PoliScrape-head.php") ?>
 </head>
 
 <body>
-    <?php include_once("iwp-nav.php") ?>
+    <?php include_once("PoliScrape-nav.php") ?>
 
     <!-- Page Content -->
     <div class="container">
@@ -36,20 +36,20 @@ $animationDirs = recurseDirs($searchPath, 0 );
 array_unshift($animationDirs, $searchPath );
 // print_r($animationDirs);
 foreach ( $animationDirs as $dir ) { 
-	$hrefDir = str_replace_first($animationPath, '', $dir);
-	$relDir = str_replace_first($searchPath.'/', '', $dir);
+  $hrefDir = str_replace_first($animationPath, '', $dir);
+  $relDir = str_replace_first($searchPath.'/', '', $dir);
        if ( $dir != $searchPath ) {
 ?>
-	<!-- Sub Directory -->
+  <!-- Sub Directory -->
         <div class="row">
             <div class="col-lg-12">
-	    	 <h3><a href="<?= $browseUrl ?><?= $hrefDir ?>"><?= $relDir ?></a></h3>
-	    </div>
+              <h3><a href="<?= $browseUrl ?><?= $hrefDir ?>"><?= $relDir ?></a></h3>
+            </div>
         </div>
 
 <?php
        } else { 
-	$animationFiles = recurseFind($dir, '/.iwp$/', 0 );
+  $animationFiles = recurseFind($dir, '/.xml$/', 0 );
 ?>
         <!-- Current Directory --> 
 <!--
@@ -59,37 +59,26 @@ foreach ( $animationDirs as $dir ) {
             </div>
         </div>
 -->
-	<!-- /.row -->
+  <!-- /.row -->
 
-	<!-- Animations -->
+  <!-- Animations -->
         <div class="row">
 
 <?php
 foreach ( $animationFiles as $file ) { 
-	$name = str_replace_first($dir.'/', '', $file);
-	$uri = str_replace_first($animationPath,'',$file);
+  $name = str_replace_first($dir.'/', '', $file);
+  $uri = str_replace_first($animationPath,'',$file);
 ?>
             <div class="col-md-4 col-sm-6 hero-feature">
               <div class="thumbnail">
                    <h3><?= $name ?></i></h3> <!-- color: #FFD700; -->
-            <img src="<?= $screenshotsUrl ?><?= $uri ?>.png" alt="">
-                <div class="caption">
-
-                          <a target="_anim" href="<?= $baseAnimateUrl ?><?= $uri ?>" class="btn btn-default">Animate</a>
-                        <p>
-			<i class="fa fa-star-o" style="color: #333;"></i>	
-			<i class="fa fa-bug" style="color: #333;"></i>	
-			<a target="_xtoj" href="<?= $baseXtojUrl ?><?= $uri ?>"><i class="fa fa-file-code-o fa-1x" style="color: #333;"></i></a>
-			<a target="_applet" href="https://www.iwphys.org/pps/webInterface.php/packagedProblems/<?= str_replace_first('/iwp-packaged','',$uri) ?>"><i class="fa fa-coffee fa-1x" style="color: #333;"></i></a>
-			</p>
-			<p>
-			<?= readIwpFileDescription($file) ?>
+                        <p><?=$dir?><?= $uri ?>
                         </p>
                 </div>
              </div>
            </div>
 <?php } ?>
-	</div>
+  </div>
 <?php }
 
 }

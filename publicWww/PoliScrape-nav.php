@@ -18,7 +18,7 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                <li>
-                    <a href="http://localhost/PoliScrape/git/PoliScrape/publicWww/data.php"><i class="fa fa-database"></i> Full Database </a>
+                    <a href="<?= $browseUrl ?>/"><i class="fa fa-database"></i> Full Database </a>
                 </li>
                 <li>
                     <a href="https://github.com/rsteed11/PoliScrape"><i class="fa fa-git"></i> Open Source on Github</a>
