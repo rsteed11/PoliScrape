@@ -40,17 +40,34 @@ foreach ( $animationDirs as $dir ) {
   $relDir = str_replace_first($searchPath.'/', '', $dir);
        if ( $dir != $searchPath ) {
 ?>
+
   <!-- Sub Directory -->
-        <div class="row">
-            <div class="col-lg-12">
-              <h3><a href="<?= $browseUrl ?><?= $hrefDir ?>"><?= $relDir ?></a></h3>
+            <div class="col-sm-4">
+              <p><a href="<?= $browseUrl ?><?= $hrefDir ?>"><?= $relDir ?></a></p>
             </div>
-        </div>
 
 <?php
        } else { 
   $animationFiles = recurseFind($dir, '/.xml$/', 0 );
 ?>
+
+<?php
+foreach ( $animationFiles as $file ) { 
+  $name = str_replace_first($dir.'/', '', $file);
+  $uri = str_replace_first($animationPath,'',$file);
+?>
+            <div class="col-sm-4">
+                   <p><a href="<?= $prefixUri ?><?= $animationPath ?><?= $uri ?>"><?= $name ?></i></p> <!-- color: #FFD700; -->
+                        <!--<p><?=$dir?><?= $uri ?></p>-->
+            </div>
+<?php } ?>
+  </div>
+<?php }
+
+}
+ ?>
+
+     </div>
         <!-- Current Directory --> 
 <!--
         <div class="row">
@@ -61,29 +78,6 @@ foreach ( $animationDirs as $dir ) {
 -->
   <!-- /.row -->
 
-  <!-- Animations -->
-        <div class="row">
 
-<?php
-foreach ( $animationFiles as $file ) { 
-  $name = str_replace_first($dir.'/', '', $file);
-  $uri = str_replace_first($animationPath,'',$file);
-?>
-            <div class="col-md-4 col-sm-6 hero-feature">
-              <div class="thumbnail">
-                   <h3><?= $name ?></i></h3> <!-- color: #FFD700; -->
-                        <p><?=$dir?><?= $uri ?>
-                        </p>
-                </div>
-             </div>
-           </div>
-<?php } ?>
-  </div>
-<?php }
-
-}
- ?>
-
-     </div>
 </body>
 </html>

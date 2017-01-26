@@ -6,7 +6,7 @@
 //----------------------------------------------------------------------------------------
 
 // File Path Setup
-$animationPath = "testData";
+$animationPath = "Database";
 
 // Prod Webserver Prefix 
 //$prefixUri   = 'somethingDifferent';

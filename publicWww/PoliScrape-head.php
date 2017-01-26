@@ -10,16 +10,15 @@
 
 <title>PoliScrape</title>
 
-<!-- Bootstrap Core CSS -->
-<link href="css/bootstrap.css" rel="stylesheet">
-<link href="css/font-awesome.css" rel="stylesheet"> <!-- Version 4.6.3 -->
+<!-- Bootstrap CSS -->
+<link href="<?= $baseUrl ?>css/bootstrap.css" rel="stylesheet">
+<link href="<?= $baseUrl ?>css/font-awesome.css" rel="stylesheet"> <!-- Version 4.6.3 -->
 
 <!-- Custom CSS -->
-<link href="css/heroic-features.css" rel="stylesheet">
-<link href="css/business-frontpage.css" rel="stylesheet">
+<link href="<?= $baseUrl ?>css/heroic-features.css" rel="stylesheet">
 
 <!-- Common Application CSS -->
-<link href="css/PoliScrape-common.css" rel="stylesheet">
+<link href="<?= $baseUrl ?>css/PoliScrape-common.css" rel="stylesheet">
 
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -28,10 +27,10 @@
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
 
-<script charset="utf-8" type="text/javascript" src="js/jquery-3.0.0.js"></script>
+<script src="<?= $baseUri ?>js/jquery-3.0.0.js"></script>
 
 
 <!-- Bootstrap Core JavaScript -->
-<script src="js/bootstrap.min.js"></script>
+<script src="<?= $baseUrl ?>js/bootstrap.min.js"></script>
 
 <?php return ''; ?>
