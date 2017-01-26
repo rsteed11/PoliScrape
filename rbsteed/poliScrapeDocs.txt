@@ -1,0 +1,25 @@
+Know your users: what will be referenced?
+What are they trying to do?
+Address each function.
+
+When I want to use PoliScrape, I will:
+
+Run the crawler.
+	- how to direct the crawler
+	- how to limit the crawler's scope
+	- how to change items scraped
+	- crawler parsing
+	- how to adjust item pipelines
+	- how to change settings
+	- the command to run
+Utilise VCL to run crawler.
+	- reserve and log-in
+	- git documentation
+	- file transfer to Longleaf
+Run the file splitter.
+	- file splitter function
+	- file splitter filtering
+	- file splitter arguments
+	- command line arguments
+	- recommended to conduct from Longleaf
+

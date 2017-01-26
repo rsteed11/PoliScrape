@@ -566,3 +566,5 @@ LEARNED:
  created submodule in poliprod dir, links to PoliScrape main website
  now published at http://poliscrape-rsteed11.apps.unc.edu/PoliScrape/publicWww/
  git fetch and git merge to update changes, from PoliScrape dir
+
+ scp myfile.txt rsteed11@longleaf.its.unc.edu:/ms/depts/polisci/LemurProj

@@ -8,9 +8,10 @@ def split(toSplit, dir_name):
 	for event, elem in toSplit:
 		if elem.tag == 'item':
 			index += 1
-			toSplit = 27 #27 for history.state.gov
+			toSplit = 27 #for history.state.gov
 			title = elem.find('id').text[toSplit:]
 			if "historicaldocuments" not in title:
+			#if "" not in title:
 				print(index, "Passed")
 				pass
 			else:
