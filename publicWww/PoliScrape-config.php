@@ -9,10 +9,10 @@
 $animationPath = "Database";
 
 // Prod Webserver Prefix 
-//$prefixUri   = 'somethingDifferent';
+$prefixUri   = '/PoliScrape/publicWww/';
 
 // Development environment
-$prefixUri   = '/PoliScrape/git/PoliScrape/publicWww/';
+//$prefixUri   = '/PoliScrape/git/PoliScrape/publicWww/';
 
 include_once("PoliScrape-common.php");
 ?>
