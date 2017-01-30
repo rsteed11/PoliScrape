@@ -15,4 +15,5 @@ class foreignScrapeItem(scrapy.Item):
     name = scrapy.Field()
     bodyText = scrapy.Field()
     urls = scrapy.Field()
+    pdf = scrapy.Field()
     
