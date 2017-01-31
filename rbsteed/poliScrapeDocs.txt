@@ -4,16 +4,6 @@ Address each function.
 
 When I want to use PoliScrape, I will:
 
-Run the crawler.
-	- how to direct the crawler
-	- how to limit the crawler's scope
-	- how to change items scraped
-	- crawler parsing
-Change crawler settings.	
-	- how to adjust item pipelines
-	- how to change settings
-	- the command to run
-	- new crawlers
 Utilise VCL to run crawler.
 	- reserve and log-in
 	- git documentation
@@ -27,17 +17,22 @@ Run the file splitter.
 
 Home
 
-PoliScrape is a web crawler built using Scrapy, an opensource web crawling library. The Scrapy documentation is below:
+PoliScrape is an open source web crawler built using Scrapy, an open source web crawling library. The Scrapy documentation is below:
 
 http://scrapydocs
 
+Both the crawler and the website are available on GitHub at the following address. GitHub version control is highly recommended for project changes or merges. 
+
+** github project **
+** github version control tutorial **
+
 The crawler also uses the BeautifulSoup project, located here:
 
-
+** BeautifulSoup docs **
 
 The crawler also utilizes regular expressions, a module whose documentation is located here:
 
-
+** re docs **
 
 This documentation covers the following topics:
 
@@ -46,7 +41,6 @@ This documentation covers the following topics:
 Any further issues can be submitted here:
 
 ** github issues **
-
 
 
 
@@ -67,9 +61,65 @@ Currently, both crawlers are calibrated to exclude extraneous webpage data. To a
 ** parse function **
 
 
-Changing Crawler Settings
+Settings
 
-Once items are scraped (see Items), they are shuttled to an item pipeline, <PoliScrape/poliScrapy/foreignScrape/pipelines.py>. 
+Pipeline Settings
+
+Once items are scraped (see Items), they are shuttled to an item pipeline, <PoliScrape/poliScrapy/foreignScrape/pipelines.py>. Here, items are exported to a single file entitled <spiderName_products.xml>. Each item is formatted into an XML (Extensible Markup Language) value, and appended to a single <item> tag. Each scraped page is appended to this document, creating a single, large file for each crawler run. To change this file name, simply adjust the pipeline settings.
+
+** pipelines.py ** 
+
+
+Feed Settings
+
+Additionally, an XML file is created using an exporter which contains the XML documents outputted by the item pipeline. Its name can be adjusted in the crawler settings file, <PoliScrape/poliScrapy/foreignScrape/settings.py>. The feed exports files to the <PoliScrape/poliScrapy/xmlItems> directory, where runs are organized by day scraped and named by time scraped.
+
+** item pipelines settings **
+
+
+Web Courtesy
+
+The settings.py file also defines bot name and other web crawling behaviors. By default, PoliScrape adheres to robots.txt files to prevent server overloading and subsequent IP address banishment. The bot is limited to 32 concurrent requests by default, and throttled to a 2 second download delay. These settings should always be maintained.
+
+** courtesy settings **
+
+
+Other Settings
+
+PoliScrape is highly customizable. PoliScrape outputs a log file each run, along with a closeSpider report. These are defined as extensions, which can be removed or added in the settings.py file.
+
+** extensions **
+
+There are a series of sentinel failsafes that halt spider progress if triggered. By default, the spider will halt after 30 thrown errors. It may also halt after a finite number of visited pages is reached, a time limit is met, or an item count is surpassed. These latter three are disabled by default, but can be activated or adjusted in the settings.py file.
+
+** close spider **
+
+The depth priority setting prioritizes pages immediately below the start URL in the web hierarchy. For more depth priority options, visit the Scrapy documentation.
+
+** depth priority **
+
+To create a new crawler, use the Scrapy documentation. The project name for new crawler instantiation is contained in settings.py.
+
+
+Using the Virtual Computing Laboratory
+
+While the PoliScrape application can be operated from any Linux or Unix server, including local machines, it is recommended that users operate PoliScrape using UNC's Virtual Computing Laboratory. To use the laboratory, follow the instructions for reserving a machine available on UNC IT's site:
+
+** UNC IT VCL tutorial **
+
+A full blade Ubuntu disk image environment containing Scrapy and BeautifulSoup is available on the VCL reservation page, entitled "Scrapy, Ubuntu 14.04 LTS Svr (Full Blade)". Using a remote shell and GitHub's cloning method, download the PoliScrape repository to a remote machine.
+
+** remote shell UNC tutorial **
+** GitHub git clone method **
+
+Once the PoliScrape application is initialized, run the crawler (see "Run the Crawler"). PoliScrape data is stored in Longleaf mass storage at the University of North Carolina at Chapel Hill. Shell into onyen@longleaf.its.unc.edu and navigate to /ms/depts/polisci/PoliScrape. Run the secure file transfer from the VCL shell to transfer a scraped file, exercising caution and creating file copies using the <cp originalFile newFile> command to avoid loss of data: 
+
+** scp scrapedFile onyen@longleaf.its.unc.edu:/ms/depts/polisci/PoliScrape/xmlItems **
+
+To transfer a directory recursively (best method for maintaining date and time hierarchical organization from "Feed Settings"):
+
+** scp -r scrapedDir onyen@longleaf.its.unc.edu:/ms/depts/polisci/PoliScrape/xmlItems **
+
 
 
 
