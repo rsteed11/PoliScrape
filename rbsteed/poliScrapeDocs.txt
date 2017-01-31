@@ -4,16 +4,17 @@ Address each function.
 
 When I want to use PoliScrape, I will:
 
-Utilise VCL to run crawler.
-	- reserve and log-in
-	- git documentation
-	- file transfer to Longleaf
 Run the file splitter.
 	- file splitter function
 	- file splitter filtering
 	- file splitter arguments
 	- command line arguments
 	- recommended to conduct from Longleaf
+Webpage Information
+	- location
+	- github control
+	- PHP hierarchy
+	- searching
 
 Home
 
@@ -43,7 +44,7 @@ Any further issues can be submitted here:
 ** github issues **
 
 
-
+---------------------
 Running the Crawler
 
 Currently, there are two crawlers included in the PoliScrape project. The first, named "history," targets the State Department's Office of the Historian FRUS collection. The second, called "wisconsin," targets Wisconsin's FRUS collection. To run either crawler, navigate to the project home directory, <PoliScrape/poliScrapy/foreignScrape>. In the command line, run:
@@ -60,7 +61,7 @@ Currently, both crawlers are calibrated to exclude extraneous webpage data. To a
 
 ** parse function **
 
-
+---------------------
 Settings
 
 Pipeline Settings
@@ -100,7 +101,7 @@ The depth priority setting prioritizes pages immediately below the start URL in 
 
 To create a new crawler, use the Scrapy documentation. The project name for new crawler instantiation is contained in settings.py.
 
-
+---------------------
 Using the Virtual Computing Laboratory
 
 While the PoliScrape application can be operated from any Linux or Unix server, including local machines, it is recommended that users operate PoliScrape using UNC's Virtual Computing Laboratory. To use the laboratory, follow the instructions for reserving a machine available on UNC IT's site:
@@ -112,13 +113,25 @@ A full blade Ubuntu disk image environment containing Scrapy and BeautifulSoup i
 ** remote shell UNC tutorial **
 ** GitHub git clone method **
 
-Once the PoliScrape application is initialized, run the crawler (see "Run the Crawler"). PoliScrape data is stored in Longleaf mass storage at the University of North Carolina at Chapel Hill. Shell into onyen@longleaf.its.unc.edu and navigate to /ms/depts/polisci/PoliScrape. Run the secure file transfer from the VCL shell to transfer a scraped file, exercising caution and creating file copies using the <cp originalFile newFile> command to avoid loss of data: 
+Once the PoliScrape application is initialized, run the crawler (see "Run the Crawler"). VCL sessions are finite and all data, including the PoliScrape application, will be wiped after the time reservation is over. Scraped data must be transferred to local or remote storage before the timeout.
+
+File Transfer
+
+PoliScrape data is stored in Longleaf mass storage at the University of North Carolina at Chapel Hill.Shell into onyen@longleaf.its.unc.edu and navigate to </ms/depts/polisci/PoliScrape/>. Run the secure copy file transfer protocol from the VCL shell program to transfer a scraped file, exercising caution and creating file copies using the <cp originalFile newFile> command to avoid loss of data: 
 
 ** scp scrapedFile onyen@longleaf.its.unc.edu:/ms/depts/polisci/PoliScrape/xmlItems **
 
 To transfer a directory recursively (best method for maintaining date and time hierarchical organization from "Feed Settings"):
 
 ** scp -r scrapedDir onyen@longleaf.its.unc.edu:/ms/depts/polisci/PoliScrape/xmlItems **
+
+---------------------
+File Splitting
+
+PoliScrape includes a Python XML file splitting script to parse crawler run files. Usually conducted in the Longleaf Linux cluster (see "File Transfer"). The xmlSplitter file (<PoliScrape/poliScrapy/xmlSplitter.py) iterates through each webpage item stored in the XML crawl file.Each file is copied into a separate file and named by its "id" item, or URL. A hierarchical tree file structure resembling the original web hierarchy is constructed as files are stored using their respective HTML URI paths. 
+
+
+
 
 
 
