@@ -9,9 +9,11 @@ Run the crawler.
 	- how to limit the crawler's scope
 	- how to change items scraped
 	- crawler parsing
+Change crawler settings.	
 	- how to adjust item pipelines
 	- how to change settings
 	- the command to run
+	- new crawlers
 Utilise VCL to run crawler.
 	- reserve and log-in
 	- git documentation
@@ -22,4 +24,54 @@ Run the file splitter.
 	- file splitter arguments
 	- command line arguments
 	- recommended to conduct from Longleaf
+
+Home
+
+PoliScrape is a web crawler built using Scrapy, an opensource web crawling library. The Scrapy documentation is below:
+
+http://scrapydocs
+
+The crawler also uses the BeautifulSoup project, located here:
+
+
+
+The crawler also utilizes regular expressions, a module whose documentation is located here:
+
+
+
+This documentation covers the following topics:
+
+** Topic Hierarchy Here **
+
+Any further issues can be submitted here:
+
+** github issues **
+
+
+
+
+Running the Crawler
+
+Currently, there are two crawlers included in the PoliScrape project. The first, named "history," targets the State Department's Office of the Historian FRUS collection. The second, called "wisconsin," targets Wisconsin's FRUS collection. To run either crawler, navigate to the project home directory, <PoliScrape/poliScrapy/foreignScrape>. In the command line, run:
+	
+	scrapy crawl crawlerName
+
+To adjust the first targeted site or volume for a crawler, open the crawler script, located in <PoliScrape/poliScrapy/foreignScrape/spiders/spiderName.py>. Change or append to the start_urls variable. The allowed_domains variable restricts the base domain searched, and prevents the crawler from straying from the scraping site. Multiple allowed_domains are accepted.
+
+** class definition **
+
+Crawlers scrape specific items from the webpage. These items are defined in <PoliScrape/poliScrapy/foreignScrape/items.py>. Any new items must be instantiated here. To define a new item or adjust an existing one, simply redefine it in the crawler script using the variable item['itemName']. Here, BeautifulSoup is used to parse body text, while simple HTML response parsers are used for other items.
+
+Currently, both crawlers are calibrated to exclude extraneous webpage data. To adjust crawler scraping scope, PoliScrape utilizes an in-script filter with a simple "for" loop and "if" statement. URLs that do not contain a key word such as "frus1945" are excluded from the crawler's queue. This keyword can be replaced, or additional keywords added.
+
+** parse function **
+
+
+Changing Crawler Settings
+
+Once items are scraped (see Items), they are shuttled to an item pipeline, <PoliScrape/poliScrapy/foreignScrape/pipelines.py>. 
+
+
+
+
 

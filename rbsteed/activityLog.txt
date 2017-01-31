@@ -568,3 +568,38 @@ LEARNED:
  git fetch and git merge to update changes, from PoliScrape dir
 
  scp myfile.txt rsteed11@longleaf.its.unc.edu:/ms/depts/polisci/LemurProj
+
+ Dr. McKeown,
+
+ 	Here's a quick summary of our progress this week:
+
+ 	Tuesday, I conducted a deeper scrape of the State Department site because I noticed a discrepancy in the spider's URL filtration system that resulted in a broad output. I uploaded a new file, scraped over three hours, to Longleaf with more focused results after tweaking the spider code. While it ran in VCL, I generated a new spider for the Wisconsin site and began a few test runs.
+
+ 	Thursday, I implemented a PHP file server system which displays the results as they are navigated in a Linux console (this was a little tricky, but worthwhile) - if you visit poliscrape-rsteed11.unc.apps.edu, you can click through this particular scrape under the "Databases" tab. Thank you for the quick response to that question about the Wisconsin HTML rendering system; I adjusted the crawler to collect the HTML documents as well as the PDF documents. There are still a few bugs in the Wisconsin crawler given the new file type, but I hope to have scrape of FRUS 1945 Vol. 1 for you on Tuesday. 
+
+ 	In terms of the project's legacy, I decided against refining the activity log (which is rather lengthy) in favor of a PoliScrape documentation which I will include as a page on the site. In it, I'll include the following information for any future users or developers:
+
+ 	PoliScrape documention: How to...
+	 	1. Run the crawler.
+		- how to direct the crawler
+		- how to limit the crawler's scope
+		- how to change items scraped
+		- crawler parsing
+		- how to adjust item pipelines
+		- how to change settings
+		- the command to run
+		2. Utilise VCL to run crawler.
+		- reserve and log-in
+		- git documentation
+		- file transfer to Longleaf
+		3. Run the file splitter.
+		- file splitter function
+		- file splitter filtering
+		- file splitter arguments
+		- command line arguments
+		- conducted in Longleaf - git managament
+
+	My goal is to make this document as readable as possible for non-programmers. If there is anything you would like to add to this list, such as file navigation (which should be easy if the webpage is used), please let me know and I will add it to my outline. It may not be complete before I leave, but I plan finish it afterwards if necessary, since my time here is better spent on the crawler itself.
+
+Best,
+Ryan
