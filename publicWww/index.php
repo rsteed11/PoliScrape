@@ -23,7 +23,7 @@ include_once('PoliScrape-config.php');
 
         <div class="row">
             <div class="col-lg-12" style="margin-bottom: 0.5em;">
-	    	 <h1><b>PoliScrape</b>: The Definitive Foreign Policy Database</h1>
+	    	 <h1><b>PoliScrape</b>: Foreign Policy Archive Database</h1>
 		
             </div>
         </div>
