@@ -21,7 +21,7 @@
                     <a href="<?= $browseUrl ?>/"><i class="fa fa-database"></i> Full Database </a>
                 </li>
                 <li>
-                    <a href="<?= $baseUrl ?>/docs">Documentation</a>
+                    <a href="<?= $baseUrl ?>docs"><i class="fa fa-file">Documentation</a>
                 <li>
                     <a href="https://github.com/rsteed11/PoliScrape"><i class="fa fa-git"></i> Open Source on Github</a>
                 </li>
