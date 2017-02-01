@@ -14,12 +14,11 @@ include_once('PoliScrape-config.php');
 <head>
   <?php include_once("PoliScrape-docs-head.php") ?>
 </head>
-
 <body>
     </br>
     <!-- Page Content -->
     <div class="container">
-
+        <?php include_once("button.php") ?>
         <div class="row">
             <div class="col-lg-12" style="margin-bottom: 0.5em;">
              <h1><b>Running the Crawler</b></h1>
@@ -29,18 +28,18 @@ include_once('PoliScrape-config.php');
         <!-- Jumbotron Header -->
         <div class="row">
             <div class="col-lg-12">
-            <header class="jumbotron hero-spacer" style="font-size:18px">
-                <dl>
-                    <dt>Running the Crawler<dt>
-                    <dd>
-                        <ol type="1">
-                            <li>Run Command</li>
-                            <li>Targeting and Scoping</li>
-                            <li>HTML Parsing</li>
-                        </ol>
-                    </dd>
-                </dl>
-        </header>
+                <header class="jumbotron hero-spacer" style="font-size:18px">
+                    <dl>
+                        <dt>Running the Crawler<dt>
+                        <dd>
+                            <ol type="1">
+                                <li>Run Command</li>
+                                <li>Targeting and Scoping</li>
+                                <li>HTML Parsing</li>
+                            </ol>
+                        </dd>
+                    </dl>
+                </header>
             </div>
         </div>
 

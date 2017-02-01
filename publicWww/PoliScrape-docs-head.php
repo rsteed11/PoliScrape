@@ -97,7 +97,7 @@
                 	<a href="<?= $baseUrl ?>web.php"><b><i class="fa fa-html5"></b></i> Webpage Maintenance</a>
                 </li>
                 <li>
-                    <a><i class="fa fa-git"></i> Open Source on Github</a>
+                    <a href="https://github.com/rsteed11/PoliScrape"><i class="fa fa-git"></i> Open Source on Github</a>
                 </li>
                 <li>
                 	<a href="https://github.com/rsteed11/PoliScrape/issues"><i class="fa fa-exclamation-circle"></i> Github Issues</a>
@@ -105,6 +105,5 @@
             </ul>
         </div>
         <!-- /#sidebar-wrapper -->
-
-
+    	
 <?php return ''; ?>
