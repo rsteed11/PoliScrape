@@ -44,17 +44,20 @@ include_once('PoliScrape-config.php');
         </div>
 
         <div class="row">
-            <div class="col-lg-12" style="margin-bottom: 1.5em; margin-left:1em">
+            <div class="col-lg-12" style="margin-bottom: 1.5em; );
+ ">
                 <h3>1. Run Command</h3>
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-12" style="margin-bottom: 0.5em; margin-left:1em">
-                Currently, there are two crawlers included in the PoliScrape project. The first, named <i>history</i>, targets the State Department's Office of the Historian FRUS collection. The second, called <i>wisconsin</i>, targets Wisconsin's FRUS collection. To run either crawler, navigate to the project home directory, <i>PoliScrape/poliScrapy/foreignScrape</i>. In the command line, run:
+            <div class="col-lg-12" style="margin-bottom: 0.5em; );
+ ">
+                Currently, there are two crawlers included in the PoliScrape project. The first, named <span class="code">history</span>, targets the State Department's Office of the Historian FRUS collection. The second, called <span class="code">wisconsin</span>, targets Wisconsin's FRUS collection. To run either crawler, navigate to the project home directory, <span class="code">PoliScrape/poliScrapy/foreignScrape</span>. In the command line, run:
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-12" style="margin-bottom: 0.5em; margin-left:1em">
+            <div class="col-lg-12" style="margin-bottom: 0.5em; );
+ ">
                 <header class="jumbotron special" style="font-size:18px;width:35%">
                     <div>scrapy crawl crawlerName</div>
                 </header>
@@ -62,17 +65,20 @@ include_once('PoliScrape-config.php');
         </div>
 
         <div class="row">
-            <div class="col-lg-12" style="margin-bottom: 1.5em; margin-left:1em">
+            <div class="col-lg-12" style="margin-bottom: 1.5em; );
+ ">
                 <h3>2. Targeting and Scoping</h3>
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-12" style="margin-bottom: 0.5em; margin-left:1em">
-                To adjust the first targeted site or volume for a crawler, open the crawler script, located in <i>PoliScrape/poliScrapy/foreignScrape/spiders/spiderName.py</i>. Change or append to the <i>start_urls</i> variable. The <i>allowed_domains</i> variable restricts the base domain searched, and prevents the crawler from straying from the scraping site. Multiple <i>allowed_domains</i> are accepted.
+            <div class="col-lg-12" style="margin-bottom: 0.5em; );
+ ">
+                To adjust the first targeted site or volume for a crawler, open the crawler script, located in <span class="code">PoliScrape/poliScrapy/foreignScrape/spiders/spiderName.py</span>. Change or append to the <span class="code">start_urls</span> variable. The <span class="code">allowed_domains</span> variable restricts the base domain searched, and prevents the crawler from straying from the scraping site. Multiple <span class="code">allowed_domains</span> are accepted.
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-12" style="margin-bottom: 0.5em; margin-left:1em">
+            <div class="col-lg-12" style="margin-bottom: 0.5em; );
+ ">
                 <header class="jumbotron special" style="font-size:18px;text-align:left;width:75%">
                     <div>class MySpider(CrawlSpider):<div>
                         <div style="text-indent:40px;">name = 'history'</div>
@@ -83,19 +89,22 @@ include_once('PoliScrape-config.php');
         </div>
 
         <div class="row">
-            <div class="col-lg-12" style="margin-bottom: 1.5em; margin-left:1em">
+            <div class="col-lg-12" style="margin-bottom: 1.5em; );
+ ">
                 <h3>3. HTML Parsing</h3>
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-12" style="margin-bottom: 0.5em; margin-left:1em">
-                Crawlers scrape specific items from the webpage. These items are defined in <i>PoliScrape/poliScrapy/foreignScrape/items.py</i>. Any new items must be instantiated here. To define a new item or adjust an existing one, simply redefine it in the crawler script using the variable <i>item['itemName']</i>. Here, BeautifulSoup is used to parse body text, while simple HTML response parsers are used for other items.
+            <div class="col-lg-12" style="margin-bottom: 0.5em; );
+ ">
+                Crawlers scrape specific items from the webpage. These items are defined in <span class="code">PoliScrape/poliScrapy/foreignScrape/items.py</span>. Any new items must be instantiated here. To define a new item or adjust an existing one, simply redefine it in the crawler script using the variable <span class="code">item['itemName']</span>. Here, BeautifulSoup is used to parse body text, while simple HTML response parsers are used for other items.
                 <br/><br/>
-                Currently, both crawlers are calibrated to exclude extraneous webpage data. To adjust crawler scraping scope, PoliScrape utilizes a filter with a simple <i>for</i> loop and <i>if</i> statement inside the <i>parse()</i> class method. URLs that do not contain a key word such as <i>"frus1945"</i> are excluded from the crawler's queue. This keyword can be replaced, or additional keywords added.
+                Currently, both crawlers are calibrated to exclude extraneous webpage data. To adjust crawler scraping scope, PoliScrape utilizes a filter with a simple <span class="code">for</span> loop and <span class="code">if</span> statement inside the <span class="code">parse()</span> class method. URLs that do not contain a key word such as <span class="code">"frus1945"</span> are excluded from the crawler's queue. This keyword can be replaced, or additional keywords added.
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-12" style="margin-bottom: 0.5em; margin-left:1em">
+            <div class="col-lg-12" style="margin-bottom: 0.5em; );
+ ">
                 <header class="jumbotron special" style="font-size:18px;text-align:left;width:85%">
                     <div>def parse(self, response):<div>
                         <div style="text-indent:40px;">analyzeThis = response.xpath("//body").extract_first()</div>

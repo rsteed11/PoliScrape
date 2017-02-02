@@ -62,12 +62,25 @@
 	h3 {
 		color: #b00b00;
 	}
-	i {
+	.code {
 		color: #b00b00;
 		font-family: Courier;
 	}
+	.sidebar-nav a i {
+		color: #999999;
+	}
+	.sidebar-nav a:hover i {
+		color: rgba(255,255,255,2);
+	}  
 	.special div {
-		font-size: 14px;
+		font-size: 12px;
+	}
+	.jumbotron {
+		width: 80%;
+	}
+	.col-lg-12 {
+		width: 80%;
+		margin-left: 2em;
 	}
 </style>
 <div id="wrapper">
@@ -76,7 +89,7 @@
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
                 <li class="sidebar-brand">
-                    <a href="<?= $baseUrl ?>" style="font-size:19px"><i class="fa fa-search" ></i><b> PoliScrape</b></a>
+                    <a href="<?= $baseUrl ?>" style="font-size:19px;color:#b00b00"><i class="fa fa-search" style="color:#b00b00" ></i><b> PoliScrape</b></a>
                 </li>
                 <li>
                     <a href="<?= $baseUrl ?>docs.php" style="font-size:17px"><i class="fa fa-home"></i><b> Read the Docs</b></a>

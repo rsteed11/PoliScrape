@@ -1,5 +1,5 @@
 <div class="row"  style="margin-bottom: 1em;">
-      <div class="col-lg-10">
+      <div class="col-lg-12">
         <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu</a>
       </div>
 </div>

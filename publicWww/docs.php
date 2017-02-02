@@ -59,7 +59,7 @@ include_once('PoliScrape-config.php');
                 <dt>Using VCL<dt>
                 <dd>
                     <ol type="1">
-                        <li>UNC VCL Docs</li>
+                        <li>UNC Virtual Computing Laboratory Docs</li>
                         <li>Disk Image Usage</li>
                         <li>File Transfer</li>
                         <li>File Storage</li>
@@ -68,7 +68,7 @@ include_once('PoliScrape-config.php');
                 <dt>File Splitting<dt>
                 <dd>
                     <ol type="1">
-                        <li>xmlSplitter Usage</li>
+                        <li>XML Splitter Usage</li>
                         <li>Manual Filtering</li>
                     </ol>
                 </dd>

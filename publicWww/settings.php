@@ -45,17 +45,17 @@ include_once('PoliScrape-config.php');
             </div>
 
             <div class="row">
-                <div class="col-lg-12" style="margin-bottom: 1.5em; margin-left:1em">
+                <div class="col-lg-12" style="margin-bottom: 1.5em">
                     <h3>1. Pipeline</h3>
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-12" style="margin-bottom: 0.5em; margin-left:1em">
-                    Once items are scraped (see Items), they are shuttled to an item pipeline, <i>PoliScrape/poliScrapy/foreignScrape/pipelines.py</i>. Here, items are exported to a single file entitled <i>spiderName_products.xml</i>. Each item is formatted into an XML (Extensible Markup Language) value, and appended to a single <i>item</i> tag. Each scraped page is appended to this document, creating a single, large file for each crawler run. To change this file name, simply adjust the pipeline settings.
+                <div class="col-lg-12" style="margin-bottom: 0.5em">
+                    Once items are scraped (see Items), they are shuttled to an item pipeline, <span class="code">PoliScrape/poliScrapy/foreignScrape/pipelines.py</span>. Here, items are exported to a single file entitled <span class="code">spiderName_products.xml</span>. Each item is formatted into an XML (Extensible Markup Language) value, and appended to a single <span>item</span> tag. Each scraped page is appended to this document, creating a single, large file for each crawler run. To change this file name, simply adjust the pipeline settings.
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-12" style="margin-bottom: 0.5em; margin-left:1em">
+                <div class="col-lg-12" style="margin-bottom: 0.5em">
                     <header class="jumbotron special" style="font-size:18px;text-align:left;width:75%">
                         <div>from scrapy import signals</div>
                         <div>from scrapy.exporters import XmlItemExporter</div>
@@ -87,19 +87,20 @@ include_once('PoliScrape-config.php');
                                 <div style="text-indent:80px;">return item</div>
                     </header>
                 </div>
+                </div> 
 
                 <div class="row">
-                <div class="col-lg-12" style="margin-bottom: 1.5em; margin-left:1em">
-                    <h3>2. XML Feed</h3>
-                </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-12" style="margin-bottom: 0.5em; margin-left:1em">
-                        Additionally, an XML file is created using an exporter which contains the XML documents outputted by the item pipeline. Its name can be adjusted in the crawler settings file, <i>PoliScrape/poliScrapy/foreignScrape/settings.py</i>. The feed exports files to the <i>PoliScrape/poliScrapy/xmlItems</i> directory, where runs are organized by day scraped and named by time scraped.
+                    <div class="col-lg-12" style="margin-bottom: 1.5em">
+                        <h3>2. XML Feed</h3>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-12" style="margin-bottom: 0.5em; margin-left:1em">
+                    <div class="col-lg-12" style="margin-bottom: 0.5em">
+                        Additionally, an XML file is created using an exporter which contains the XML documents outputted by the item pipeline. Its name can be adjusted in the crawler settings file, <span class="code">PoliScrape/poliScrapy/foreignScrape/settings.py</span>. The feed exports files to the <span class="code">PoliScrape/poliScrapy/xmlItems</span> directory, where runs are organized by day scraped and named by time scraped.
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12" style="margin-bottom: 0.5em">
                         <header class="jumbotron special" style="font-size:18px;text-align:left;width:75%">
                             <div>ITEM_PIPELINES = {</div>
                                 <div style="text-indent:40px;">'foreignScrape.pipelines.XmlExportPipeline': 300,</div>
@@ -114,18 +115,21 @@ include_once('PoliScrape-config.php');
                 </div>
 
                 <div class="row">
-                <div class="col-lg-12" style="margin-bottom: 1.5em; margin-left:1em">
+                <div class="col-lg-12" style="margin-bottom: 1.5em; );
+ ">
                     <h3>3. Web Courtesy</h3>
                 </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-12" style="margin-bottom: 0.5em; margin-left:1em">
-                        The <i>settings.py</i> file also defines bot name and other web crawling behaviors. By default, PoliScrape adheres to robots.txt file guidelines to prevent server overloading and subsequent IP address banishment. The bot is limited to 32 concurrent requests by default, and throttled to a 2 second download delay. These settings should always be maintained.
+                    <div class="col-lg-12" style="margin-bottom: 0.5em; );
+ ">
+                        The <span class="code">settings.py</span> file also defines bot name and other web crawling behaviors. By default, PoliScrape adheres to robots.txt file guidelines to prevent server overloading and subsequent IP address banishment. The bot is limited to 32 concurrent requests by default, and throttled to a 2 second download delay. These settings should always be maintained.
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-12" style="margin-bottom: 0.5em; margin-left:1em">
-                        <header class="jumbotron special" style="font-size:18px;text-align:left;width:30%">
+                    <div class="col-lg-12" style="margin-bottom: 0.5em; );
+ ">
+                        <header class="jumbotron special" style="font-size:18px;text-align:left;width:35%">
                             <div>ROBOTSTXT_OBEY = True</div>
                             <div>CONCURRENT_REQUESTS = 32</div>
                             <div>#DOWNLOAD_DELAY = 2</div>
@@ -134,17 +138,20 @@ include_once('PoliScrape-config.php');
                 </div>
 
                 <div class="row">
-                <div class="col-lg-12" style="margin-bottom: 1.5em; margin-left:1em">
+                <div class="col-lg-12" style="margin-bottom: 1.5em; );
+ ">
                     <h3>4. Miscellaneous</h3>
                 </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-12" style="margin-bottom: 0.5em; margin-left:1em">
-                        PoliScrape is highly customizable. PoliScrape outputs a log file each run, along with a <i>closeSpider</i> report. These are defined as extensions, which can be removed or added in the <i>settings.py</i> file.
+                    <div class="col-lg-12" style="margin-bottom: 0.5em; );
+ ">
+                        PoliScrape is highly customizable. PoliScrape outputs a log file each run, along with a <span class="code">closeSpider</span> report. These are defined as extensions, which can be removed or added in the <span class="code">settings.py</span> file.
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-12" style="margin-bottom: 0.5em; margin-left:1em">
+                    <div class="col-lg-12" style="margin-bottom: 0.5em; );
+ ">
                         <header class="jumbotron special" style="font-size:18px;text-align:left;width:50%">
                             <div>EXTENSIONS = {</div>
                                 <div style="text-indent:40px;">'scrapy.extensions.closespider.CloseSpider': 80,</div>
@@ -154,13 +161,15 @@ include_once('PoliScrape-config.php');
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-12" style="margin-bottom: 0.5em; margin-left:1em">
-                        There are a series of sentinel fail-safes that halt spider progress if triggered. By default, the spider will halt after 30 thrown errors. It may also halt after a finite number of visited pages is reached, a time limit is met, or an item count is surpassed. These latter three are disabled by default, but can be activated or adjusted in the <i>settings.py</i> file. The depth priority setting prioritizes pages immediately below the start URL in the web hierarchy. For more depth priority options, visit the Scrapy documentation.
+                    <div class="col-lg-12" style="margin-bottom: 0.5em; );
+ ">
+                        There are a series of sentinel fail-safes that halt spider progress if triggered. By default, the spider will halt after 30 thrown errors. It may also halt after a finite number of visited pages is reached, a time limit is met, or an item count is surpassed. These latter three are disabled by default, but can be activated or adjusted in the <span class="code">settings.py</span> file. The depth priority setting prioritizes pages immediately below the start URL in the web hierarchy. For more depth priority options, visit the Scrapy documentation.
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-12" style="margin-bottom: 0.5em; margin-left:1em">
-                        <header class="jumbotron special" style="font-size:18px;text-align:left;width:30%">
+                    <div class="col-lg-12" style="margin-bottom: 0.5em; );
+ ">
+                        <header class="jumbotron special" style="font-size:18px;text-align:left;width:35%">
                             <div>#CLOSESPIDER_PAGECOUNT = 3</div>
                             <div>#CLOSESPIDER_TIMEOUT = 50</div>
                             <div>#CLOSESPIDER_ITEMCOUNT</div>
@@ -170,13 +179,15 @@ include_once('PoliScrape-config.php');
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-12" style="margin-bottom: 0.5em; margin-left:1em">
-                        To create a new crawler, use the Scrapy documentation. The project name for new crawler instantiation is contained in <i>settings.py</i>.   
+                    <div class="col-lg-12" style="margin-bottom: 0.5em; );
+ ">
+                        To create a new crawler, reference the <a href="https://doc.scrapy.org/en/1.3/">Scrapy documentation</a>. The project name for new crawler instantiation is contained in <span class="code">settings.py</span>.   
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-12" style="margin-bottom: 0.5em; margin-left:1em">
-                        <header class="jumbotron special" style="font-size:18px;text-align:left;width:40%">
+                    <div class="col-lg-12" style="margin-bottom: 0.5em; );
+ ">
+                        <header class="jumbotron special" style="font-size:18px;text-align:left;width:50%">
                             <div>BOT_NAME = 'foreignScrape'</div>
 
                             <div>SPIDER_MODULES = ['foreignScrape.spiders']</div>
