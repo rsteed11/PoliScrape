@@ -35,49 +35,49 @@ include_once('PoliScrape-config.php');
                 <dt>Read the Docs<dt>
                 <dd>
                     <ol type="1">
-                        <li>Introduction</li>
-                        <li>Software Requirements</li>
+                        <li><a href="#introduction">Introduction</a></li>
+                        <li><a href="#software">Software Requirements</a></li>
                     </ol>
                 </dd>
                 <dt>Running the Crawler<dt>
                 <dd>
                     <ol type="1">
-                        <li>Run Command</li>
-                        <li>Targeting and Scoping</li>
-                        <li>HTML Parsing</li>
+                        <li><a href="<?= $baseUrl ?>crawler.php#run">Run Command</a></li>
+                        <li><a href="<?= $baseUrl ?>crawler.php#targeting">Targeting and Scoping</a></li>
+                        <li><a href="<?= $baseUrl ?>crawler.php#html">HTML Parsing</a></li>
                     </ol>
                 </dd>
                 <dt>Settings<dt>
                 <dd>
                     <ol type="1">
-                        <li>Pipeline</li>
-                        <li>XML Feed</li>
-                        <li>Web Courtesy</li>
-                        <li>Miscellaneous</li>
+                        <li><a href="<?= $baseUrl ?>settings.php#pipeline">Pipeline</a></li>
+                        <li><a href="<?= $baseUrl ?>settings.php#xml">XML Feed</a></li>
+                        <li><a href="<?= $baseUrl ?>settings.php#web">Web Courtesy</a></li>
+                        <li><a href="<?= $baseUrl ?>settings.php#misc">Miscellaneous</a></li>
                     </ol>
                 </dd>
                 <dt>Using VCL<dt>
                 <dd>
                     <ol type="1">
-                        <li>UNC Virtual Computing Laboratory Docs</li>
-                        <li>Disk Image Usage</li>
-                        <li>File Transfer</li>
-                        <li>File Storage</li>
+                        <li><a href="<?= $baseUrl ?>vcl.php#unc">UNC Virtual Computing Laboratory Docs</a></li>
+                        <li><a href="<?= $baseUrl ?>vcl.php#disk">Disk Image Usage</a></li>
+                        <li><a href="<?= $baseUrl ?>vcl.php#transfer">File Transfer</a></li>
+                        <li><a href="<?= $baseUrl ?>vcl.php#storage">File Storage</a></li>
                     </ol>
                 </dd>
                 <dt>File Splitting<dt>
                 <dd>
                     <ol type="1">
-                        <li>XML Splitter Usage</li>
-                        <li>Manual Filtering</li>
+                        <li><a href="<?= $baseUrl ?>splitting.php#xml">XML Splitter Usage</a></li>
+                        <li><a href="<?= $baseUrl ?>splitting.php#manual">Manual Filtering</a></li>
                     </ol>
                 </dd>
                 <dt>Webpage Maintenance<dt>
                 <dd>
                     <ol type="1">
-                        <li>Template</li>
-                        <li>PHP Hierarchy</li>
-                        <li>GitHub Version Control</li>
+                        <li><a href="<?= $baseUrl ?>web.php#template">Template</a></li>
+                        <li><a href="<?= $baseUrl ?>web.php#php">PHP Hierarchy</a></li>
+                        <li><a href="<?= $baseUrl ?>web.php#github">GitHub Version Control</a></li>
                     </ol>
                 </dd>
             </dl>

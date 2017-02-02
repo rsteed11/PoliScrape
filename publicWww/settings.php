@@ -34,10 +34,10 @@ include_once('PoliScrape-config.php');
                     <dt>Settings<dt>
                 <dd>
                     <ol type="1">
-                        <li>Pipeline</li>
-                        <li>XML Feed</li>
-                        <li>Web Courtesy</li>
-                        <li>Miscellaneous</li>
+                        <li><a href="#pipeline">Pipeline</a></li>
+                        <li><a href="#xml">XML Feed</a></li>
+                        <li><a href="#web">Web Courtesy</a></li>
+                        <li><a href="#misc">Miscellaneous</a></li>
                     </ol>
                 </dd>
                 </dl>
@@ -46,7 +46,7 @@ include_once('PoliScrape-config.php');
 
             <div class="row">
                 <div class="col-lg-12" style="margin-bottom: 1.5em">
-                    <h3>1. Pipeline</h3>
+                    <h3 id="pipeline">1. Pipeline</h3>
                 </div>
             </div>
             <div class="row">
@@ -91,7 +91,7 @@ include_once('PoliScrape-config.php');
 
                 <div class="row">
                     <div class="col-lg-12" style="margin-bottom: 1.5em">
-                        <h3>2. XML Feed</h3>
+                        <h3 id="xml">2. XML Feed</h3>
                     </div>
                 </div>
                 <div class="row">
@@ -117,7 +117,7 @@ include_once('PoliScrape-config.php');
                 <div class="row">
                 <div class="col-lg-12" style="margin-bottom: 1.5em; );
  ">
-                    <h3>3. Web Courtesy</h3>
+                    <h3 id="web">3. Web Courtesy</h3>
                 </div>
                 </div>
                 <div class="row">
@@ -140,7 +140,7 @@ include_once('PoliScrape-config.php');
                 <div class="row">
                 <div class="col-lg-12" style="margin-bottom: 1.5em; );
  ">
-                    <h3>4. Miscellaneous</h3>
+                    <h3 id="misc">4. Miscellaneous</h3>
                 </div>
                 </div>
                 <div class="row">

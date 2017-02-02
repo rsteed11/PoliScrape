@@ -34,9 +34,9 @@ include_once('PoliScrape-config.php');
                     <dt>Webpage Maintenance<dt>
                     <dd>
                         <ol type="1">
-                            <li>Template</li>
-                            <li>PHP Hierarchy</li>
-                            <li>GitHub Version Control</li>
+                            <li><a href="#template">Template</a></li>
+                            <li><a href="#php">PHP Hierarchy</a></li>
+                            <li><a href="#github">GitHub Version Control</a></li>
                         </ol>
                     </dd>
                 </dl>
@@ -48,7 +48,7 @@ include_once('PoliScrape-config.php');
         <!-- Page Features -->
         <div class="row">
             <div class="col-lg-12" style="margin-bottom: 1.5em;">
-                <h3>1. Template</h3>
+                <h3 id="template">1. Template</h3>
             </div>
         </div>
         <div class="row">
@@ -59,32 +59,32 @@ include_once('PoliScrape-config.php');
         <div class="row">
             <div class="col-lg-12" style="margin-bottom: 0.5em;">
                 <header class="jumbotron special" style="font-size:18px;text-align:center;width:60%">
-                    <div><a href="#">Bootstrap Heroic Features</a></div>
-                    <div><a href="#">Font Awesome</a></div>
+                    <div><a href="https://github.com/BlackrockDigital/startbootstrap-heroic-features">Bootstrap Heroic Features</a></div>
+                    <div><a href="http://fontawesome.io/">Font Awesome</a></div>
                 </header>
             </div>
         </div>
 
         <div class="row">
             <div class="col-lg-12" style="margin-bottom: 1.5em;">
-                <h3>2. PHP Hierarchy</h3>
+                <h3 id="php">2. PHP Hierarchy</h3>
             </div>
         </div>
         <div class="row">
             <div class="col-lg-12" style="margin-bottom: 0.5em;">
-            An <a href="#">nginx</a>-driven PHP localhost was used for development. The PHP hierarchy contained in the <span class="code">PoliScrape/publicWww/</span> directory consists of several components. The <span class="code">PoliScrape-config.php</span> file defines base URI paths for both development environment and production environment, while <span class="code">PoliScrape-nav.php</span>, <span class="code">PoliScrape-head.php</span> and <span class="code">PoliScrape-foot.php</span> files define common page elements. The <span class="code">PoliScrape-common.php</span> initializes path URLs and directory searching protocol implemented in the <span class="code">browse.php</span> file.
+            An <a href="https://www.nginx.com/resources/wiki/">nginx</a>-driven PHP localhost was used for development. The PHP hierarchy contained in the <span class="code">PoliScrape/publicWww/</span> directory consists of several components. The <span class="code">PoliScrape-config.php</span> file defines base URI paths for both development environment and production environment, while <span class="code">PoliScrape-nav.php</span>, <span class="code">PoliScrape-head.php</span> and <span class="code">PoliScrape-foot.php</span> files define common page elements. The <span class="code">PoliScrape-common.php</span> initializes path URLs and directory searching protocol implemented in the <span class="code">browse.php</span> file.
             </div>
         </div>
         <!-- /.row -->
 
         <div class="row">
             <div class="col-lg-12" style="margin-bottom: 1.5em;">
-                <h3>3. GitHub Version Control</h3>
+                <h3 id="github">3. GitHub Version Control</h3>
             </div>
         </div>
         <div class="row">
             <div class="col-lg-12" style="margin-bottom: 0.5em;">
-            The production server is maintained on <a href="#">Carolina Cloud Apps</a> through a GitHub submodule. Currently, it is only available for modification by Ryan Steed, the account owner. A GitHub contributor may publish changes as merge requests, which can be fetched and merged into the production submodule and published to production. Refer to the <a href="#">GitHub documentation</a> for more information on submodules and version control. A few useful version control commands are provided below.
+            The production server is maintained on <a href="https://cloudapps.unc.edu/">Carolina Cloud Apps</a> through a GitHub submodule. Currently, it is only available for modification by Ryan Steed, the account owner. A GitHub contributor may publish changes as merge requests, which can be fetched and merged into the production submodule and published to production. Refer to the <a href="https://help.github.com/">GitHub documentation</a> for more information on submodules and version control. A few useful version control commands are provided below.
             </div>
         </div>
         <div class="row">

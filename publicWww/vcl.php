@@ -33,10 +33,10 @@ include_once('PoliScrape-config.php');
                         <dt>Using VCL<dt>
                         <dd>
                             <ol type="1">
-                                <li>UNC Virtual Computing Laboratory Docs</li>
-                                <li>Disk Image Usage</li>
-                                <li>File Transfer</li>
-                                <li>File Storage</li>
+                                <li><a href="#unc">UNC Virtual Computing Laboratory Docs</a></li>
+                                <li><a href="#disk">Disk Image Usage</a></li>
+                                <li><a href="#transfer">File Transfer</a></li>
+                                <li><a href="#storage">File Storage</a></li>
                             </ol>
                         </dd>
                     </dl>
@@ -46,7 +46,7 @@ include_once('PoliScrape-config.php');
 
         <div class="row">
             <div class="col-lg-12" style="margin-bottom: 1.5em;">
-                <h3>1. UNC Virtual Computing Laboratory Docs</h3>
+                <h3 id="unc">1. UNC Virtual Computing Laboratory Docs</h3>
             </div>
         </div>
         <div class="row">
@@ -57,43 +57,42 @@ include_once('PoliScrape-config.php');
         <div class="row">
             <div class="col-lg-12" style="margin-bottom: 0.5em;">
                 <header class="jumbotron special" style="font-size:18px;text-align:center;width:35%">
-                    <div>UNC IT VCL tutorial</div>
+                    <div><a href="http://help.unc.edu/help/help-procedures-for-the-virtual-computing-lab-vcl/">UNC IT VCL Docs</a></div>
                 </header>
             </div>
         </div>
 
         <div class="row">
             <div class="col-lg-12" style="margin-bottom: 1.5em;">
-                <h3>2. Disk Image Usage</h3>
+                <h3 id="disk">2. Disk Image Usage</h3>
             </div>
         </div>
         <div class="row">
             <div class="col-lg-12" style="margin-bottom: 0.5em;">
-                A full blade Ubuntu disk image environment containing Scrapy and BeautifulSoup is available on the <a href="#">VCL reservation page</a>, entitled <span class="code">Scrapy, Ubuntu 14.04 LTS Svr (Full Blade)</span>. Using a remote shell and GitHub's cloning method, download the <a href="https://github.com/rsteed11/PoliScrape">PoliScrape repository</a> to a remote machine.
+                A full blade Ubuntu disk image environment containing Scrapy and BeautifulSoup is available on the <a href="https://vcl.unc.edu/">VCL reservation page</a>, entitled <span class="code">Scrapy, Ubuntu 14.04 LTS Svr (Full Blade)</span>. Using a remote shell and <a href="<?= $baseUrl ?>web.php#github">GitHub's cloning method</a>, download the <a href="https://github.com/rsteed11/PoliScrape">PoliScrape repository</a> to a remote machine.
             </div>
         </div>
         <div class="row">
             <div class="col-lg-12" style="margin-bottom: 0.5em;">
-                <header class="jumbotron special" style="font-size:18px;text-align:center;width:35%">
-                    <div>remote shell UNC tutorial</div>
-                    <div>GitHub git clone method</div>
+                <header class="jumbotron special" style="font-size:18px;text-align:center;width:45%">
+                    <div><a href="https://sils.unc.edu/it-services/servers/using-ssh">UNC IT Remote Shell Tutorial</a></div>
                 </header>
             </div>
         </div>
         <div class="row">
             <div class="col-lg-12" style="margin-bottom: 0.5em;">
-                Once the PoliScrape application is initialized, <a href="#">run the crawler</a>. VCL sessions are finite and all data, including the PoliScrape application, will be permanently wiped from the remote machine after the time reservation expires. Scraped data must be transferred to local or remote storage before the timeout.
+                Once the PoliScrape application is initialized, <a href="<?= $baseUrl ?>crawler.php">run the crawler</a>. VCL sessions are finite and all data, including the PoliScrape application, will be permanently wiped from the remote machine after the time reservation expires. Scraped data must be transferred to local or remote storage before the timeout.
             </div>
         </div>
 
         <div class="row">
             <div class="col-lg-12" style="margin-bottom: 1.5em;">
-                <h3>3. File Transfer</h3>
+                <h3 id="transfer">3. File Transfer</h3>
             </div>
         </div>
         <div class="row">
             <div class="col-lg-12" style="margin-bottom: 0.5em;">
-                PoliScrape data is stored in <a href="#">Longleaf mass storage</a> at the University of North Carolina at Chapel Hill. Shell into onyen@longleaf.its.unc.edu and navigate to <span class="code">/ms/depts/polisci/PoliScrape/</span>. Run the secure copy file transfer protocol from the VCL shell program to transfer a scraped file, exercising caution and creating file copies using the <span class="code">cp originalFile newFile</span> command to avoid loss of data.
+                PoliScrape data is stored in <a href="http://help.unc.edu/help/mass-storage/">Longleaf mass storage</a> at the University of North Carolina at Chapel Hill. Shell into onyen@longleaf.its.unc.edu and navigate to <span class="code">/ms/depts/polisci/PoliScrape/</span>. Run the secure copy file transfer protocol from the VCL shell program to transfer a scraped file, exercising caution and creating file copies using the <span class="code">cp originalFile newFile</span> command to avoid loss of data.
             </div>
         </div>
         <div class="row">
@@ -105,7 +104,7 @@ include_once('PoliScrape-config.php');
         </div>
         <div class="row">
             <div class="col-lg-12" style="margin-bottom: 0.5em;">
-                To transfer a directory recursively, use the following command. This is the best method for maintaining date and time hierarchical organization created with <a href="#">Feed Settings</a>).
+                To transfer a directory recursively, use the following command. This is the best method for maintaining date and time hierarchical organization created with <a href="<?= $baseUrl ?>settings.php#xml">Feed Settings</a>).
             </div>
         </div>
         <div class="row">
@@ -119,22 +118,15 @@ include_once('PoliScrape-config.php');
         
         <div class="row">
             <div class="col-lg-12" style="margin-bottom: 1.5em;">
-                <h3>4. File Storage</h3>
+                <h3 id="storage">4. File Storage</h3>
             </div>
         </div>
         <div class="row">
             <div class="col-lg-12" style="margin-bottom: 0.5em;">
-                Conventionally, files are stored in Longleaf at <span class="code">/ms/depts/polisci/PoliScrape/xmlItems/</span>. There is a <span class="code">history/</span> directory for raw, XML, scraped data and two other directories for split items from each crawler (see <a href="#">File Splitting</a>).
+                Conventionally, files are stored in Longleaf at <span class="code">/ms/depts/polisci/PoliScrape/xmlItems/</span>. There is a <span class="code">history/</span> directory for raw, XML, scraped data and two other directories for split items from each crawler (see <a href="<?= $baseUrl ?>splitting.php">File Splitting</a>).
             </div>
         </div>
-        <div class="row">
-            <div class="col-lg-12" style="margin-bottom: 0.5em;">
-                <header class="jumbotron special" style="font-size:18px;text-align:center;width:35%">
-                    <div>remote shell UNC tutorial</div>
-                    <div>GitHub git clone method</div>
-                </header>
-            </div>
-        </div>
+        <br/><br/>
         
         <!-- Page Features -->
         <!-- /.row -->

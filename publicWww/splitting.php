@@ -34,8 +34,8 @@ include_once('PoliScrape-config.php');
                     <dt>File Splitting<dt>
                     <dd>
                         <ol type="1">
-                            <li>XML Splitter Usage</li>
-                            <li>Manual Filtering</li>
+                            <li><a href="#xml">XML Splitter Usage</a></li>
+                            <li><a href="#manual">Manual Filtering</a></li>
                         </ol>
                     </dd>
                 </dl>
@@ -46,12 +46,12 @@ include_once('PoliScrape-config.php');
         <!-- Page Features -->
         <div class="row">
             <div class="col-lg-12" style="margin-bottom: 1.5em;">
-                <h3>1. XML Splitter Usage</h3>
+                <h3 id="xml">1. XML Splitter Usage</h3>
             </div>
         </div>
         <div class="row">
             <div class="col-lg-12" style="margin-bottom: 0.5em;">
-                PoliScrape includes a Python XML file splitting script to parse crawler run files. Usually run in the Longleaf Linux cluster (see <a href="#">File Transfer</a>), the xmlSplitter script <span class="code">PoliScrape/poliScrapy/xmlSplitter.py</span> iterates through each webpage item stored in the XML crawl file. Each file is copied into a separate file and named using its scraped <span class="code">id</span> item, or URL. A hierarchical tree file structure resembling the original web hierarchy is constructed as files are stored according to their respective HTML URI paths. 
+                PoliScrape includes a Python XML file splitting script to parse crawler run files. Usually run in the Longleaf Linux cluster (see <a href="<?= $baseUrl ?>vcl.php#transfer">File Transfer</a>), the xmlSplitter script <span class="code">PoliScrape/poliScrapy/xmlSplitter.py</span> iterates through each webpage item stored in the XML crawl file. Each file is copied into a separate file and named using its scraped <span class="code">id</span> item, or URL. A hierarchical tree file structure resembling the original web hierarchy is constructed as files are stored according to their respective HTML URI paths. 
                 <br/><br/>
                 There is a separate xmlSplitter file for each crawler, equipped to handle certain keywords specific to each website. To run the xmlSplitter file, use the following command:
             </div>
@@ -66,12 +66,12 @@ include_once('PoliScrape-config.php');
 
         <div class="row">
             <div class="col-lg-12" style="margin-bottom: 1.5em;">
-                <h3>2. Manual Filtering</h3>
+                <h3 id="manual">2. Manual Filtering</h3>
             </div>
         </div>
         <div class="row">
             <div class="col-lg-12" style="margin-bottom: 0.5em;">
-                The scraped file will be split into its requisite components and a hierarchy constructed in the specified <a href="#">file storage</a> directory in Longleaf. To alter or add an <span class="code">xmlSplitter</span> file, adjust the filtering condition in the filtering <span class="code">if</span> statement:
+                The scraped file will be split into its requisite components and a hierarchy constructed in the specified <a href="<?= $baseUrl ?>vcl.php#storage">file storage</a> directory in Longleaf. To alter or add an <span class="code">xmlSplitter</span> file, adjust the filtering condition in the filtering <span class="code">if</span> statement:
             </div>
         </div>
         <div class="row">
