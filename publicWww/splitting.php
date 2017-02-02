@@ -22,7 +22,7 @@ include_once('PoliScrape-config.php');
         <?php include_once("button.php") ?>
         <div class="row">
             <div class="col-lg-12" style="margin-bottom: 0.5em;">
-             <h1><b>File Splitting</b></h1>
+             <h1>File Splitting</h1>
             </div>
         </div>
 
