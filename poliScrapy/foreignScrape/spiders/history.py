@@ -21,7 +21,7 @@ class MySpider(CrawlSpider):
         soup = BeautifulSoup(analyzeThis, 'lxml')
         item['name'] = response.xpath("//title").extract()[6:][:-8] #strips excess title text
         item['id'] = response.url
-        item['bodyText'] = soup.body.get_text()[:-568] #strip off excess text from historian site
+        item['bodyText'] = soup.body.get_text()[:-568] #strips off excess text
         roughLinks = response.xpath('//a/@href').extract()
         fineLinks = []
         for url in roughLinks:

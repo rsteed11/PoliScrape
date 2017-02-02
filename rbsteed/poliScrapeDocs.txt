@@ -4,21 +4,12 @@ Address each function.
 
 When I want to use PoliScrape, I will:
 
-Run the file splitter.
-	- file splitter function
-	- file splitter filtering
-	- file splitter arguments
-	- command line arguments
-	- recommended to conduct from Longleaf
-Webpage Information
-	- location
-	- github control
-	- PHP hierarchy
-	- searching
 
 Home
 
-PoliScrape is an open source web crawler built using Scrapy, an open source web crawling library. The Scrapy documentation is below:
+PoliScrape is an open source web crawler built using Scrapy, an open source web crawling library. This documentation contains basic PoliScrape functions and references.
+
+The Scrapy documentation is below:
 
 http://scrapydocs
 
@@ -125,10 +116,46 @@ To transfer a directory recursively (best method for maintaining date and time h
 
 ** scp -r scrapedDir onyen@longleaf.its.unc.edu:/ms/depts/polisci/PoliScrape/xmlItems **
 
+File Storage
+
+Conventionally, files are stored in Longleaf at </ms/depts/polisci/PoliScrape/xmlItems/. There is a "history" directory for raw, XML, scraped data and two other directories for split items from each crawler (see "File Splitting").
+
 ---------------------
 File Splitting
 
-PoliScrape includes a Python XML file splitting script to parse crawler run files. Usually conducted in the Longleaf Linux cluster (see "File Transfer"). The xmlSplitter file (<PoliScrape/poliScrapy/xmlSplitter.py) iterates through each webpage item stored in the XML crawl file.Each file is copied into a separate file and named by its "id" item, or URL. A hierarchical tree file structure resembling the original web hierarchy is constructed as files are stored using their respective HTML URI paths. 
+PoliScrape includes a Python XML file splitting script to parse crawler run files. Usually run in the Longleaf Linux cluster (see "File Transfer"), the xmlSplitter script (<PoliScrape/poliScrapy/xmlSplitter.py) iterates through each webpage item stored in the XML crawl file.Each file is copied into a separate file and named by its "id" item, or URL. A hierarchical tree file structure resembling the original web hierarchy is constructed as files are stored using their respective HTML URI paths. 
+
+
+There is a separate xmlSplitter file for each crawler, given varying keywords. To run the xmlSplitter file, use the following command:
+
+** python xmlSplitter-crawlerName.py scrapedFile storageDir **
+
+The scraped file will be split into its requisite components and a hierarchy constructed in the specified storage directory in Longleaf (see "File Storage").
+To alter or add an xmlSplitter file, adjust the filtering "if" statement:
+
+** filtering statement **
+
+---------------------
+Webpage Maintenance
+
+The PoliScrape webpage is a PHP hierarchy, hosted at http://poliscrape-rsteed11.apps.unc.edu. The PHP hierarchy code can be found in full in the GitHub repository in the <PoliScrape/publicWww/> directory. It is composed of four main components: a home page, database tab, GitHub source links, and the PoliScrape documentation. The browsing tab iterates through data housed in the <PoliScrape/publicWww/Database/> directory, creating links for subdirectories and displaying XML levels. The Database tab is intended to display an HTML version of the PoliScrape stored data hierarchy, though it is not linked directly to Longleaf due to storage restrictions.
+The webpage is constructed from the Bootstrap Heroic Features template using Font Awesome fonts, found here:
+
+** Bootstrap Heroic Features **
+** FontAwesome **
+
+An nginx-driven PHP localhost was used for development. The PoliScrape-config.php file defines base URI paths for both development environment and production environment. The production environment does not share the same root pathway. Production is maintained on Carolina Cloud Apps through a GitHub submodule. Currently, it is only available for modification by Ryan Steed, the account owner. A GitHub contributor may publish changes as merge requests, which can be fetched and merged into the production submodule and published to production. Refer to the GitHub documentation for more information on submodules and version control.
+
+** GitHub version control again **
+
+Searching
+
+PoliScrape searching is unavailable in Version 1.
+
+Use Read the Docs Sphinx theme.
+
+
+
 
 
 

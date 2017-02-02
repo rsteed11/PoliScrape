@@ -2,6 +2,7 @@ import xml.etree.ElementTree as ET
 import io
 import os
 import sys
+import re
 
 def split(toSplit, dir_name):
 	index = 0
@@ -11,7 +12,6 @@ def split(toSplit, dir_name):
 			toSplit = 27 #for history.state.gov
 			title = elem.find('id').text[toSplit:]
 			if "historicaldocuments" not in title:
-			#if "" not in title:
 				print(index, "Passed")
 				pass
 			else:
