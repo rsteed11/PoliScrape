@@ -8,7 +8,7 @@
 <meta name="description" content="PoliScrape">
 <meta name="author" content="Ryan Steed">
 
-<title>PoliScrape</title>
+<title>PoliScrape Documentation</title>
 
 <!-- Bootstrap CSS -->
 <link href="<?= $baseUrl ?>css/bootstrap.css" rel="stylesheet">
@@ -89,7 +89,7 @@
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
                 <li class="sidebar-brand">
-                    <a href="<?= $baseUrl ?>" style="font-size:19px;color:#b00b00"><i class="fa fa-search" style="color:#b00b00" ></i><b> PoliScrape</b></a>
+                    <a href="<?= $baseUrl ?>" style="font-size:19px;color:white"><i class="fa fa-search" style="color:white" ></i><b> PoliScrape</b></a>
                 </li>
                 <li>
                     <a href="<?= $baseUrl ?>docs.php" style="font-size:17px"><i class="fa fa-home"></i><b> Read the Docs</b></a>
