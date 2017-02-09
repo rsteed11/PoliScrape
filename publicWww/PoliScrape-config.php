@@ -9,7 +9,7 @@
 $animationPath = "Database";
 
 // Prod Webserver Prefix 
-$prefixUri   = '/PoliScrape/publicWww/';
+$prefixUri   = '/publicWww/';
 
 // Development environment
 //$prefixUri   = '/PoliScrape/git/PoliScrape/publicWww/';
